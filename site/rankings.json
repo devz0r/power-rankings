@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T11:53:39+00:00",
+  "generated": "2026-10-21T11:58:50+00:00",
   "season": 2026,
   "through_week": 6,
   "next_week": 7,
@@ -72,8 +72,8 @@
       },
       "vegas_rating": 3.09,
       "vegas_difference": 3.33,
-      "note_hash": "c5a7ee928ac43b9b",
-      "note": "Six straight wins and the top spot, with Brock Purdy's offense (+3.9 points) doing the heavy lifting. The model rates them 3.3 points higher than the betting market does, and they visit Atlanta as 4.8-point favorites.",
+      "note_hash": "5c4cb51c26376500",
+      "note": "The 49ers are 6-0 and sit at No. 1, with a +67 point differential. The offense (+3.9 points) is the engine. The model likes them 3.3 points more than the betting market does.",
       "note_source": "ai"
     },
     {
@@ -143,8 +143,8 @@
       },
       "vegas_rating": 4.64,
       "vegas_difference": 0.93,
-      "note_hash": "8e098ac21a730517",
-      "note": "Buffalo slips to second after a 33-30 escape at Las Vegas, which showed the defense (-1.2 points) is the soft spot. Josh Allen's offense (+4.8 points) keeps them at 5-1.",
+      "note_hash": "793c290f37b24c6e",
+      "note": "Buffalo slipped to No. 2 after a 33-30 win at Las Vegas that wasn't pretty. The offense is +4.8 points, but the defense is -1.2 points and that keeps showing up.",
       "note_source": "ai"
     },
     {
@@ -214,8 +214,8 @@
       },
       "vegas_rating": 3.59,
       "vegas_difference": 1.55,
-      "note_hash": "9824c2fcf5966ba9",
-      "note": "Jacksonville moves up to third despite a 34-31 loss to Houston on a neutral field. The offense (+1.9 points) carries them, and Indianapolis comes next as a 7.5-point underdog.",
+      "note_hash": "e92f3bcd8c51d711",
+      "note": "Jacksonville moved up one spot to No. 3 despite a 34-31 loss to Houston. At 4-2 they have a 74% shot at the division.",
       "note_source": "ai"
     },
     {
@@ -285,8 +285,8 @@
       },
       "vegas_rating": 4.59,
       "vegas_difference": -0.32,
-      "note_hash": "3aa67e9c330ea0a1",
-      "note": "The Rams are 2-4 yet still fourth on rating, which is why their strength of record rank is 24. An 18-16 home loss to Arizona cost them 0.9 points, and Las Vegas is next.",
+      "note_hash": "bfc28e0603bec86d",
+      "note": "The Rams are 2-4 and still ranked No. 4, because the rating (+4.3) sees a better team than the record. Losing 18-16 to Arizona cost them 0.9 points.",
       "note_source": "ai"
     },
     {
@@ -351,8 +351,8 @@
       },
       "vegas_rating": 4.22,
       "vegas_difference": -0.06,
-      "note_hash": "0a2689f68308ca66",
-      "note": "Kansas City is 5-0 after a 22-6 win over the Chargers, and Patrick Mahomes' offense is the best thing about them at +1.7 points. Seattle is a tougher test, with the model making them 1.4-point underdogs.",
+      "note_hash": "a322f42422c555b3",
+      "note": "Kansas City is 5-0 after beating the Chargers 22-6, and the offense leads at +1.7 points. Next comes a trip to Seattle, where the model has them as underdog by 1.4.",
       "note_source": "ai"
     },
     {
@@ -422,8 +422,8 @@
       },
       "vegas_rating": 2.82,
       "vegas_difference": 1.34,
-      "note_hash": "f93f36289f23f6ff",
-      "note": "Detroit used the bye week and still dropped a spot, simply because Kansas City passed them. Jared Goff's offense (+2.9 points) is fine; the defense at -0.7 points is the concern before Green Bay.",
+      "note_hash": "81922b20cf56d68c",
+      "note": "Detroit used the bye week to hold at No. 6 at 3-2. The offense is +2.9 points and the defense is the soft spot at -0.7. Green Bay visits next.",
       "note_source": "ai"
     },
     {
@@ -493,8 +493,8 @@
       },
       "vegas_rating": 4.96,
       "vegas_difference": -1.57,
-      "note_hash": "e3b307ca577a8eb1",
-      "note": "Seattle held at seventh after a 17-14 loss in Denver. Drew Lock starting puts them 1.8 points below their usual quarterback situation, and the model still has them favored by 1.4 over Kansas City.",
+      "note_hash": "33b8f09d0a704bda",
+      "note": "Seattle stays at No. 7 despite the 17-14 loss at Denver. Drew Lock starting puts them 1.8 points below their usual quarterback situation, yet they're still favored by 1.4 over Kansas City.",
       "note_source": "ai"
     },
     {
@@ -564,8 +564,8 @@
       },
       "vegas_rating": 1.54,
       "vegas_difference": 1.75,
-      "note_hash": "c69d98cd68556eb1",
-      "note": "Chicago climbs two spots to eighth after beating Atlanta 31-23 on the road, with a rating jump of 2.2 points. Injuries helped by 1.4 points, and New England visits next.",
+      "note_hash": "9fa376736569e59a",
+      "note": "Chicago jumped two spots to No. 8 on a 31-23 road win at Atlanta. The rating rose 2.2 points, with injuries accounting for +1.4 of it.",
       "note_source": "ai"
     },
     {
@@ -635,8 +635,8 @@
       },
       "vegas_rating": 0.98,
       "vegas_difference": 1.92,
-      "note_hash": "1d1043121b238fdb",
-      "note": "New England has won 3 straight, the latest 26-19 over the Jets, and sits steady at ninth. The trip to Chicago has the model calling them 2.6-point underdogs.",
+      "note_hash": "7208644744197b5a",
+      "note": "New England has won 3 straight and holds at No. 9. Next is a road game at Chicago, where the model has them as underdog by 2.6.",
       "note_source": "ai"
     },
     {
@@ -701,8 +701,8 @@
       },
       "vegas_rating": 2.04,
       "vegas_difference": 0.62,
-      "note_hash": "1a764629d312af33",
-      "note": "Minnesota is 5-0 with the second-best strength of record, yet ranks only tenth. The offense at -1.8 points is why, while the defense (+2.5 points) does the work. Indianapolis visits after the bye.",
+      "note_hash": "08b40563163f8112",
+      "note": "Minnesota is 5-0 but ranked only No. 10. The defense (+2.5 points) does the work while the offense sits at -1.8 points.",
       "note_source": "ai"
     },
     {
@@ -772,8 +772,8 @@
       },
       "vegas_rating": 0.73,
       "vegas_difference": 0.68,
-      "note_hash": "5b87563dceea8f32",
-      "note": "Green Bay has won 3 straight, the latest 23-13 over Dallas, but the point differential is only 2. Injuries added 0.8 points, and the trip to Detroit has them as 4.9-point underdogs.",
+      "note_hash": "da872817a6137450",
+      "note": "Green Bay won 23-13 over Dallas for a third straight win and rose to No. 11. A 2-point point differential says it's been closer than the record.",
       "note_source": "ai"
     },
     {
@@ -843,8 +843,8 @@
       },
       "vegas_rating": 2.25,
       "vegas_difference": -1.16,
-      "note_hash": "605c6a47af9b036f",
-      "note": "Houston jumps five spots to 12th after beating Jacksonville 34-31 on the road. Injuries added 1.1 points and the offense 0.8, making this a 2-4 team with a better rating than its record.",
+      "note_hash": "5bc8ce4eeb69bad7",
+      "note": "Houston climbed five spots to No. 12 by beating Jacksonville 34-31 on the road. The offense improved 0.8 points. At 2-4, they host the Giants next.",
       "note_source": "ai"
     },
     {
@@ -914,8 +914,8 @@
       },
       "vegas_rating": 2.0,
       "vegas_difference": -1.04,
-      "note_hash": "64931cb5a557fc77",
-      "note": "Cincinnati fell two spots without playing, thanks to bye-week movement elsewhere. Joe Burrow's offense is +1.2 points, the defense -1.0, and the model has them favored by just 0.3 at Baltimore.",
+      "note_hash": "9a724459373cc08c",
+      "note": "Cincinnati used the bye week and slid two spots to No. 13 without changing its rating. The defense at -1.0 points is the problem. Baltimore is next, with the model favoring them by 0.3.",
       "note_source": "ai"
     },
     {
@@ -985,8 +985,8 @@
       },
       "vegas_rating": 2.48,
       "vegas_difference": -1.57,
-      "note_hash": "5bbc5abd8309f8ef",
-      "note": "Denver beat Seattle 17-14 at home and moved up one spot, though the point differential is still -11. The 4-2 record owes plenty to a defense at +1.3 points.",
+      "note_hash": "4b94ffd7f38540d1",
+      "note": "Denver beat Seattle 17-14 and moved up one to No. 14. They're 4-2 with a -11 point differential, and the defense (+1.3 points) carries them.",
       "note_source": "ai"
     },
     {
@@ -1056,8 +1056,8 @@
       },
       "vegas_rating": 0.11,
       "vegas_difference": 0.34,
-      "note_hash": "55799dcff2f66ed5",
-      "note": "Carolina rises three spots to 15th after a 25-14 win in Philadelphia, a rating gain of 1.9 points. Tampa Bay comes to town, and the model has Carolina favored by 6.9.",
+      "note_hash": "f85386cc95e5a1bd",
+      "note": "Carolina rose three spots to No. 15 with a 25-14 win in Philadelphia. The rating gained 1.9 points, and they have a 64% chance to win the division.",
       "note_source": "ai"
     },
     {
@@ -1127,8 +1127,8 @@
       },
       "vegas_rating": -1.49,
       "vegas_difference": 1.29,
-      "note_hash": "cb99c7f191545106",
-      "note": "Indianapolis drops three spots to 16th after losing 26-20 at home to last-ranked Tennessee. At 2-4, their playoff chances are down to 20 percent, and Minnesota is next.",
+      "note_hash": "ff41b941c2810bfa",
+      "note": "Indianapolis fell three spots to No. 16 after losing 26-20 at home to Tennessee, the 32nd-ranked team. At 2-4, their playoff odds are 20%.",
       "note_source": "ai"
     },
     {
@@ -1198,8 +1198,8 @@
       },
       "vegas_rating": -1.04,
       "vegas_difference": 0.47,
-      "note_hash": "6c7e11a3c58d8b6d",
-      "note": "Atlanta falls three spots after a 31-23 home loss to Chicago. The offense at -1.6 points is the main weakness, and San Francisco arrives with the Falcons as 4.8-point underdogs.",
+      "note_hash": "e8b79d3322e345c2",
+      "note": "Atlanta dropped three spots to No. 17 after a 31-23 home loss to Chicago. The offense at -1.6 points is the weak link, and San Francisco comes next.",
       "note_source": "ai"
     },
     {
@@ -1269,8 +1269,8 @@
       },
       "vegas_rating": 0.57,
       "vegas_difference": -1.38,
-      "note_hash": "6410d916506ab577",
-      "note": "Pittsburgh is 4-2 after a 26-19 win at Tampa Bay, but the offense at -0.9 points keeps them 18th. New Orleans is next, with the model favoring them by 3.1.",
+      "note_hash": "2051d877d7282a15",
+      "note": "Pittsburgh won 26-19 at Tampa Bay and moved up one to No. 18. The rating gained 0.9 points, but the offense is still -0.9.",
       "note_source": "ai"
     },
     {
@@ -1340,8 +1340,8 @@
       },
       "vegas_rating": 2.91,
       "vegas_difference": -3.85,
-      "note_hash": "189ba9ec3160f0f4",
-      "note": "Dallas drops three spots after a 23-13 loss in Green Bay. The defense at -2.2 points is the issue, and the model rates them 3.9 points lower than the betting market does.",
+      "note_hash": "6b5b46d37d90e535",
+      "note": "Dallas fell three spots to No. 19 after a 23-13 loss at Green Bay. The defense is -2.2 points, and the model rates them 3.9 points lower than the market does.",
       "note_source": "ai"
     },
     {
@@ -1411,8 +1411,8 @@
       },
       "vegas_rating": -2.05,
       "vegas_difference": 0.98,
-      "note_hash": "8a32788ad2ac807e",
-      "note": "Philadelphia climbs 11 spots to 20th even after a 25-14 home loss to Carolina, their fourth straight. The quarterback situation added 4.9 points, which explains the jump.",
+      "note_hash": "f0cc000766a95bdb",
+      "note": "Philadelphia jumped 11 spots to No. 20, the biggest move of the week, mostly from the quarterback situation (+4.9 points). They've still lost 4 straight, the latest 25-14 to Carolina.",
       "note_source": "ai"
     },
     {
@@ -1482,8 +1482,8 @@
       },
       "vegas_rating": -3.6,
       "vegas_difference": 2.11,
-      "note_hash": "a6f863e8e8318073",
-      "note": "Washington lost 23-17 at San Francisco and slipped a spot, though the rating still ticked up 0.4 points. The record is 1-4-1, and the model likes them by 1.7 against Philadelphia.",
+      "note_hash": "68612e17d27b5d81",
+      "note": "Washington lost 23-17 at San Francisco and slipped to No. 21. They're 1-4-1 with a -40 point differential, but the model likes them 2.1 points more than the market does.",
       "note_source": "ai"
     },
     {
@@ -1553,8 +1553,8 @@
       },
       "vegas_rating": 2.01,
       "vegas_difference": -3.54,
-      "note_hash": "ae77183a3b5c450d",
-      "note": "Baltimore lost 13-10 at Cleveland with Tyler Huntley starting, which puts them 3.7 points below their usual quarterback situation. The model rates them 3.5 points lower than the market does.",
+      "note_hash": "ec3614b85931dde1",
+      "note": "Baltimore lost 13-10 at Cleveland and sits at No. 22. Tyler Huntley starting puts them 3.7 points below their usual quarterback situation, and the model is 3.5 points lower than the market.",
       "note_source": "ai"
     },
     {
@@ -1624,8 +1624,8 @@
       },
       "vegas_rating": -3.37,
       "vegas_difference": 0.05,
-      "note_hash": "173219edce0a25e9",
-      "note": "The Jets move up one spot to 23rd despite a 26-19 loss at New England. Injuries added 1.0 points, but the offense is at -2.0, and Miami visits as 5.1-point underdogs.",
+      "note_hash": "0a722f6fea512ab8",
+      "note": "The Jets rose one to No. 23 despite a 26-19 loss at New England. The offense at -2.0 points holds them back, but Miami visits next.",
       "note_source": "ai"
     },
     {
@@ -1695,8 +1695,8 @@
       },
       "vegas_rating": -3.93,
       "vegas_difference": 0.38,
-      "note_hash": "f130e501ae7b32b4",
-      "note": "Arizona beat the Rams 18-16 on the road and rose three spots to 24th. The point differential is still -52, and Denver visits with Arizona as 2.2-point underdogs.",
+      "note_hash": "aa710a5037ada18b",
+      "note": "Arizona beat the Rams 18-16 and climbed three spots to No. 24. They're 2-4 with a -52 point differential, so the move is modest.",
       "note_source": "ai"
     },
     {
@@ -1766,8 +1766,8 @@
       },
       "vegas_rating": -2.25,
       "vegas_difference": -1.42,
-      "note_hash": "4ea95182eba72dff",
-      "note": "Las Vegas has lost 3 straight, the latest a 33-30 home loss to Buffalo, and dropped two spots. The offense at -1.6 points is the weak link, and the Rams are next.",
+      "note_hash": "c8843970b3d92775",
+      "note": "Las Vegas has lost 3 straight, the latest 33-30 to Buffalo, and fell two spots to No. 25. The offense at -1.6 points is the weakest unit. Next is the Rams.",
       "note_source": "ai"
     },
     {
@@ -1837,8 +1837,8 @@
       },
       "vegas_rating": -2.31,
       "vegas_difference": -1.57,
-      "note_hash": "8f90bfe1f4800daf",
-      "note": "New Orleans stays 26th after a 34-27 win over the Giants. The offense is still the weak spot at -1.4 points, and Pittsburgh is next on a neutral field with the Saints as 3.1-point underdogs.",
+      "note_hash": "a50eadecc7ec275f",
+      "note": "New Orleans stays at No. 26 after a 34-27 win over the Giants. The rating gained 1.1 points, and Pittsburgh is next on a neutral field.",
       "note_source": "ai"
     },
     {
@@ -1908,8 +1908,8 @@
       },
       "vegas_rating": -5.46,
       "vegas_difference": 1.33,
-      "note_hash": "96174875ff09b7f5",
-      "note": "The Giants lost 34-27 at home to New Orleans and slid two spots to 27th. The offense (-1.2 points) is the problem, and Houston is next with the Giants as 7.4-point underdogs.",
+      "note_hash": "3ce5cffec165eeed",
+      "note": "The Giants fell two spots to No. 27 after losing 34-27 at home to New Orleans. They're 3-2-1, and Houston is a tough road trip, with the model giving them underdog status by 7.4.",
       "note_source": "ai"
     },
     {
@@ -1979,8 +1979,8 @@
       },
       "vegas_rating": -2.48,
       "vegas_difference": -1.79,
-      "note_hash": "ea30ff198b75ac92",
-      "note": "Tampa Bay drops six spots to 28th after a 26-19 home loss to Pittsburgh. With Jalon Daniels starting, they're 3.1 points below their usual quarterback situation. The record is 1-5.",
+      "note_hash": "b4599e3db20ffd61",
+      "note": "Tampa Bay fell six spots to No. 28, the steepest drop this week, after a 26-19 home loss to Pittsburgh. At 1-5, Jalon Daniels starting puts them 3.1 points below their usual quarterback situation.",
       "note_source": "ai"
     },
     {
@@ -2045,8 +2045,8 @@
       },
       "vegas_rating": -0.91,
       "vegas_difference": -3.46,
-      "note_hash": "895c1e6b3446bafe",
-      "note": "The Chargers are 0-6 and lost 22-6 at Kansas City. The offense is the problem at -3.0 points, and the model rates them 3.5 points lower than the market does.",
+      "note_hash": "7e4b511ac4a57bba",
+      "note": "The Chargers are 0-6 after a 22-6 loss at Kansas City, with a -61 point differential. The offense at -3.0 points is the core issue. Playoff odds are 0%.",
       "note_source": "ai"
     },
     {
@@ -2116,8 +2116,8 @@
       },
       "vegas_rating": -3.73,
       "vegas_difference": -0.86,
-      "note_hash": "247bc5ced4793d30",
-      "note": "Cleveland is 4-2 after a 13-10 win over Baltimore, yet the offense at -3.0 points keeps them 30th. A trip to Tennessee has them favored by only 0.4.",
+      "note_hash": "60516cd9e6b3f7d8",
+      "note": "Cleveland is 4-2 but ranked No. 30, with a -16 point differential. The 13-10 win over Baltimore didn't change that, since the offense is -3.0 points.",
       "note_source": "ai"
     },
     {
@@ -2182,8 +2182,8 @@
       },
       "vegas_rating": -6.29,
       "vegas_difference": 0.1,
-      "note_hash": "543af58b6b3e1aba",
-      "note": "Miami had the bye week at 0-5, with five straight losses. The offense is at -2.4 points, and the Jets are next, with the model making Miami 5.1-point underdogs.",
+      "note_hash": "a606e8032af5d7a7",
+      "note": "Miami is 0-5 after a bye week and has lost 5 straight. The -62 point differential and -2.4 points on offense explain the No. 31 spot. The Jets are next.",
       "note_source": "ai"
     },
     {
@@ -2253,8 +2253,8 @@
       },
       "vegas_rating": -6.64,
       "vegas_difference": -0.52,
-      "note_hash": "38e9f7fb6308168b",
-      "note": "Tennessee beat Indianapolis 26-20 on the road and gained 1.7 points, but still sits last. The offense at -3.0 points is the problem, and Cleveland visits with Tennessee as 0.4-point underdogs.",
+      "note_hash": "8720d97a043d05ac",
+      "note": "Tennessee is still at No. 32 despite a 26-20 win at Indianapolis. The rating rose 1.7 points, yet it's still -7.2, and Cleveland visits next.",
       "note_source": "ai"
     }
   ],
