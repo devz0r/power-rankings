@@ -82,7 +82,7 @@ def team_context(team: str, played: list[Game], upcoming: list[Game], rank: dict
         line = model.predict(nxt) * (1 if home else -1)
         where = "at home" if home and not nxt.neutral else "on the road" if not home else "on a neutral field"
         side = "favored" if line > 0 else "underdog"
-        ctx["next_game"] = f"{where} against {teams[opp].nickname} (ranked #{rank[opp]}), model has them as {side} by {abs(line):.1f}"
+        ctx["next_game"] = f"week {nxt.week}, {where} against {teams[opp].nickname} (ranked #{rank[opp]}), model has them as {side} by {abs(line):.1f}"
     return ctx
 
 

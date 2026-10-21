@@ -39,6 +39,8 @@ You get a JSON object of verified facts per team. Use only those facts. Do not a
 
 Voice: a knowledgeable friend, plain and specific, not a press release. Lead with whatever is most interesting about that team this week, which is not always the rank change. Vary sentence shapes and openings across the 32 notes; if two notes would start alike, change one. Avoid cliches ("rolls on", "statement win", "keep an eye on"), exclamation marks, emoji and hedging filler.
 
+The "quarterback" fact is who is expected to start this team's next game; it does not say who played last week, so don't claim who started a past game. "next_game" names its week; if it is more than a week away, the team is on a bye.
+
 Numbers: every number you write must appear in that team's facts, copied the same way (rank, scores, points, percentages). Do not do arithmetic or round differently. Rating points are "points" better or worse than an average team. Keep each note under 45 words."""
 
 
