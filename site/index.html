@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Power Rankings</title>
+<meta name="description" content="Predictive NFL power rankings: each team's strength in points, adjusted for opponent, quarterback and injuries.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23121212%27/%3E%3Cpath d=%27M7 24V8h5l8 10V8h5v16h-5L12 14v10z%27 fill=%27%230a99ff%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>NFL Power Rankings</h1>
+    <p class="sub" id="subtitle">Loading…</p>
+    <nav class="tabs" role="tablist" aria-label="View">
+      <button role="tab" data-view="rankings" aria-selected="true">Rankings</button>
+      <button role="tab" data-view="tiers" aria-selected="false">Tier list</button>
+      <button role="tab" data-view="games" aria-selected="false">Games</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="error" id="error" hidden></p>
+
+  <section id="view-rankings" class="view">
+    <div class="table-scroll">
+      <table id="rank-table">
+        <thead>
+          <tr>
+            <th data-sort="rank" class="num">#</th>
+            <th class="chg" title="Change in rank since last week"></th>
+            <th data-sort="name">Team</th>
+            <th data-sort="rating" class="num" title="Points better than an average team on a neutral field, with this week's starting QB and injury report">Rating</th>
+            <th class="range-col" title="80% range: where the team's true strength most likely sits">Range</th>
+            <th data-sort="record" class="num">Record</th>
+            <th data-sort="sor" class="num hide-sm" title="Strength of record: rank of how hard this record is to match against this schedule">SOR</th>
+            <th data-sort="playoffs" class="num hide-sm" title="Chance to make the playoffs">Playoffs</th>
+            <th data-sort="sb" class="num hide-sm" title="Chance to win the Super Bowl">Title</th>
+            <th data-sort="vegas" class="num hide-md" title="Model rating minus the market's implied rating. Positive means this model likes the team more than Vegas does.">vs Vegas</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="note">Rating is points better than an average team on a neutral field. Click a team for details. Résumé, playoff odds and the Vegas column are shown beside the ranking and never feed into it.</p>
+  </section>
+
+  <section id="view-tiers" class="view" hidden>
+    <div id="tier-list" class="tier-list"></div>
+    <p class="note">Tiers split at the natural gaps between ratings, so a tier can hold few teams or many. Teams are ordered by rating within a tier; ratings are uncertain by a few points, so neighbours are close calls. Click a team for details.</p>
+  </section>
+
+  <section id="view-games" class="view" hidden>
+    <div class="table-scroll">
+      <table id="games-table">
+        <thead>
+          <tr><th>Game</th><th class="num">Model</th><th class="num">Vegas</th><th class="num">Gap</th><th class="num hide-sm">Home win</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="note">Lines are the home team's expected margin; a negative number means the road team is favored. Gap is the model minus Vegas.</p>
+  </section>
+</main>
+
+<dialog id="detail"></dialog>
+
+<footer class="wrap foot">
+  Updated every Tuesday after Monday Night Football, and Saturday with final injury reports.
+  Data: <a href="https://github.com/nflverse">nflverse</a>. Method and backtest results on
+  <a href="https://github.com/devz0r/power-rankings">GitHub</a>.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

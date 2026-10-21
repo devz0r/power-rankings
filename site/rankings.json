@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T10:34:39+00:00",
+  "generated": "2026-10-21T10:48:52+00:00",
   "season": 2026,
   "through_week": 6,
   "next_week": 7,
@@ -1939,7 +1939,7 @@
       "ties": 0,
       "point_diff": -61,
       "strength_of_record": 1.0,
-      "strength_of_record_rank": 31,
+      "strength_of_record_rank": 32,
       "best_win": null,
       "worst_loss": {
         "opponent": "LV",
@@ -2070,7 +2070,7 @@
       "ties": 0,
       "point_diff": -62,
       "strength_of_record": 1.0,
-      "strength_of_record_rank": 32,
+      "strength_of_record_rank": 31,
       "best_win": null,
       "worst_loss": {
         "opponent": "LV",

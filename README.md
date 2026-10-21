@@ -16,7 +16,7 @@ Data comes from [nflverse](https://github.com/nflverse) and is cached in
 ## Usage
 
 ```sh
-python -m powerrank rank                 # current ratings + next week's lines, writes output/rankings.json
+python -m powerrank rank                 # current ratings + next week's lines, writes site/rankings.json
 python -m powerrank rank --model ridge   # same, using a baseline
 python -m powerrank backtest             # score every model week by week vs. the closing line
 python -m powerrank fit                  # refit the epa model's weights (once per offseason)
@@ -26,9 +26,24 @@ python -m pytest                         # tests
 `rank` only counts fully completed weeks, so running it mid-week never mixes
 in Thursday's game.
 
+## Website
+
+`site/` is a static page (plain HTML, CSS and JavaScript, no build step) that
+reads `site/rankings.json`. It has a sortable ranking table, an S-F tier list
+and a games view comparing the model's lines with Vegas; clicking a team opens
+its breakdown, résumé and playoff odds. Preview locally:
+
+```sh
+python -m http.server -d site     # then open http://localhost:8000
+```
+
+To publish it, serve the `site/` folder (for example GitHub Pages, deploying
+from a workflow or a `/site` folder). The weekly job keeps `site/rankings.json`
+current.
+
 ## Rankings output
 
-`python -m powerrank rank` writes `output/rankings.json`. For each team:
+`python -m powerrank rank` writes `site/rankings.json`. For each team:
 
 | field | meaning |
 |---|---|
@@ -60,7 +75,7 @@ Football, with retries Tuesday evening and Wednesday in case nflverse hasn't
 published the play-by-play yet. It runs again Saturday morning with the final
 injury reports and latest projected starters, which can move this week's
 ratings, ranks and lines but adds no games. Each run tests, regenerates
-`output/rankings.json`, and commits it if anything changed. It can also be run
+`site/rankings.json`, and commits it if anything changed. It can also be run
 by hand from the Actions tab.
 
 ## Models

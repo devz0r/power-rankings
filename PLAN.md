@@ -79,7 +79,7 @@ The ranking is predictive: who would win on a neutral field next Sunday? Each te
 3. Preseason priors and weekly updating. **Done:** projections from the last two seasons, QB/coach changes and draft capital, with empirical-Bayes prior strengths. Helps QB-change teams, ties overall. Win totals left out to stay independent of Vegas.
 4. QB and injury adjustments. **Done:** career QB ratings swap in the actual starter (biggest gain so far, held-out MAE 10.18 -> 10.08); non-QB injuries add a little; healthy vs this-week ratings. Injury reports aren't out by Tuesday.
 5. Résumé columns, uncertainty, season simulation, Vegas disagreement. **Done:** strength of record, best win / worst loss, remaining schedule, calibrated 80% ranges and chance of being #1/top 5, natural-break tiers, 10,000-season playoff simulation, market-implied ratings, rank changes. Saturday injury-report run added.
-6. Export to JSON and build the static site (ranked and tier views).
+6. Export to JSON and build the static site (ranked and tier views). **Done:** `site/` with ranking table, S-F tier list and games view.
 7. Weekly run after Monday Night Football. **Done:** GitHub Actions, Tuesdays with retries.
 
 ## Model and effort

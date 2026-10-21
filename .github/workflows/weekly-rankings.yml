@@ -52,14 +52,14 @@ jobs:
 
       - name: Commit if the rankings changed
         run: |
-          if git diff --quiet -I '"generated":' -- output/rankings.json; then
+          if git diff --quiet -I '"generated":' -- site/rankings.json; then
             echo "No change."
             exit 0
           fi
-          week=$(python -c "import json; print(json.load(open('output/rankings.json'))['through_week'])")
+          week=$(python -c "import json; print(json.load(open('site/rankings.json'))['through_week'])")
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add output/rankings.json
+          git add site/rankings.json
           if [ "$(date -u +%u)" = "6" ]; then
             git commit -m "Rankings through week ${week}, updated with injury reports"
           else

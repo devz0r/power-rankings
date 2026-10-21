@@ -26,7 +26,7 @@ from powerrank.models.qb import QbTracker
 from powerrank.pbp import FIRST_SEASON, load_qb_games, load_team_games
 from powerrank.teams import load_teams
 
-DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "output" / "rankings.json"
+DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "site" / "rankings.json"
 
 # Preseason projections need two earlier seasons of play-by-play.
 PRESEASON_FIRST_SEASON = FIRST_SEASON + 2
