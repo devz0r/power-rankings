@@ -25,7 +25,9 @@ def test_offseason_detects_qb_and_coach_changes():
     games.append(game(2021, 1, "AAA", "BBB", "vet1", "rookie", home_coach="Z", away_coach="Y"))
 
     info = offseason_info(games, drafts={})
-    assert info[(2020, "AAA")] == {"qb_changed": 0.0, "veteran_qb": 0.0, "coach_changed": 0.0, "draft": 0.0}
+    assert info[(2020, "AAA")] == {
+        "qb_changed": 0.0, "veteran_qb": 0.0, "qb_delta": 0.0, "coach_changed": 0.0, "draft": 0.0,
+    }
     assert info[(2021, "AAA")]["qb_changed"] == 1.0
     assert info[(2021, "AAA")]["veteran_qb"] == 1.0
     assert info[(2021, "AAA")]["coach_changed"] == 1.0
@@ -52,7 +54,9 @@ def synthetic(carry: float, qb_penalty: float, seed: int = 0):
         values[season] = {}
         for t in teams:
             changed = float(rng.random() < 0.25)
-            offseason[(season, t)] = {"qb_changed": changed, "veteran_qb": 0.0, "coach_changed": 0.0, "draft": 0.0}
+            offseason[(season, t)] = {
+                "qb_changed": changed, "veteran_qb": 0.0, "qb_delta": 0.0, "coach_changed": 0.0, "draft": 0.0,
+            }
             values[season][t] = {
                 f: (carry - qb_penalty * changed) * values[season - 1][t][f] + rng.gauss(0, 0.5) for f in FEATURES
             }

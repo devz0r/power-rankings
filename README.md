@@ -26,6 +26,15 @@ python -m pytest                         # tests
 `rank` only counts fully completed weeks, so running it mid-week never mixes
 in Thursday's game.
 
+## Rankings output
+
+`output/rankings.json` lists each team's `rating` (strength for its next game,
+with the projected starting QB and that week's injury report, which is what
+the rank uses), `healthy_rating` (with its main QB and nobody ruled out), a
+`breakdown` into offense / defense / special teams / scoring / quarterback /
+injuries that sums to `rating`, its `preseason_rating`, offseason changes,
+record, and next week's model and market lines.
+
 ## Weekly update
 
 `.github/workflows/weekly-rankings.yml` runs every Tuesday after Monday Night
@@ -38,7 +47,7 @@ by hand from the Actions tab.
 
 | model   | what it is |
 |---------|------------|
-| `epa`   | **Default.** Opponent-adjusted play-by-play efficiency (pass, rush, interceptions, special teams) blended with score margin, starting each season from a preseason projection. Gives each team an offense / defense / special teams / scoring breakdown. |
+| `epa`   | **Default.** Opponent-adjusted play-by-play efficiency (pass, rush, interceptions, special teams) blended with score margin, starting each season from a preseason projection, and adjusted for who starts at QB and who is ruled out. Gives each team an offense / defense / special teams / scoring / QB / injuries breakdown. |
 | `ridge` | Baseline: opponent-adjusted point differential, with last season as a prior |
 | `elo`   | Baseline: FiveThirtyEight-style Elo, in points |
 
@@ -52,7 +61,7 @@ never saw while being tuned.
 |---|---|---|
 | elo | 10.89 | 10.19 |
 | ridge | 10.83 | 10.17 |
-| epa | 10.82 | 10.18 |
+| epa | 10.77 | 10.08 |
 | closing line | 10.71 | 9.78 |
 
 What the tuning found:
@@ -74,6 +83,19 @@ What the tuning found:
   right: halving or doubling them is worse. Overall game accuracy is
   unchanged: public offseason information explains only ~20% of how good a
   team turns out to be.
+- **Quarterbacks are the biggest single improvement** (10.18 -> 10.10
+  held out). Each QB has a career rating (EPA per play above what his
+  opponents usually allow, older plays fading with a 40-week half-life,
+  shrunk toward a below-average unknown). A game's adjustment is the
+  starter's rating minus the mix of QBs behind the team's numbers. In the 329
+  held-out games where this moved the line 2+ points, error fell from 10.54
+  to 10.06 and the model's lines got much closer to the market's.
+- Non-QB injuries (recent snap share of players ruled Out/Doubtful) help a
+  little: ~0.8 points per full-time starter out, 0.01 points of held-out
+  error. Separate weights by position overfit the few seasons of data.
+  Injury reports come out Wednesday-Friday, so the Tuesday rankings
+  usually can't include the coming week's; they do include projected
+  starting QBs.
 - Preseason market win totals would be the biggest single improvement for
   the first month, but are left out on purpose so the model stays
   independent of Vegas.

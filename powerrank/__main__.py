@@ -5,10 +5,13 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from powerrank import backtest, preseason
+import polars as pl
+
+from powerrank import backtest, injuries, preseason
 from powerrank.data import Game, load_games
 from powerrank.models import MODELS, RatingModel
 from powerrank.models.epa import (
@@ -19,7 +22,8 @@ from powerrank.models.epa import (
     fit_weights,
     load_weights,
 )
-from powerrank.pbp import FIRST_SEASON, load_team_games
+from powerrank.models.qb import QbTracker
+from powerrank.pbp import FIRST_SEASON, load_qb_games, load_team_games
 
 DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "output" / "rankings.json"
 
@@ -36,35 +40,67 @@ def season_range(text: str) -> range:
     return range(int(start), int(end or start) + 1)
 
 
-def load_stats(games: list[Game], refresh: bool) -> TeamGameStats:
+@dataclass
+class Inputs:
+    """Everything the epa model reads besides the schedule."""
+
+    stats: TeamGameStats
+    qb_games: pl.DataFrame
+    injuries: dict[tuple[int, int, str], float]
+
+
+def load_inputs(games: list[Game], refresh: bool) -> Inputs:
     last = max(g.season for g in games if g.played)
-    return TeamGameStats(load_team_games(range(FIRST_SEASON, last + 1), refresh=refresh))
+    seasons = range(FIRST_SEASON, last + 1)
+    return Inputs(
+        stats=TeamGameStats(load_team_games(seasons, refresh=refresh)),
+        qb_games=load_qb_games(seasons, refresh=refresh),
+        injuries=injuries.load_index(last, refresh=refresh),
+    )
 
 
-def build_model(name: str, games: list[Game], stats: TeamGameStats | None, fit_seasons: range | None = None) -> RatingModel:
-    """A fresh model. For epa, `fit_seasons` refits its preseason projections
-    and weights on just those seasons (and earlier), so a backtest never scores
-    games anything was fitted on. Otherwise epa uses the saved fit."""
+def build_epa(
+    games: list[Game], inputs: Inputs, fit_seasons: range | None = None
+) -> tuple[EpaModel, dict[str, float], list]:
+    """The epa model with preseason projections, QB ratings and injuries.
+
+    With `fit_seasons`, refits the projections and weights on just those
+    seasons (and earlier), so a backtest never scores games anything was fitted
+    on, and also returns the weights and the per-game rows they were fitted on.
+    Otherwise uses the saved fit."""
+    if fit_seasons is None:
+        pre = preseason.build(inputs.stats, games, QbTracker(inputs.qb_games), saved=load_weights()["preseason"])
+    else:
+        pre = preseason.build(
+            inputs.stats, games, QbTracker(inputs.qb_games), seasons=range(PRESEASON_FIRST_SEASON, fit_seasons.stop)
+        )
+
+    def make(weights: dict[str, float] | None) -> EpaModel:
+        return EpaModel(
+            stats=inputs.stats, weights=weights, preseason=pre, qbs=QbTracker(inputs.qb_games), injuries=inputs.injuries
+        )
+
+    if fit_seasons is None:
+        return make(None), {}, []
+    weights, rows = fit_weights(make({}), games, fit_seasons)
+    return make(weights), weights, rows
+
+
+def build_model(name: str, games: list[Game], inputs: Inputs | None, fit_seasons: range | None = None) -> RatingModel:
     if name != "epa":
         return MODELS[name]()
-    if fit_seasons is None:
-        saved = load_weights()
-        pre = preseason.build(stats, games, saved=saved["preseason"])
-        return EpaModel(stats=stats, preseason=pre)
-    pre = preseason.build(stats, games, seasons=range(PRESEASON_FIRST_SEASON, fit_seasons.stop))
-    weights, _ = fit_weights(EpaModel(stats=stats, weights={}, preseason=pre), games, fit_seasons)
-    return EpaModel(stats=stats, weights=weights, preseason=pre)
+    return build_epa(games, inputs, fit_seasons)[0]
 
 
 def cmd_backtest(args: argparse.Namespace, games: list[Game]) -> None:
     names = [args.model] if args.model else list(MODELS)
-    stats = load_stats(games, args.refresh) if "epa" in names else None
+    inputs = load_inputs(games, args.refresh) if "epa" in names else None
     for label, seasons in (("train", args.train), ("test", args.test)):
         print(f"\n{label} {seasons.start}-{seasons.stop - 1}")
         print(f"{'':8}{backtest.SCORES_HEADER}")
         market = None
         for name in names:
-            model = build_model(name, games, stats, fit_seasons=args.train)
+            model = build_model(name, games, inputs, fit_seasons=args.train)
             predictions = backtest.run(model, games, through_season=seasons.stop - 1)
             model_scores, market = backtest.evaluate(predictions, seasons)
             print(f"{name:8}{model_scores.row()}")
@@ -73,10 +109,8 @@ def cmd_backtest(args: argparse.Namespace, games: list[Game]) -> None:
 
 def cmd_fit(args: argparse.Namespace, games: list[Game]) -> None:
     seasons = args.seasons or range(2006, max(g.season for g in games if g.played))
-    stats = load_stats(games, args.refresh)
-    pre = preseason.build(stats, games, seasons=range(PRESEASON_FIRST_SEASON, seasons.stop))
-    model = EpaModel(stats=stats, weights={}, preseason=pre)
-    weights, rows = fit_weights(model, games, seasons)
+    model, weights, rows = build_epa(games, load_inputs(games, args.refresh), fit_seasons=seasons)
+    pre = model.preseason
     params = {
         "prior_plays": model.prior_plays,
         "prior_scale": model.prior_scale,
@@ -85,6 +119,11 @@ def cmd_fit(args: argparse.Namespace, games: list[Game]) -> None:
         "st_prior_games": model.st_prior_games,
         "half_life": model.half_life,
         "neutralize_fumbles": model.neutralize_fumbles,
+        "qb": {
+            "half_life_weeks": model.qbs.half_life_weeks,
+            "prior_plays": model.qbs.prior_plays,
+            "prior_mean": model.qbs.prior_mean,
+        },
     }
     WEIGHTS_PATH.write_text(
         json.dumps(
@@ -143,8 +182,8 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
 
     # Only full weeks count, so a Thursday game never sneaks into a ranking.
     history = [g for g in games if g.season < season or (g.season == season and g.week <= through)]
-    stats = load_stats(games, args.refresh) if args.model == "epa" else None
-    model = build_model(args.model, games, stats)
+    inputs = load_inputs(games, args.refresh) if args.model == "epa" else None
+    model = build_model(args.model, games, inputs)
     backtest.run(model, history)
 
     played = [g for g in season_games if g.week <= through and g.played]
@@ -153,18 +192,26 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
         if missing:
             sys.exit(f"play-by-play not published yet for: {', '.join(missing)}")
 
-    next_week = min((g.week for g in season_games if g.week > through), default=None)
-    ratings = sorted(model.ratings().items(), key=lambda item: -item[1])
+    upcoming = [g for g in season_games if g.week > through]
+    next_week = min((g.week for g in upcoming), default=None)
+    qb_names = {qb: name for g in games for qb, name in ((g.home_qb, g.home_qb_name), (g.away_qb, g.away_qb_name)) if qb}
     teams = []
-    for i, (team, rating) in enumerate(ratings):
-        entry = {"rank": i + 1, "team": team, "rating": round(rating, 2), **record(team, played)}
+    for team, rating in model.ratings().items():
+        entry = {"team": team, "rating": round(rating, 2), **record(team, played)}
         if isinstance(model, EpaModel):
-            entry["breakdown"] = {unit: round(v, 2) for unit, v in model.breakdown(team).items()}
+            entry.update(this_week(model, team, upcoming, qb_names))
+            entry["breakdown"] = {unit: round(v, 2) for unit, v in model.breakdown(team).items()} | {
+                "quarterback": entry.pop("qb_points"),
+                "injuries": entry.pop("injury_points"),
+            }
             entry["preseason_rating"] = round(model.preseason_rating(team), 2)
             if model.preseason is not None:
                 info = model.preseason.offseason.get((season, team), {})
                 entry["offseason"] = {k: bool(info.get(k)) for k in ("qb_changed", "veteran_qb", "coach_changed")}
         teams.append(entry)
+    teams.sort(key=lambda t: -t["rating"])
+    for i, t in enumerate(teams):
+        t["rank"] = i + 1
     matchups = [
         {
             "home": g.home,
@@ -179,13 +226,19 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
 
     print(f"{season} through week {through} ({model.name}, home field {model.hfa.value:+.1f})\n")
     has_breakdown = "breakdown" in teams[0]
-    print(" #  team  rating  record  diff" + ("    off    def     st  score" if has_breakdown else ""))
+    print(
+        " #  team  rating  record  diff"
+        + ("  healthy    off    def     st  score     qb    inj  starter" if has_breakdown else "")
+    )
     for t in teams:
         rec = f"{t['wins']}-{t['losses']}" + (f"-{t['ties']}" if t["ties"] else "")
         line = f"{t['rank']:>2}  {t['team']:<4} {t['rating']:+7.1f}  {rec:>6}  {t['point_diff']:+4d}"
         if has_breakdown:
             b = t["breakdown"]
-            line += f"  {b['offense']:+5.1f}  {b['defense']:+5.1f}  {b['special_teams']:+5.1f}  {b['scoring']:+5.1f}"
+            line += (
+                f"  {t['healthy_rating']:+7.1f}  {b['offense']:+5.1f}  {b['defense']:+5.1f}  {b['special_teams']:+5.1f}"
+                f"  {b['scoring']:+5.1f}  {b['quarterback']:+5.1f}  {b['injuries']:+5.1f}  {t['starter'] or ''}"
+            )
         print(line)
     if matchups:
         print(f"\nweek {next_week} (home team's expected margin)")
@@ -210,6 +263,32 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
         + "\n"
     )
     print(f"\nwrote {args.out}")
+
+
+def this_week(model: EpaModel, team: str, upcoming: list[Game], qb_names: dict[str, str]) -> dict:
+    """Strength for the team's next game (projected starter, injury report)
+    and when healthy (its main QB, nobody ruled out). If the next starter
+    isn't projected yet (e.g. after a bye), assume the main QB."""
+    primary = model.primary_qb(team)
+    healthy = model.rating_with(team, primary)
+    game = next((g for g in upcoming if team in (g.home, g.away)), None)
+    if game is None:
+        return {
+            "rating": round(healthy, 2), "healthy_rating": round(healthy, 2),
+            "starter": qb_names.get(primary), "qb_points": 0.0, "injury_points": 0.0,
+        }
+    qb, name = (game.home_qb, game.home_qb_name) if game.home == team else (game.away_qb, game.away_qb_name)
+    if qb is None:
+        qb, name = primary, qb_names.get(primary)
+    with_qb = model.rating_with(team, qb)
+    injury = model.injury_cost(game.season, game.week, team)
+    return {
+        "rating": round(with_qb + injury, 2),
+        "healthy_rating": round(healthy, 2),
+        "starter": name,
+        "qb_points": round(with_qb - model.ratings()[team], 2),
+        "injury_points": round(injury, 2),
+    }
 
 
 def main() -> None:

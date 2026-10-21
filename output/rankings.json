@@ -1,681 +1,809 @@
 {
-  "generated": "2026-10-21T08:13:43+00:00",
+  "generated": "2026-10-21T08:58:58+00:00",
   "season": 2026,
   "through_week": 6,
   "model": "epa",
   "home_field": 2.2,
   "teams": [
     {
-      "rank": 1,
       "team": "SF",
-      "rating": 6.5,
+      "rating": 6.43,
       "wins": 6,
       "losses": 0,
       "ties": 0,
       "point_diff": 67,
+      "healthy_rating": 6.43,
+      "starter": "Brock Purdy",
       "breakdown": {
-        "offense": 3.78,
-        "defense": 0.21,
-        "special_teams": -0.21,
-        "scoring": 2.72
+        "offense": 3.86,
+        "defense": 0.19,
+        "special_teams": -0.2,
+        "scoring": 2.57,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 2.25,
+      "preseason_rating": 2.33,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 1
     },
     {
-      "rank": 2,
       "team": "BUF",
       "rating": 5.57,
       "wins": 5,
       "losses": 1,
       "ties": 0,
       "point_diff": 26,
+      "healthy_rating": 5.57,
+      "starter": "Josh Allen",
       "breakdown": {
-        "offense": 4.67,
-        "defense": -1.16,
-        "special_teams": -0.14,
-        "scoring": 2.21
+        "offense": 4.8,
+        "defense": -1.17,
+        "special_teams": -0.15,
+        "scoring": 2.09,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 4.22,
+      "preseason_rating": 4.31,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 3,
-      "team": "SEA",
-      "rating": 5.34,
-      "wins": 3,
-      "losses": 3,
-      "ties": 0,
-      "point_diff": 26,
-      "breakdown": {
-        "offense": -0.22,
-        "defense": 2.15,
-        "special_teams": 1.05,
-        "scoring": 2.36
       },
-      "preseason_rating": 5.82,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
-      }
+      "rank": 2
     },
     {
-      "rank": 4,
       "team": "JAX",
-      "rating": 5.28,
+      "rating": 5.14,
       "wins": 4,
       "losses": 2,
       "ties": 0,
       "point_diff": 50,
+      "healthy_rating": 5.14,
+      "starter": "Trevor Lawrence",
       "breakdown": {
-        "offense": 1.84,
-        "defense": 0.71,
-        "special_teams": 0.24,
-        "scoring": 2.5
+        "offense": 1.88,
+        "defense": 0.74,
+        "special_teams": 0.22,
+        "scoring": 2.3,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 2.16,
+      "preseason_rating": 2.08,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 5,
-      "team": "KC",
-      "rating": 4.28,
-      "wins": 5,
-      "losses": 0,
-      "ties": 0,
-      "point_diff": 57,
-      "breakdown": {
-        "offense": 1.64,
-        "defense": 0.57,
-        "special_teams": -0.07,
-        "scoring": 2.14
       },
-      "preseason_rating": 1.17,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
-      }
+      "rank": 3
     },
     {
-      "rank": 6,
       "team": "LA",
-      "rating": 4.19,
+      "rating": 4.27,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": -3,
+      "healthy_rating": 4.27,
+      "starter": "Matthew Stafford",
       "breakdown": {
-        "offense": 2.23,
-        "defense": 1.2,
-        "special_teams": -0.63,
-        "scoring": 1.38
+        "offense": 2.31,
+        "defense": 1.23,
+        "special_teams": -0.62,
+        "scoring": 1.31,
+        "quarterback": 0.04,
+        "injuries": -0.0
       },
-      "preseason_rating": 6.0,
+      "preseason_rating": 5.94,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 4
     },
     {
-      "rank": 7,
       "team": "DET",
-      "rating": 4.18,
+      "rating": 4.16,
       "wins": 3,
       "losses": 2,
       "ties": 0,
       "point_diff": 16,
+      "healthy_rating": 4.16,
+      "starter": "Jared Goff",
       "breakdown": {
-        "offense": 2.79,
-        "defense": -0.7,
-        "special_teams": 0.69,
-        "scoring": 1.4
+        "offense": 2.87,
+        "defense": -0.72,
+        "special_teams": 0.7,
+        "scoring": 1.31,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 4.05,
+      "preseason_rating": 4.07,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 5
     },
     {
-      "rank": 8,
-      "team": "NE",
-      "rating": 2.96,
-      "wins": 4,
-      "losses": 2,
+      "team": "KC",
+      "rating": 4.16,
+      "wins": 5,
+      "losses": 0,
       "ties": 0,
-      "point_diff": 23,
+      "point_diff": 57,
+      "healthy_rating": 4.16,
+      "starter": "Patrick Mahomes",
       "breakdown": {
-        "offense": 0.75,
-        "defense": 0.42,
-        "special_teams": 0.27,
-        "scoring": 1.53
+        "offense": 1.71,
+        "defense": 0.55,
+        "special_teams": -0.06,
+        "scoring": 1.96,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 1.65,
+      "preseason_rating": 1.13,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 6
     },
     {
-      "rank": 9,
+      "team": "SEA",
+      "rating": 3.4,
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "point_diff": 26,
+      "healthy_rating": 5.35,
+      "starter": "Drew Lock",
+      "breakdown": {
+        "offense": -0.24,
+        "defense": 2.19,
+        "special_teams": 1.06,
+        "scoring": 2.16,
+        "quarterback": -1.77,
+        "injuries": -0.0
+      },
+      "preseason_rating": 5.6,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": false
+      },
+      "rank": 7
+    },
+    {
       "team": "CHI",
-      "rating": 2.6,
+      "rating": 3.29,
       "wins": 4,
       "losses": 2,
       "ties": 0,
       "point_diff": 31,
+      "healthy_rating": 3.29,
+      "starter": "Caleb Williams",
       "breakdown": {
-        "offense": 1.16,
+        "offense": 1.2,
         "defense": -0.21,
-        "special_teams": 0.41,
-        "scoring": 1.24
+        "special_teams": 0.42,
+        "scoring": 1.17,
+        "quarterback": 0.71,
+        "injuries": -0.0
       },
-      "preseason_rating": 0.21,
+      "preseason_rating": 0.25,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 8
     },
     {
-      "rank": 10,
-      "team": "BAL",
-      "rating": 2.21,
+      "team": "NE",
+      "rating": 2.9,
       "wins": 4,
       "losses": 2,
       "ties": 0,
-      "point_diff": 24,
+      "point_diff": 23,
+      "healthy_rating": 2.9,
+      "starter": "Drake Maye",
       "breakdown": {
-        "offense": 2.01,
-        "defense": -0.31,
-        "special_teams": -0.24,
-        "scoring": 0.75
+        "offense": 0.73,
+        "defense": 0.41,
+        "special_teams": 0.29,
+        "scoring": 1.41,
+        "quarterback": 0.07,
+        "injuries": -0.0
       },
-      "preseason_rating": 1.1,
+      "preseason_rating": 1.63,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
-        "coach_changed": true
-      }
+        "coach_changed": false
+      },
+      "rank": 9
     },
     {
-      "rank": 11,
       "team": "MIN",
-      "rating": 1.76,
+      "rating": 2.66,
       "wins": 5,
       "losses": 0,
       "ties": 0,
       "point_diff": 45,
+      "healthy_rating": 2.66,
+      "starter": "Kyler Murray",
       "breakdown": {
-        "offense": -2.05,
-        "defense": 2.28,
-        "special_teams": 0.11,
-        "scoring": 1.44
+        "offense": -1.77,
+        "defense": 2.46,
+        "special_teams": 0.1,
+        "scoring": 1.75,
+        "quarterback": 0.12,
+        "injuries": -0.0
       },
-      "preseason_rating": -1.34,
+      "preseason_rating": 0.08,
       "offseason": {
         "qb_changed": true,
         "veteran_qb": true,
         "coach_changed": false
-      }
+      },
+      "rank": 10
     },
     {
-      "rank": 12,
       "team": "GB",
-      "rating": 1.32,
+      "rating": 1.41,
       "wins": 4,
       "losses": 2,
       "ties": 0,
       "point_diff": 2,
+      "healthy_rating": 1.41,
+      "starter": "Jordan Love",
       "breakdown": {
-        "offense": 0.62,
-        "defense": 0.25,
-        "special_teams": -0.08,
-        "scoring": 0.54
+        "offense": 0.64,
+        "defense": 0.28,
+        "special_teams": -0.06,
+        "scoring": 0.55,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 2.72,
+      "preseason_rating": 2.78,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 11
     },
     {
-      "rank": 13,
       "team": "HOU",
-      "rating": 1.22,
+      "rating": 1.09,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": 1,
+      "healthy_rating": 1.09,
+      "starter": "C.J. Stroud",
       "breakdown": {
-        "offense": -0.47,
+        "offense": -0.5,
         "defense": 1.28,
-        "special_teams": -0.22,
-        "scoring": 0.63
+        "special_teams": -0.25,
+        "scoring": 0.55,
+        "quarterback": 0.01,
+        "injuries": -0.0
       },
-      "preseason_rating": 1.98,
+      "preseason_rating": 1.81,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 14,
-      "team": "DEN",
-      "rating": 0.98,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": -11,
-      "breakdown": {
-        "offense": -1.01,
-        "defense": 1.27,
-        "special_teams": -0.1,
-        "scoring": 0.81
       },
-      "preseason_rating": 1.74,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
-      }
+      "rank": 12
     },
     {
-      "rank": 15,
       "team": "CIN",
       "rating": 0.96,
       "wins": 3,
       "losses": 2,
       "ties": 0,
       "point_diff": 19,
+      "healthy_rating": 0.96,
+      "starter": "Joe Burrow",
       "breakdown": {
-        "offense": 1.16,
+        "offense": 1.2,
         "defense": -1.0,
         "special_teams": 0.12,
-        "scoring": 0.68
+        "scoring": 0.64,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": -0.58,
+      "preseason_rating": -0.46,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 13
     },
     {
-      "rank": 16,
+      "team": "DEN",
+      "rating": 0.91,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": -11,
+      "healthy_rating": 0.91,
+      "starter": "Bo Nix",
+      "breakdown": {
+        "offense": -1.02,
+        "defense": 1.33,
+        "special_teams": -0.1,
+        "scoring": 0.7,
+        "quarterback": 0.0,
+        "injuries": -0.0
+      },
+      "preseason_rating": 1.59,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": false
+      },
+      "rank": 14
+    },
+    {
       "team": "CAR",
-      "rating": 0.52,
+      "rating": 0.45,
       "wins": 3,
       "losses": 2,
       "ties": 0,
       "point_diff": 23,
+      "healthy_rating": 0.45,
+      "starter": "Bryce Young",
       "breakdown": {
-        "offense": 0.57,
-        "defense": -0.36,
-        "special_teams": 0.11,
-        "scoring": 0.2
+        "offense": 0.56,
+        "defense": -0.37,
+        "special_teams": 0.12,
+        "scoring": 0.14,
+        "quarterback": 0.01,
+        "injuries": -0.0
       },
-      "preseason_rating": -2.26,
+      "preseason_rating": -2.21,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 15
     },
     {
-      "rank": 17,
       "team": "IND",
-      "rating": -0.28,
+      "rating": -0.2,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": -20,
+      "healthy_rating": -0.2,
+      "starter": "Daniel Jones",
       "breakdown": {
-        "offense": 0.41,
+        "offense": 0.47,
         "defense": -0.45,
-        "special_teams": 0.1,
-        "scoring": -0.34
+        "special_teams": 0.08,
+        "scoring": -0.3,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": 2.26,
+      "preseason_rating": 2.23,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 16
     },
     {
-      "rank": 18,
+      "team": "ATL",
+      "rating": -0.57,
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": -11,
+      "healthy_rating": -0.57,
+      "starter": "Michael Penix Jr.",
+      "breakdown": {
+        "offense": -1.56,
+        "defense": 0.38,
+        "special_teams": -0.85,
+        "scoring": -0.81,
+        "quarterback": 2.26,
+        "injuries": -0.0
+      },
+      "preseason_rating": -2.41,
+      "offseason": {
+        "qb_changed": true,
+        "veteran_qb": true,
+        "coach_changed": false
+      },
+      "rank": 17
+    },
+    {
       "team": "PIT",
       "rating": -0.81,
       "wins": 4,
       "losses": 2,
       "ties": 0,
       "point_diff": 9,
+      "healthy_rating": -0.81,
+      "starter": "Aaron Rodgers",
       "breakdown": {
-        "offense": -0.91,
-        "defense": -0.09,
-        "special_teams": 0.18,
-        "scoring": 0.01
+        "offense": -0.88,
+        "defense": -0.08,
+        "special_teams": 0.14,
+        "scoring": -0.0,
+        "quarterback": 0.01,
+        "injuries": -0.0
       },
-      "preseason_rating": -1.7,
+      "preseason_rating": -1.69,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": true
-      }
+      },
+      "rank": 18
     },
     {
-      "rank": 19,
       "team": "DAL",
-      "rating": -1.04,
+      "rating": -0.94,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": -8,
+      "healthy_rating": -0.94,
+      "starter": "Dak Prescott",
       "breakdown": {
-        "offense": 1.61,
-        "defense": -2.11,
-        "special_teams": 0.3,
-        "scoring": -0.85
+        "offense": 1.64,
+        "defense": -2.16,
+        "special_teams": 0.29,
+        "scoring": -0.7,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": -1.46,
+      "preseason_rating": -1.31,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 20,
-      "team": "TB",
-      "rating": -1.26,
-      "wins": 1,
-      "losses": 5,
-      "ties": 0,
-      "point_diff": -19,
-      "breakdown": {
-        "offense": -1.07,
-        "defense": 0.84,
-        "special_teams": -0.31,
-        "scoring": -0.71
       },
-      "preseason_rating": 0.86,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
-      }
+      "rank": 19
     },
     {
-      "rank": 21,
       "team": "PHI",
-      "rating": -1.48,
+      "rating": -1.07,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": -31,
+      "healthy_rating": -1.07,
+      "starter": "Jalen Hurts",
       "breakdown": {
-        "offense": -1.57,
+        "offense": -1.58,
         "defense": 0.56,
-        "special_teams": 0.11,
-        "scoring": -0.58
+        "special_teams": 0.13,
+        "scoring": -0.56,
+        "quarterback": 0.38,
+        "injuries": -0.0
       },
-      "preseason_rating": 2.62,
+      "preseason_rating": 2.54,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
+      },
+      "rank": 20
     },
     {
-      "rank": 22,
       "team": "WAS",
-      "rating": -2.12,
+      "rating": -1.49,
       "wins": 1,
       "losses": 4,
       "ties": 1,
       "point_diff": -40,
+      "healthy_rating": -1.49,
+      "starter": "Jayden Daniels",
       "breakdown": {
-        "offense": 0.31,
-        "defense": -1.27,
-        "special_teams": 0.38,
-        "scoring": -1.53
+        "offense": 0.34,
+        "defense": -1.3,
+        "special_teams": 0.41,
+        "scoring": -1.37,
+        "quarterback": 0.43,
+        "injuries": -0.0
       },
-      "preseason_rating": 0.13,
+      "preseason_rating": 0.29,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 23,
-      "team": "ATL",
-      "rating": -2.17,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -11,
-      "breakdown": {
-        "offense": -1.28,
-        "defense": 0.48,
-        "special_teams": -0.84,
-        "scoring": -0.54
       },
-      "preseason_rating": -1.32,
-      "offseason": {
-        "qb_changed": true,
-        "veteran_qb": true,
-        "coach_changed": false
-      }
+      "rank": 21
     },
     {
-      "rank": 24,
+      "team": "BAL",
+      "rating": -1.53,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 24,
+      "healthy_rating": 2.93,
+      "starter": "Tyler Huntley",
+      "breakdown": {
+        "offense": 2.09,
+        "defense": -0.35,
+        "special_teams": -0.22,
+        "scoring": 0.68,
+        "quarterback": -3.73,
+        "injuries": -0.0
+      },
+      "preseason_rating": 1.12,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": true
+      },
+      "rank": 22
+    },
+    {
       "team": "NYJ",
-      "rating": -3.08,
+      "rating": -3.32,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": -10,
+      "healthy_rating": -3.32,
+      "starter": "Geno Smith",
       "breakdown": {
-        "offense": -1.76,
-        "defense": -0.58,
-        "special_teams": 0.66,
-        "scoring": -1.4
+        "offense": -1.96,
+        "defense": -0.62,
+        "special_teams": 0.68,
+        "scoring": -1.43,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": -4.66,
+      "preseason_rating": -4.99,
       "offseason": {
         "qb_changed": true,
         "veteran_qb": true,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 25,
-      "team": "LV",
-      "rating": -3.43,
-      "wins": 3,
-      "losses": 3,
-      "ties": 0,
-      "point_diff": 0,
-      "breakdown": {
-        "offense": -1.37,
-        "defense": -0.32,
-        "special_teams": -0.3,
-        "scoring": -1.45
       },
-      "preseason_rating": -5.52,
-      "offseason": {
-        "qb_changed": true,
-        "veteran_qb": true,
-        "coach_changed": true
-      }
+      "rank": 23
     },
     {
-      "rank": 26,
       "team": "ARI",
-      "rating": -3.66,
+      "rating": -3.54,
       "wins": 2,
       "losses": 4,
       "ties": 0,
       "point_diff": -52,
+      "healthy_rating": -3.54,
+      "starter": "Jacoby Brissett",
       "breakdown": {
-        "offense": -0.26,
-        "defense": -0.98,
+        "offense": -0.25,
+        "defense": -1.03,
         "special_teams": -0.5,
-        "scoring": -1.92
+        "scoring": -1.77,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": -1.58,
+      "preseason_rating": -1.53,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": false
-      }
-    },
-    {
-      "rank": 27,
-      "team": "NO",
-      "rating": -3.9,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -26,
-      "breakdown": {
-        "offense": -1.36,
-        "defense": -0.66,
-        "special_teams": -0.13,
-        "scoring": -1.74
       },
-      "preseason_rating": -3.05,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
-      }
+      "rank": 24
     },
     {
-      "rank": 28,
-      "team": "NYG",
-      "rating": -3.92,
+      "team": "LV",
+      "rating": -3.67,
       "wins": 3,
-      "losses": 2,
-      "ties": 1,
-      "point_diff": -4,
-      "breakdown": {
-        "offense": -1.14,
-        "defense": -1.05,
-        "special_teams": 0.05,
-        "scoring": -1.79
-      },
-      "preseason_rating": -3.59,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": true
-      }
-    },
-    {
-      "rank": 29,
-      "team": "LAC",
-      "rating": -4.42,
-      "wins": 0,
-      "losses": 6,
+      "losses": 3,
       "ties": 0,
-      "point_diff": -61,
+      "point_diff": 0,
+      "healthy_rating": -3.67,
+      "starter": "Kirk Cousins",
       "breakdown": {
-        "offense": -2.92,
-        "defense": 0.92,
-        "special_teams": -0.55,
-        "scoring": -1.88
+        "offense": -1.6,
+        "defense": -0.34,
+        "special_teams": -0.3,
+        "scoring": -1.5,
+        "quarterback": 0.06,
+        "injuries": -0.0
       },
-      "preseason_rating": -0.03,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
-      }
-    },
-    {
-      "rank": 30,
-      "team": "CLE",
-      "rating": -4.71,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": -16,
-      "breakdown": {
-        "offense": -2.8,
-        "defense": 0.3,
-        "special_teams": -0.37,
-        "scoring": -1.84
-      },
-      "preseason_rating": -5.57,
+      "preseason_rating": -5.88,
       "offseason": {
         "qb_changed": true,
         "veteran_qb": true,
         "coach_changed": true
-      }
+      },
+      "rank": 25
     },
     {
-      "rank": 31,
-      "team": "MIA",
-      "rating": -6.29,
-      "wins": 0,
-      "losses": 5,
+      "team": "NO",
+      "rating": -3.88,
+      "wins": 2,
+      "losses": 4,
       "ties": 0,
-      "point_diff": -62,
+      "point_diff": -26,
+      "healthy_rating": -3.88,
+      "starter": "Tyler Shough",
       "breakdown": {
-        "offense": -2.35,
-        "defense": -1.14,
-        "special_teams": 0.04,
-        "scoring": -2.84
+        "offense": -1.41,
+        "defense": -0.67,
+        "special_teams": -0.12,
+        "scoring": -1.68,
+        "quarterback": 0.0,
+        "injuries": -0.0
       },
-      "preseason_rating": -3.18,
+      "preseason_rating": -3.12,
       "offseason": {
-        "qb_changed": true,
+        "qb_changed": false,
         "veteran_qb": false,
-        "coach_changed": true
-      }
+        "coach_changed": false
+      },
+      "rank": 26
     },
     {
-      "rank": 32,
-      "team": "TEN",
-      "rating": -7.32,
-      "wins": 1,
-      "losses": 5,
-      "ties": 0,
-      "point_diff": -45,
+      "team": "NYG",
+      "rating": -4.12,
+      "wins": 3,
+      "losses": 2,
+      "ties": 1,
+      "point_diff": -4,
+      "healthy_rating": -4.12,
+      "starter": "Jameis Winston",
       "breakdown": {
-        "offense": -3.01,
-        "defense": -1.04,
-        "special_teams": -0.14,
-        "scoring": -3.13
+        "offense": -1.17,
+        "defense": -1.05,
+        "special_teams": 0.08,
+        "scoring": -1.58,
+        "quarterback": -0.4,
+        "injuries": -0.0
       },
-      "preseason_rating": -5.08,
+      "preseason_rating": -3.34,
       "offseason": {
         "qb_changed": false,
         "veteran_qb": false,
         "coach_changed": true
-      }
+      },
+      "rank": 27
+    },
+    {
+      "team": "TB",
+      "rating": -4.26,
+      "wins": 1,
+      "losses": 5,
+      "ties": 0,
+      "point_diff": -19,
+      "healthy_rating": -4.26,
+      "starter": "Jalon Daniels",
+      "breakdown": {
+        "offense": -1.02,
+        "defense": 0.86,
+        "special_teams": -0.35,
+        "scoring": -0.62,
+        "quarterback": -3.14,
+        "injuries": -0.0
+      },
+      "preseason_rating": 0.82,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": false
+      },
+      "rank": 28
+    },
+    {
+      "team": "LAC",
+      "rating": -4.37,
+      "wins": 0,
+      "losses": 6,
+      "ties": 0,
+      "point_diff": -61,
+      "healthy_rating": -4.37,
+      "starter": "Justin Herbert",
+      "breakdown": {
+        "offense": -2.96,
+        "defense": 0.95,
+        "special_teams": -0.57,
+        "scoring": -1.8,
+        "quarterback": 0.01,
+        "injuries": -0.0
+      },
+      "preseason_rating": -0.16,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": false
+      },
+      "rank": 29
+    },
+    {
+      "team": "CLE",
+      "rating": -4.59,
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": -16,
+      "healthy_rating": -4.59,
+      "starter": "Deshaun Watson",
+      "breakdown": {
+        "offense": -2.96,
+        "defense": 0.35,
+        "special_teams": -0.34,
+        "scoring": -1.65,
+        "quarterback": 0.0,
+        "injuries": -0.0
+      },
+      "preseason_rating": -5.31,
+      "offseason": {
+        "qb_changed": true,
+        "veteran_qb": true,
+        "coach_changed": true
+      },
+      "rank": 30
+    },
+    {
+      "team": "MIA",
+      "rating": -6.19,
+      "wins": 0,
+      "losses": 5,
+      "ties": 0,
+      "point_diff": -62,
+      "healthy_rating": -6.19,
+      "starter": "Malik Willis",
+      "breakdown": {
+        "offense": -2.39,
+        "defense": -1.18,
+        "special_teams": 0.01,
+        "scoring": -2.64,
+        "quarterback": 0.0,
+        "injuries": -0.0
+      },
+      "preseason_rating": -3.25,
+      "offseason": {
+        "qb_changed": true,
+        "veteran_qb": false,
+        "coach_changed": true
+      },
+      "rank": 31
+    },
+    {
+      "team": "TEN",
+      "rating": -7.16,
+      "wins": 1,
+      "losses": 5,
+      "ties": 0,
+      "point_diff": -45,
+      "healthy_rating": -7.16,
+      "starter": "Cam Ward",
+      "breakdown": {
+        "offense": -3.02,
+        "defense": -1.07,
+        "special_teams": -0.18,
+        "scoring": -2.89,
+        "quarterback": 0.0,
+        "injuries": -0.0
+      },
+      "preseason_rating": -4.94,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": true
+      },
+      "rank": 32
     }
   ],
   "next_week": {
@@ -685,7 +813,7 @@
         "home": "CHI",
         "away": "NE",
         "neutral": false,
-        "model_line": 1.8,
+        "model_line": 2.6,
         "market_line": 3.0
       },
       {
@@ -699,7 +827,7 @@
         "home": "BAL",
         "away": "CIN",
         "neutral": false,
-        "model_line": 3.5,
+        "model_line": -0.3,
         "market_line": 3.0
       },
       {
@@ -713,70 +841,70 @@
         "home": "MIN",
         "away": "IND",
         "neutral": false,
-        "model_line": 4.2,
+        "model_line": 5.1,
         "market_line": 6.5
       },
       {
         "home": "NYJ",
         "away": "MIA",
         "neutral": false,
-        "model_line": 5.4,
+        "model_line": 5.1,
         "market_line": 4.5
       },
       {
         "home": "HOU",
         "away": "NYG",
         "neutral": false,
-        "model_line": 7.3,
+        "model_line": 7.4,
         "market_line": 10.0
       },
       {
         "home": "ATL",
         "away": "SF",
         "neutral": false,
-        "model_line": -6.5,
+        "model_line": -4.8,
         "market_line": -3.0
       },
       {
         "home": "CAR",
         "away": "TB",
         "neutral": false,
-        "model_line": 4.0,
+        "model_line": 6.9,
         "market_line": 3.5
       },
       {
         "home": "ARI",
         "away": "DEN",
         "neutral": false,
-        "model_line": -2.4,
+        "model_line": -2.2,
         "market_line": -4.5
       },
       {
         "home": "DET",
         "away": "GB",
         "neutral": false,
-        "model_line": 5.1,
+        "model_line": 4.9,
         "market_line": 3.0
       },
       {
         "home": "LV",
         "away": "LA",
         "neutral": false,
-        "model_line": -5.4,
+        "model_line": -5.7,
         "market_line": -4.5
       },
       {
         "home": "SEA",
         "away": "KC",
         "neutral": false,
-        "model_line": 3.3,
+        "model_line": 1.4,
         "market_line": 2.5
       },
       {
         "home": "PHI",
         "away": "DAL",
         "neutral": false,
-        "model_line": 1.8,
+        "model_line": 2.1,
         "market_line": -4.5
       }
     ]

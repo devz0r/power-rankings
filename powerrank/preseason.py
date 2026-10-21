@@ -4,7 +4,8 @@ For every model feature, a regression projects this season's full-season value
 from information available before week 1:
   - the team's value last season and two seasons ago
   - whether the week-1 starting QB differs from last season's main starter,
-    and whether the new one is a veteran (16+ career starts)
+    whether the new one is a veteran (16+ career starts), and how much
+    better or worse his rating is (see powerrank.models.qb)
   - whether the head coach changed
   - draft capital from this year's draft
 The score-margin projection also gets last season's efficiency, which predicts
@@ -30,6 +31,7 @@ import polars as pl
 from powerrank import backtest
 from powerrank.data import CACHE_DIR, TEAM_ALIASES, Game
 from powerrank.models.epa import FEATURES, GAME_COMPONENTS, PLAY_COMPONENTS, EpaModel, TeamGameStats
+from powerrank.models.qb import QbTracker
 
 VETERAN_STARTS = 16
 # Draft picks from Pro Football Reference use their own abbreviations.
@@ -38,7 +40,7 @@ DRAFT_ALIASES = {
     "SDG": "LAC", "SFO": "SF", "TAM": "TB", **TEAM_ALIASES,
 }
 EPA_FOR_MARGIN = ("off_pass", "def_pass", "off_rush", "def_rush")
-OFFSEASON = ("qb_changed", "veteran_qb", "coach_changed", "draft")
+OFFSEASON = ("qb_changed", "veteran_qb", "qb_delta", "coach_changed", "draft")
 
 
 def pick_value(pick: int) -> float:
@@ -62,7 +64,11 @@ def draft_values(refresh: bool = False) -> dict[tuple[int, str], float]:
     return dict(totals)
 
 
-def offseason_info(games: list[Game], drafts: dict[tuple[int, str], float]) -> dict[tuple[int, str], dict[str, float]]:
+def offseason_info(
+    games: list[Game],
+    drafts: dict[tuple[int, str], float],
+    qb_deltas: dict[tuple[int, str], float] | None = None,
+) -> dict[tuple[int, str], dict[str, float]]:
     """QB, coach and draft changes for each (season, team), known before its first game."""
     starters: dict[tuple[int, str], list[str]] = defaultdict(list)
     coaches: dict[tuple[int, str], list[str]] = defaultdict(list)
@@ -95,6 +101,7 @@ def offseason_info(games: list[Game], drafts: dict[tuple[int, str], float]) -> d
         info[(season, team)] = {
             "qb_changed": qb_changed,
             "veteran_qb": veteran,
+            "qb_delta": (qb_deltas or {}).get((season, team), 0.0),
             "coach_changed": coach_changed,
             "draft": drafts.get((season, team), 0.0),
         }
@@ -105,6 +112,38 @@ def offseason_info(games: list[Game], drafts: dict[tuple[int, str], float]) -> d
         for k in keys:
             info[k]["draft"] -= mean
     return info
+
+
+def qb_deltas(
+    games: list[Game], qbs: QbTracker, stats: TeamGameStats, estimates: SeasonEstimates
+) -> dict[tuple[int, str], float]:
+    """Rating of each team's week-1 starter minus last season's main starter,
+    using QB ratings as they stood before the season."""
+    deltas = {}
+    played = [g for g in games if g.played]
+    seasons = sorted({g.season for g in games})
+    for season in seasons:
+        season_games = [g for g in games if g.season == season]
+        last = Counter(
+            (team, qb)
+            for g in played
+            if g.season == season - 1
+            for team, qb in ((g.home, g.home_qb), (g.away, g.away_qb))
+            if qb
+        )
+        week1: dict[str, str] = {}
+        for g in season_games:
+            for team, qb in ((g.home, g.home_qb), (g.away, g.away_qb)):
+                week1.setdefault(team, qb)
+        for team, qb in week1.items():
+            starts = {q: n for (t, q), n in last.items() if t == team}
+            main = max(starts, key=starts.get) if starts else None
+            if qb and main and qb != main:
+                deltas[(season, team)] = qbs.rating(qb) - qbs.rating(main)
+        allowed = {t: v["def_pass"] for t, v in estimates.values.get(season, {}).items()}
+        for _season, _week, week_games in backtest.group_weeks([g for g in played if g.season == season]):
+            qbs.update_week(week_games, allowed, stats.fumble_epa(season))
+    return deltas
 
 
 @dataclass
@@ -256,10 +295,17 @@ class Preseason:
         }
 
 
-def build(stats: TeamGameStats, games: list[Game], seasons: range | None = None, saved: dict | None = None) -> Preseason:
-    """Fit on `seasons`, or rebuild from saved coefficients."""
+def build(
+    stats: TeamGameStats,
+    games: list[Game],
+    qbs: QbTracker,
+    seasons: range | None = None,
+    saved: dict | None = None,
+) -> Preseason:
+    """Fit on `seasons`, or rebuild from saved coefficients. `qbs` should be a
+    fresh tracker; it is run through history to rate QBs before each season."""
     estimates = season_estimates(stats, games)
-    offseason = offseason_info(games, draft_values())
+    offseason = offseason_info(games, draft_values(), qb_deltas(games, qbs, stats, estimates))
     if saved is not None:
         return Preseason(saved["coefficients"], saved["strengths"], estimates, offseason)
     return Preseason.fit(estimates, offseason, seasons)

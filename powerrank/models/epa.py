@@ -50,6 +50,11 @@ FEATURES = (
     "off_pass", "def_pass", "off_rush", "def_rush", "off_int", "def_int",
     "st_kick", "st_return", "margin",
 )
+# Weights also cover game-specific adjustments, which depend on who plays
+# rather than being team features: the QB starting, and the share of the
+# usual lineup ruled out (see powerrank.injuries).
+GAME_ADJUSTMENTS = ("qb", "injuries")
+WEIGHT_NAMES = (*FEATURES, *GAME_ADJUSTMENTS)
 
 # Which features make up each unit when a rating is broken down for display.
 UNITS = {
@@ -108,6 +113,8 @@ class EpaModel(RatingModel):
         half_life: float | None = None,
         neutralize_fumbles: bool | None = None,
         preseason=None,
+        qbs=None,
+        injuries: dict | None = None,
     ):
         super().__init__()
         saved = load_weights() if WEIGHTS_PATH.exists() else {"params": {}, "weights": {}}
@@ -135,6 +142,15 @@ class EpaModel(RatingModel):
         # `prior_plays`, `prior_scale` and `st_prior_games`.
         self.preseason = preseason
         self._strength: dict[str, float] = {}
+        # A powerrank.models.qb.QbTracker. When set, predictions adjust for
+        # who starts at quarterback.
+        self.qbs = qbs
+        # Plays by each QB for each team this season, and the week-1 starter,
+        # who carries the preseason prior's weight in the team's QB mix.
+        self._team_qbs: dict[str, dict[str, float]] = {}
+        self._qb_prior: dict[str, tuple[str, float]] = {}
+        # (season, week, team) -> recent snap share of players ruled out.
+        self.injuries = injuries
         self.margin = RidgeMarginModel()
         self.hfa = self.margin.hfa
         self._features: dict[str, dict[str, float]] = {}
@@ -156,6 +172,8 @@ class EpaModel(RatingModel):
         self._obs = {c: [] for c in PLAY_COMPONENTS}
         self._week_index = 0
         self._st = {t: {c: [] for c in GAME_COMPONENTS} for t in self._teams}
+        self._team_qbs = {t: {} for t in self._teams}
+        self._qb_prior = {}
         if self.preseason is not None:
             projected = self.preseason.project(season, self._teams)
             self._prior = projected
@@ -186,6 +204,8 @@ class EpaModel(RatingModel):
         self._fit()
 
     def update_week(self, games: list[Game]) -> None:
+        if self.qbs is not None:
+            self._update_qbs(games)
         self.margin.update_week(games)
         for g in games:
             rows = self.stats.by_game.get(g.game_id)
@@ -197,7 +217,69 @@ class EpaModel(RatingModel):
         self._fit()
 
     def ratings(self) -> dict[str, float]:
+        """Strength with the mix of QBs the team has actually played."""
         return {t: sum(self.weights.get(f, 0.0) * v for f, v in fs.items()) for t, fs in self._features.items()}
+
+    def predict(self, game: Game) -> float:
+        adjustments = self.game_adjustments(game)
+        return super().predict(game) + sum(self.weights.get(k, 0.0) * v for k, v in adjustments.items())
+
+    def game_adjustments(self, game: Game) -> dict[str, float]:
+        """Home minus away for each game-specific adjustment."""
+        return {
+            "qb": self.qb_diff(game),
+            "injuries": self.missing(game.season, game.week, game.home)
+            - self.missing(game.season, game.week, game.away),
+        }
+
+    def missing(self, season: int, week: int, team: str) -> float:
+        return self.injuries.get((season, week, team), 0.0) if self.injuries else 0.0
+
+    def injury_cost(self, season: int, week: int, team: str) -> float:
+        """Points this team loses to players ruled out (negative is worse)."""
+        return self.weights.get("injuries", 0.0) * self.missing(season, week, team)
+
+    # --- Quarterbacks -------------------------------------------------------------
+
+    def qb_adjustment(self, team: str, qb: str | None) -> float:
+        """EPA per play this QB adds over the team's usual QB mix (0 if unknown)."""
+        mix = dict(self._team_qbs.get(team, {}))
+        if team in self._qb_prior:
+            prior_qb, weight = self._qb_prior[team]
+            mix[prior_qb] = mix.get(prior_qb, 0.0) + weight
+        if self.qbs is None or not qb or not mix:
+            return 0.0
+        total = sum(mix.values())
+        baseline = sum(plays * self.qbs.rating(q) for q, plays in mix.items()) / total
+        return self.qbs.rating(qb) - baseline
+
+    def qb_diff(self, game: Game) -> float:
+        return self.qb_adjustment(game.home, game.home_qb) - self.qb_adjustment(game.away, game.away_qb)
+
+    def rating_with(self, team: str, qb: str | None) -> float:
+        """Team strength in points with this QB starting."""
+        return self.ratings()[team] + self.weights.get("qb", 0.0) * self.qb_adjustment(team, qb)
+
+    def primary_qb(self, team: str) -> str | None:
+        """The QB with the most plays for this team this season."""
+        mix = self._team_qbs.get(team)
+        if mix:
+            return max(mix, key=mix.get)
+        return self._qb_prior.get(team, (None, 0.0))[0]
+
+    def _update_qbs(self, games: list[Game]) -> None:
+        # The preseason projection assumed the week-1 starter, so he carries
+        # the prior's weight in the team's QB mix.
+        for g in games:
+            for team, qb in ((g.home, g.home_qb), (g.away, g.away_qb)):
+                if qb and team in self._team_qbs and team not in self._qb_prior:
+                    self._qb_prior[team] = (qb, self._strength.get("off_pass", self.prior_plays))
+        allowed = {t: fs["def_pass"] for t, fs in self._features.items()}
+        rows = self.qbs.update_week(games, allowed, self._fumble_epa, self.neutralize_fumbles)
+        for r in rows:
+            mix = self._team_qbs.get(r["team"])
+            if mix is not None:
+                mix[r["qb"]] = mix.get(r["qb"], 0.0) + r["plays"]
 
     # --- Breakdown --------------------------------------------------------------
 
@@ -326,7 +408,8 @@ def fit_weights(model: EpaModel, games: list[Game], seasons: range) -> tuple[dic
         if game.season not in seasons:
             return
         fs = model._features
-        x = np.array([fs[game.home][f] - fs[game.away][f] for f in FEATURES])
+        adjustments = model.game_adjustments(game)
+        x = np.array([*(fs[game.home][f] - fs[game.away][f] for f in FEATURES), *(adjustments[k] for k in GAME_ADJUSTMENTS)])
         rows.append((game.season, x, game.home_margin - model.home_field(game)))
 
     backtest.run(model, games, through_season=seasons.stop - 1, observe=observe)
@@ -340,13 +423,14 @@ def solve_weights(rows: list[tuple[int, np.ndarray, float]]) -> dict[str, float]
     composite and the score margin."""
     x = np.array([r[1] for r in rows])
     y = np.array([r[2] for r in rows])
-    epa_cols = [i for i, f in enumerate(FEATURES) if f != "margin"]
-    margin_col = FEATURES.index("margin")
+    blend_names = ("margin", *GAME_ADJUSTMENTS)
+    epa_cols = [i for i, f in enumerate(WEIGHT_NAMES) if f not in blend_names]
+    blend_cols = [WEIGHT_NAMES.index(f) for f in blend_names]
     stage1, *_ = np.linalg.lstsq(x[:, epa_cols], y, rcond=None)
-    blend, *_ = np.linalg.lstsq(np.column_stack([x[:, epa_cols] @ stage1, x[:, margin_col]]), y, rcond=None)
-    weights = dict(zip([FEATURES[i] for i in epa_cols], (stage1 * blend[0]).tolist()))
-    weights["margin"] = float(blend[1])
-    return {f: weights[f] for f in FEATURES}
+    blend, *_ = np.linalg.lstsq(np.column_stack([x[:, epa_cols] @ stage1, x[:, blend_cols]]), y, rcond=None)
+    weights = dict(zip([WEIGHT_NAMES[i] for i in epa_cols], (stage1 * blend[0]).tolist()))
+    weights.update(zip(blend_names, blend[1:].tolist()))
+    return {f: weights[f] for f in WEIGHT_NAMES}
 
 
 def cross_validated_mae(rows: list[tuple[int, np.ndarray, float]]) -> float:
@@ -355,6 +439,6 @@ def cross_validated_mae(rows: list[tuple[int, np.ndarray, float]]) -> float:
     for season in sorted({r[0] for r in rows}):
         train = [r for r in rows if r[0] != season]
         test = [r for r in rows if r[0] == season]
-        beta = np.array([solve_weights(train)[f] for f in FEATURES])
+        beta = np.array([solve_weights(train)[f] for f in WEIGHT_NAMES])
         errors.extend(abs(float(r[1] @ beta) - r[2]) for r in test)
     return float(np.mean(errors))

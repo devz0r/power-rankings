@@ -35,6 +35,8 @@ class Game:
     away_qb: str | None = None
     home_coach: str | None = None
     away_coach: str | None = None
+    home_qb_name: str | None = None
+    away_qb_name: str | None = None
 
     @property
     def played(self) -> bool:
@@ -85,6 +87,8 @@ def to_games(df: pl.DataFrame) -> list[Game]:
             away_qb=r.get("away_qb_id"),
             home_coach=r.get("home_coach"),
             away_coach=r.get("away_coach"),
+            home_qb_name=r.get("home_qb_name"),
+            away_qb_name=r.get("away_qb_name"),
         )
         for r in df.iter_rows(named=True)
     ]
