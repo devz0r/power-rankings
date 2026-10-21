@@ -13,8 +13,10 @@ plus `margin`, the score-based ridge rating, in points.
 Each per-play component is a weighted ridge regression over this season's
 games, solved for every offense and defense at once:
     play EPA = league mean + home edge + offense[o] + defense[d]
-with each team pulled toward a fraction of last season's estimate. That prior
-is worth `prior_plays` plays, so it fades as the season fills in.
+with each team pulled toward its preseason projection (powerrank.preseason),
+held with a strength based on how accurate that projection has been
+historically, so it fades as the season fills in. Without a projection, the
+prior is a fraction of last season's estimate worth `prior_plays` plays.
 
 Luck and garbage time:
   - Fumbles are charged at the league-average EPA of a fumble, so who
@@ -105,6 +107,7 @@ class EpaModel(RatingModel):
         prior_scale: dict[str, float] | None = None,
         half_life: float | None = None,
         neutralize_fumbles: bool | None = None,
+        preseason=None,
     ):
         super().__init__()
         saved = load_weights() if WEIGHTS_PATH.exists() else {"params": {}, "weights": {}}
@@ -127,6 +130,11 @@ class EpaModel(RatingModel):
 
             stats = TeamGameStats(load_team_games(range(FIRST_SEASON, date.today().year + 1)))
         self.stats = stats
+        # A powerrank.preseason.Preseason. When set, it supplies each team's
+        # starting point and how strongly to hold it, replacing `carryover`,
+        # `prior_plays`, `prior_scale` and `st_prior_games`.
+        self.preseason = preseason
+        self._strength: dict[str, float] = {}
         self.margin = RidgeMarginModel()
         self.hfa = self.margin.hfa
         self._features: dict[str, dict[str, float]] = {}
@@ -145,6 +153,17 @@ class EpaModel(RatingModel):
         self._season = season
         self._fumble_epa = self.stats.fumble_epa(season)
         self._teams = sorted(teams)
+        self._obs = {c: [] for c in PLAY_COMPONENTS}
+        self._week_index = 0
+        self._st = {t: {c: [] for c in GAME_COMPONENTS} for t in self._teams}
+        if self.preseason is not None:
+            projected = self.preseason.project(season, self._teams)
+            self._prior = projected
+            self._strength = dict(self.preseason.strengths)
+            self.margin.set_prior({t: projected[t]["margin"] for t in self._teams}, self._strength["margin"])
+            self._fit()
+            return
+
         last = self._features
         prior = {
             t: {f: self.carryover * last.get(t, {}).get(f, 0.0) for f in FEATURES if f != "margin"}
@@ -157,9 +176,13 @@ class EpaModel(RatingModel):
             for t in self._teams:
                 prior[t][f] -= mean
         self._prior = prior
-        self._obs = {c: [] for c in PLAY_COMPONENTS}
-        self._week_index = 0
-        self._st = {t: {c: [] for c in GAME_COMPONENTS} for t in self._teams}
+        self._strength = {}
+        for comp in PLAY_COMPONENTS:
+            for side in ("off", "def"):
+                f = f"{side}_{comp}"
+                self._strength[f] = self.prior_plays * self.prior_scale.get(f, 1.0)
+        for comp in GAME_COMPONENTS:
+            self._strength[comp] = self.st_prior_games
         self._fit()
 
     def update_week(self, games: list[Game]) -> None:
@@ -180,6 +203,11 @@ class EpaModel(RatingModel):
 
     def features(self) -> dict[str, dict[str, float]]:
         return {t: dict(fs) for t, fs in self._features.items()}
+
+    def preseason_rating(self, team: str) -> float:
+        """The rating this team started the season with, in points."""
+        prior = dict(self._prior[team], margin=self.margin._prior[team])
+        return sum(self.weights.get(f, 0.0) * prior.get(f, 0.0) for f in FEATURES)
 
     def breakdown(self, team: str) -> dict[str, float]:
         """A team's rating split into units, in points."""
@@ -236,8 +264,8 @@ class EpaModel(RatingModel):
             k = 2 + 2 * n
             penalty = np.empty(k)
             penalty[:2] = 1e-6
-            penalty[2 : 2 + n] = self.prior_plays * self.prior_scale.get(f"off_{comp}", 1.0)
-            penalty[2 + n :] = self.prior_plays * self.prior_scale.get(f"def_{comp}", 1.0)
+            penalty[2 : 2 + n] = self._strength[f"off_{comp}"]
+            penalty[2 + n :] = self._strength[f"def_{comp}"]
             target = np.concatenate([[0.0, 0.0], prior_off, prior_def])
             a = np.diag(penalty)
             b = penalty * target
@@ -262,9 +290,10 @@ class EpaModel(RatingModel):
                 features[t][f"def_{comp}"] = float(dfn[index[t]])
 
         for comp in GAME_COMPONENTS:
+            strength = self._strength[comp]
             values = {
-                t: (sum(self._st[t][comp]) + self.st_prior_games * self._prior[t][comp])
-                / (len(self._st[t][comp]) + self.st_prior_games)
+                t: (sum(self._st[t][comp]) + strength * self._prior[t][comp])
+                / (len(self._st[t][comp]) + strength)
                 for t in teams
             }
             mean = sum(values.values()) / n

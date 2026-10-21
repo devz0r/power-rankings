@@ -30,6 +30,11 @@ class Game:
     away_score: int | None
     # nflverse convention: positive means the home team is favored by that many points.
     spread_line: float | None
+    # Starting QBs (gsis ids) and head coaches, known before kickoff.
+    home_qb: str | None = None
+    away_qb: str | None = None
+    home_coach: str | None = None
+    away_coach: str | None = None
 
     @property
     def played(self) -> bool:
@@ -76,6 +81,10 @@ def to_games(df: pl.DataFrame) -> list[Game]:
             home_score=r["home_score"],
             away_score=r["away_score"],
             spread_line=r["spread_line"],
+            home_qb=r.get("home_qb_id"),
+            away_qb=r.get("away_qb_id"),
+            home_coach=r.get("home_coach"),
+            away_coach=r.get("away_coach"),
         )
         for r in df.iter_rows(named=True)
     ]

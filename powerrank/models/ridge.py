@@ -46,6 +46,13 @@ class RidgeMarginModel(RatingModel):
         self._game_weeks = []
         self._week_index = 0
 
+    def set_prior(self, prior: dict[str, float], prior_games: float) -> None:
+        """Replace the start-of-season prior (call right after start_season)."""
+        mean = sum(prior.values()) / len(prior)
+        self._prior = {t: prior[t] - mean for t in self._prior}
+        self._ratings = dict(self._prior)
+        self.prior_games = prior_games
+
     def update_week(self, games: list[Game]) -> None:
         for g in games:
             self.hfa.update(g)

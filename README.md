@@ -38,7 +38,7 @@ by hand from the Actions tab.
 
 | model   | what it is |
 |---------|------------|
-| `epa`   | **Default.** Opponent-adjusted play-by-play efficiency (pass, rush, interceptions, special teams) blended with score margin. Gives each team an offense / defense / special teams / scoring breakdown. |
+| `epa`   | **Default.** Opponent-adjusted play-by-play efficiency (pass, rush, interceptions, special teams) blended with score margin, starting each season from a preseason projection. Gives each team an offense / defense / special teams / scoring breakdown. |
 | `ridge` | Baseline: opponent-adjusted point differential, with last season as a prior |
 | `elo`   | Baseline: FiveThirtyEight-style Elo, in points |
 
@@ -52,7 +52,7 @@ never saw while being tuned.
 |---|---|---|
 | elo | 10.89 | 10.19 |
 | ridge | 10.83 | 10.17 |
-| epa | 10.82 | 10.17 |
+| epa | 10.82 | 10.18 |
 | closing line | 10.71 | 9.78 |
 
 What the tuning found:
@@ -64,6 +64,19 @@ What the tuning found:
   shrinkage for defense and rushing, and weighting recent games more all moved
   the error by less than 0.01 points, below the noise. Recency weighting made
   it worse.
+- Preseason projections (last two seasons, QB change and whether the new QB
+  is a veteran, coach change, draft capital) beat simple carryover for teams
+  that changed quarterback (5.26 vs 5.44 RMSE on full-season strength,
+  2016-2025) and tie it overall. A new QB cuts the carryover of last
+  season's passing offense by more than half; a new coach does the same for
+  the run game. Prior strengths come from empirical Bayes (play-to-play noise
+  divided by projection error), and cross-validation confirms they are
+  right: halving or doubling them is worse. Overall game accuracy is
+  unchanged: public offseason information explains only ~20% of how good a
+  team turns out to be.
+- Preseason market win totals would be the biggest single improvement for
+  the first month, but are left out on purpose so the model stays
+  independent of Vegas.
 - The remaining ~0.4 point gap to the closing line is mostly information the
   market has and this model doesn't yet: injuries, quarterback changes, and
   offseason moves (plan steps 3 and 4).

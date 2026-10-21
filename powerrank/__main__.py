@@ -8,13 +8,23 @@ import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from powerrank import backtest
+from powerrank import backtest, preseason
 from powerrank.data import Game, load_games
 from powerrank.models import MODELS, RatingModel
-from powerrank.models.epa import WEIGHTS_PATH, EpaModel, TeamGameStats, cross_validated_mae, fit_weights
+from powerrank.models.epa import (
+    WEIGHTS_PATH,
+    EpaModel,
+    TeamGameStats,
+    cross_validated_mae,
+    fit_weights,
+    load_weights,
+)
 from powerrank.pbp import FIRST_SEASON, load_team_games
 
 DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "output" / "rankings.json"
+
+# Preseason projections need two earlier seasons of play-by-play.
+PRESEASON_FIRST_SEASON = FIRST_SEASON + 2
 
 # A game this many days past its date with no score is treated as cancelled,
 # so it can't hold a week open forever.
@@ -32,14 +42,18 @@ def load_stats(games: list[Game], refresh: bool) -> TeamGameStats:
 
 
 def build_model(name: str, games: list[Game], stats: TeamGameStats | None, fit_seasons: range | None = None) -> RatingModel:
-    """A fresh model. For epa, `fit_seasons` refits its weights on just those
-    seasons so a backtest never scores games the weights were fitted on."""
+    """A fresh model. For epa, `fit_seasons` refits its preseason projections
+    and weights on just those seasons (and earlier), so a backtest never scores
+    games anything was fitted on. Otherwise epa uses the saved fit."""
     if name != "epa":
         return MODELS[name]()
     if fit_seasons is None:
-        return EpaModel(stats=stats)
-    weights, _ = fit_weights(EpaModel(stats=stats, weights={}), games, fit_seasons)
-    return EpaModel(stats=stats, weights=weights)
+        saved = load_weights()
+        pre = preseason.build(stats, games, saved=saved["preseason"])
+        return EpaModel(stats=stats, preseason=pre)
+    pre = preseason.build(stats, games, seasons=range(PRESEASON_FIRST_SEASON, fit_seasons.stop))
+    weights, _ = fit_weights(EpaModel(stats=stats, weights={}, preseason=pre), games, fit_seasons)
+    return EpaModel(stats=stats, weights=weights, preseason=pre)
 
 
 def cmd_backtest(args: argparse.Namespace, games: list[Game]) -> None:
@@ -59,7 +73,9 @@ def cmd_backtest(args: argparse.Namespace, games: list[Game]) -> None:
 
 def cmd_fit(args: argparse.Namespace, games: list[Game]) -> None:
     seasons = args.seasons or range(2006, max(g.season for g in games if g.played))
-    model = EpaModel(stats=load_stats(games, args.refresh), weights={})
+    stats = load_stats(games, args.refresh)
+    pre = preseason.build(stats, games, seasons=range(PRESEASON_FIRST_SEASON, seasons.stop))
+    model = EpaModel(stats=stats, weights={}, preseason=pre)
     weights, rows = fit_weights(model, games, seasons)
     params = {
         "prior_plays": model.prior_plays,
@@ -78,6 +94,7 @@ def cmd_fit(args: argparse.Namespace, games: list[Game]) -> None:
                 "cross_validated_mae": round(cross_validated_mae(rows), 3),
                 "params": params,
                 "weights": {f: round(w, 4) for f, w in weights.items()},
+                "preseason": pre.to_json(),
             },
             indent=2,
         )
@@ -143,6 +160,10 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
         entry = {"rank": i + 1, "team": team, "rating": round(rating, 2), **record(team, played)}
         if isinstance(model, EpaModel):
             entry["breakdown"] = {unit: round(v, 2) for unit, v in model.breakdown(team).items()}
+            entry["preseason_rating"] = round(model.preseason_rating(team), 2)
+            if model.preseason is not None:
+                info = model.preseason.offseason.get((season, team), {})
+                entry["offseason"] = {k: bool(info.get(k)) for k in ("qb_changed", "veteran_qb", "coach_changed")}
         teams.append(entry)
     matchups = [
         {
