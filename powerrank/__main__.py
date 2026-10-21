@@ -6,12 +6,12 @@ import argparse
 import json
 import sys
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, timedelta
 from pathlib import Path
 
 import polars as pl
 
-from powerrank import backtest, injuries, preseason
+from powerrank import backtest, injuries, preseason, report, uncertainty
 from powerrank.data import Game, load_games
 from powerrank.models import MODELS, RatingModel
 from powerrank.models.epa import (
@@ -24,6 +24,7 @@ from powerrank.models.epa import (
 )
 from powerrank.models.qb import QbTracker
 from powerrank.pbp import FIRST_SEASON, load_qb_games, load_team_games
+from powerrank.teams import load_teams
 
 DEFAULT_OUTPUT = Path(__file__).resolve().parent.parent / "output" / "rankings.json"
 
@@ -111,6 +112,7 @@ def cmd_fit(args: argparse.Namespace, games: list[Game]) -> None:
     seasons = args.seasons or range(2006, max(g.season for g in games if g.played))
     model, weights, rows = build_epa(games, load_inputs(games, args.refresh), fit_seasons=seasons)
     pre = model.preseason
+    calibration = uncertainty.calibrate(model, games, seasons)
     params = {
         "prior_plays": model.prior_plays,
         "prior_scale": model.prior_scale,
@@ -134,6 +136,7 @@ def cmd_fit(args: argparse.Namespace, games: list[Game]) -> None:
                 "params": params,
                 "weights": {f: round(w, 4) for f, w in weights.items()},
                 "preseason": pre.to_json(),
+                "uncertainty": calibration,
             },
             indent=2,
         )
@@ -158,21 +161,6 @@ def completed_through(season_games: list[Game], today: date) -> int | None:
     return last
 
 
-def record(team: str, games: list[Game]) -> dict:
-    wins = losses = ties = points_for = points_against = 0
-    for g in games:
-        if team not in (g.home, g.away):
-            continue
-        margin = g.home_margin if g.home == team else -g.home_margin
-        wins += margin > 0
-        losses += margin < 0
-        ties += margin == 0
-        scored = g.home_score if g.home == team else g.away_score
-        points_for += scored
-        points_against += scored - margin
-    return {"wins": wins, "losses": losses, "ties": ties, "point_diff": points_for - points_against}
-
-
 def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
     season = args.season or max(g.season for g in games if g.played)
     season_games = [g for g in games if g.season == season]
@@ -180,115 +168,33 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
     if through is None:
         sys.exit(f"no completed weeks in {season} yet")
 
-    # Only full weeks count, so a Thursday game never sneaks into a ranking.
-    history = [g for g in games if g.season < season or (g.season == season and g.week <= through)]
-    inputs = load_inputs(games, args.refresh) if args.model == "epa" else None
-    model = build_model(args.model, games, inputs)
-    backtest.run(model, history)
+    model = build_model("epa", games, load_inputs(games, args.refresh))
+    saved = load_weights()
+    data = report.build(model, games, season, through, load_teams(refresh=args.refresh), saved["uncertainty"])
+    missing = [gid for gid in model.missing_games if gid.startswith(f"{season}_")]
+    if missing:
+        sys.exit(f"play-by-play not published yet for: {', '.join(missing)}")
 
-    played = [g for g in season_games if g.week <= through and g.played]
-    if isinstance(model, EpaModel):
-        missing = [gid for gid in model.missing_games if gid.startswith(f"{season}_")]
-        if missing:
-            sys.exit(f"play-by-play not published yet for: {', '.join(missing)}")
-
-    upcoming = [g for g in season_games if g.week > through]
-    next_week = min((g.week for g in upcoming), default=None)
-    qb_names = {qb: name for g in games for qb, name in ((g.home_qb, g.home_qb_name), (g.away_qb, g.away_qb_name)) if qb}
-    teams = []
-    for team, rating in model.ratings().items():
-        entry = {"team": team, "rating": round(rating, 2), **record(team, played)}
-        if isinstance(model, EpaModel):
-            entry.update(this_week(model, team, upcoming, qb_names))
-            entry["breakdown"] = {unit: round(v, 2) for unit, v in model.breakdown(team).items()} | {
-                "quarterback": entry.pop("qb_points"),
-                "injuries": entry.pop("injury_points"),
-            }
-            entry["preseason_rating"] = round(model.preseason_rating(team), 2)
-            if model.preseason is not None:
-                info = model.preseason.offseason.get((season, team), {})
-                entry["offseason"] = {k: bool(info.get(k)) for k in ("qb_changed", "veteran_qb", "coach_changed")}
-        teams.append(entry)
-    teams.sort(key=lambda t: -t["rating"])
-    for i, t in enumerate(teams):
-        t["rank"] = i + 1
-    matchups = [
-        {
-            "home": g.home,
-            "away": g.away,
-            "neutral": g.neutral,
-            "model_line": round(model.predict(g), 1),
-            "market_line": g.spread_line,
-        }
-        for g in season_games
-        if g.week == next_week
-    ]
-
-    print(f"{season} through week {through} ({model.name}, home field {model.hfa.value:+.1f})\n")
-    has_breakdown = "breakdown" in teams[0]
-    print(
-        " #  team  rating  record  diff"
-        + ("  healthy    off    def     st  score     qb    inj  starter" if has_breakdown else "")
-    )
-    for t in teams:
+    print(f"{season} through week {through} (home field {data['home_field']:+.1f}, ratings +/- {data['rating_sd']:.1f})\n")
+    print("  #   chg  team tier rating     80% range  record  SOR  playoff    SB  vegas  starter")
+    for t in data["teams"]:
         rec = f"{t['wins']}-{t['losses']}" + (f"-{t['ties']}" if t["ties"] else "")
-        line = f"{t['rank']:>2}  {t['team']:<4} {t['rating']:+7.1f}  {rec:>6}  {t['point_diff']:+4d}"
-        if has_breakdown:
-            b = t["breakdown"]
-            line += (
-                f"  {t['healthy_rating']:+7.1f}  {b['offense']:+5.1f}  {b['defense']:+5.1f}  {b['special_teams']:+5.1f}"
-                f"  {b['scoring']:+5.1f}  {b['quarterback']:+5.1f}  {b['injuries']:+5.1f}  {t['starter'] or ''}"
-            )
-        print(line)
-    if matchups:
-        print(f"\nweek {next_week} (home team's expected margin)")
-        for m in matchups:
+        odds = t["odds"]
+        vegas = "" if t["vegas_difference"] is None else f"{t['vegas_difference']:+5.1f}"
+        print(
+            f"{t['rank']:>3}  {t['rank_change']:+3d}  {t['team']:<4}  {t['tier']}  {t['rating']:+6.1f}  "
+            f"[{t['range'][0]:+5.1f},{t['range'][1]:+5.1f}]  {rec:>6}  {t['strength_of_record_rank']:>3}  "
+            f"{odds['make_playoffs']:6.0%}  {odds['win_super_bowl']:4.0%}  {vegas:>5}  {t['starter'] or ''}"
+        )
+    if data["games"]:
+        print(f"\nweek {data['next_week']} (home team's expected margin)")
+        for m in data["games"]:
             market = "n/a" if m["market_line"] is None else f"{m['market_line']:+.1f}"
             print(f"  {m['away']:>3} @ {m['home']:<3}  model {m['model_line']:+5.1f}  market {market:>5}")
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(
-        json.dumps(
-            {
-                "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                "season": season,
-                "through_week": through,
-                "model": model.name,
-                "home_field": round(model.hfa.value, 2),
-                "teams": teams,
-                "next_week": {"week": next_week, "games": matchups},
-            },
-            indent=2,
-        )
-        + "\n"
-    )
+    args.out.write_text(json.dumps(data, indent=2) + "\n")
     print(f"\nwrote {args.out}")
-
-
-def this_week(model: EpaModel, team: str, upcoming: list[Game], qb_names: dict[str, str]) -> dict:
-    """Strength for the team's next game (projected starter, injury report)
-    and when healthy (its main QB, nobody ruled out). If the next starter
-    isn't projected yet (e.g. after a bye), assume the main QB."""
-    primary = model.primary_qb(team)
-    healthy = model.rating_with(team, primary)
-    game = next((g for g in upcoming if team in (g.home, g.away)), None)
-    if game is None:
-        return {
-            "rating": round(healthy, 2), "healthy_rating": round(healthy, 2),
-            "starter": qb_names.get(primary), "qb_points": 0.0, "injury_points": 0.0,
-        }
-    qb, name = (game.home_qb, game.home_qb_name) if game.home == team else (game.away_qb, game.away_qb_name)
-    if qb is None:
-        qb, name = primary, qb_names.get(primary)
-    with_qb = model.rating_with(team, qb)
-    injury = model.injury_cost(game.season, game.week, team)
-    return {
-        "rating": round(with_qb + injury, 2),
-        "healthy_rating": round(healthy, 2),
-        "starter": name,
-        "qb_points": round(with_qb - model.ratings()[team], 2),
-        "injury_points": round(injury, 2),
-    }
 
 
 def main() -> None:
@@ -305,7 +211,6 @@ def main() -> None:
     ft.add_argument("--seasons", type=season_range, help="default: 2006 through last season")
 
     rk = sub.add_parser("rank", help="current ratings")
-    rk.add_argument("--model", choices=list(MODELS), default="epa")
     rk.add_argument("--season", type=int)
     rk.add_argument("--out", type=Path, default=DEFAULT_OUTPUT)
 

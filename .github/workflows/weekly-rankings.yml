@@ -1,14 +1,21 @@
 name: Weekly rankings
 
 # Tuesday after Monday Night Football (times are UTC; 15:00 is 10-11am Eastern).
-# The later runs are retries: if the week isn't finished or nflverse hasn't
-# published play-by-play yet, `rank` exits with an error and the next run
-# picks it up. A run with nothing new commits nothing.
+# The Tuesday-evening and Wednesday runs are retries: if the week isn't
+# finished or nflverse hasn't published play-by-play yet, `rank` exits with an
+# error and the next run picks it up.
+#
+# Saturday re-runs with the final injury reports (published Wednesday-Friday)
+# and the latest projected starters. It doesn't add any games, so only "this
+# week" ratings, ranks and next week's lines can move.
+#
+# A run with nothing new commits nothing.
 on:
   schedule:
     - cron: "0 15 * * 2"
     - cron: "0 21 * * 2"
     - cron: "0 15 * * 3"
+    - cron: "0 15 * * 6"
   workflow_dispatch:
 
 permissions:
@@ -53,5 +60,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
           git add output/rankings.json
-          git commit -m "Rankings through week ${week}"
+          if [ "$(date -u +%u)" = "6" ]; then
+            git commit -m "Rankings through week ${week}, updated with injury reports"
+          else
+            git commit -m "Rankings through week ${week}"
+          fi
           git push

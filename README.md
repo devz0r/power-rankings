@@ -28,18 +28,38 @@ in Thursday's game.
 
 ## Rankings output
 
-`output/rankings.json` lists each team's `rating` (strength for its next game,
-with the projected starting QB and that week's injury report, which is what
-the rank uses), `healthy_rating` (with its main QB and nobody ruled out), a
-`breakdown` into offense / defense / special teams / scoring / quarterback /
-injuries that sums to `rating`, its `preseason_rating`, offseason changes,
-record, and next week's model and market lines.
+`python -m powerrank rank` writes `output/rankings.json`. For each team:
+
+| field | meaning |
+|---|---|
+| `rank`, `rating` | strength for its next game, in points vs. an average team on a neutral field, with the projected starting QB and that week's injury report |
+| `range` | 80% range for the rating (about +/-4.7 points; calibrated from history) |
+| `chance_best`, `chance_top5` | how likely the team is truly #1 / top 5, given that uncertainty |
+| `tier` | S-F, split at the natural gaps in the ratings |
+| `previous_rank`, `rank_change`, `rating_change` | versus last week |
+| `healthy_rating` | with its main QB and nobody ruled out |
+| `breakdown` | offense / defense / special teams / scoring / quarterback / injuries, summing to `rating` |
+| `preseason_rating`, `offseason` | where it started and why (QB change, veteran QB, new coach) |
+| `wins`, `losses`, `ties`, `point_diff` | the record |
+| `strength_of_record` | chance a typical playoff team (average of the top 14 ratings) would have done at least as well against this schedule; lower is more impressive |
+| `best_win`, `worst_loss` | judged by the opponent's current rating |
+| `remaining_schedule` | average strength of opponents left, counting home and away |
+| `odds` | projected wins and chances to make the playoffs, win the division, get the 1 seed, win the conference and win the Super Bowl, from 10,000 simulated seasons |
+| `vegas_rating`, `vegas_difference` | the market's implied rating (from this season's point spreads, recent weeks weighted most) and how far this model is from it |
+
+It also lists next week's games with the model's line, win probability and
+the market's line.
+
+The résumé, odds and Vegas numbers are shown beside the ranking; none of
+them feed into it.
 
 ## Weekly update
 
 `.github/workflows/weekly-rankings.yml` runs every Tuesday after Monday Night
 Football, with retries Tuesday evening and Wednesday in case nflverse hasn't
-published the play-by-play yet. It runs the tests, regenerates
+published the play-by-play yet. It runs again Saturday morning with the final
+injury reports and latest projected starters, which can move this week's
+ratings, ranks and lines but adds no games. Each run tests, regenerates
 `output/rankings.json`, and commits it if anything changed. It can also be run
 by hand from the Actions tab.
 

@@ -1,17 +1,34 @@
 {
-  "generated": "2026-10-21T08:58:58+00:00",
+  "generated": "2026-10-21T10:34:39+00:00",
   "season": 2026,
   "through_week": 6,
+  "next_week": 7,
   "model": "epa",
   "home_field": 2.2,
+  "vegas_home_field": 1.65,
+  "rating_sd": 3.71,
+  "game_sd": 13.44,
+  "strength_of_record_reference": 3.59,
   "teams": [
     {
+      "rank": 1,
+      "previous_rank": 2,
+      "rank_change": 1,
       "team": "SF",
+      "name": "San Francisco 49ers",
+      "nickname": "49ers",
+      "conference": "NFC",
+      "division": "NFC West",
+      "color": "#AA0000",
+      "color2": "#B3995D",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+      "tier": "S",
       "rating": 6.43,
-      "wins": 6,
-      "losses": 0,
-      "ties": 0,
-      "point_diff": 67,
+      "rating_change": 1.2,
+      "range": [
+        1.7,
+        11.2
+      ],
       "healthy_rating": 6.43,
       "starter": "Brock Purdy",
       "breakdown": {
@@ -28,15 +45,53 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 1
+      "wins": 6,
+      "losses": 0,
+      "ties": 0,
+      "point_diff": 67,
+      "strength_of_record": 0.051,
+      "strength_of_record_rank": 1,
+      "best_win": {
+        "opponent": "SEA",
+        "score": "32-29",
+        "week": 5,
+        "opponent_rating": 5.4
+      },
+      "worst_loss": null,
+      "remaining_schedule": 0.23,
+      "remaining_schedule_rank": 12,
+      "chance_best": 0.206,
+      "chance_top5": 0.629,
+      "odds": {
+        "projected_wins": 13.3,
+        "make_playoffs": 0.974,
+        "win_division": 0.868,
+        "top_seed": 0.566,
+        "win_conference": 0.307,
+        "win_super_bowl": 0.167
+      },
+      "vegas_rating": 3.09,
+      "vegas_difference": 3.33
     },
     {
+      "rank": 2,
+      "previous_rank": 1,
+      "rank_change": -1,
       "team": "BUF",
+      "name": "Buffalo Bills",
+      "nickname": "Bills",
+      "conference": "AFC",
+      "division": "AFC East",
+      "color": "#00338D",
+      "color2": "#C60C30",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/buf.png",
+      "tier": "S",
       "rating": 5.57,
-      "wins": 5,
-      "losses": 1,
-      "ties": 0,
-      "point_diff": 26,
+      "rating_change": -0.08,
+      "range": [
+        0.8,
+        10.3
+      ],
       "healthy_rating": 5.57,
       "starter": "Josh Allen",
       "breakdown": {
@@ -53,15 +108,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 2
+      "wins": 5,
+      "losses": 1,
+      "ties": 0,
+      "point_diff": 26,
+      "strength_of_record": 0.195,
+      "strength_of_record_rank": 4,
+      "best_win": {
+        "opponent": "LA",
+        "score": "37-34",
+        "week": 5,
+        "opponent_rating": 4.3
+      },
+      "worst_loss": {
+        "opponent": "NE",
+        "score": "29-26",
+        "week": 4,
+        "opponent_rating": 2.9
+      },
+      "remaining_schedule": 0.13,
+      "remaining_schedule_rank": 14,
+      "chance_best": 0.15,
+      "chance_top5": 0.544,
+      "odds": {
+        "projected_wins": 12.0,
+        "make_playoffs": 0.928,
+        "win_division": 0.662,
+        "top_seed": 0.287,
+        "win_conference": 0.221,
+        "win_super_bowl": 0.119
+      },
+      "vegas_rating": 4.64,
+      "vegas_difference": 0.93
     },
     {
+      "rank": 3,
+      "previous_rank": 4,
+      "rank_change": 1,
       "team": "JAX",
+      "name": "Jacksonville Jaguars",
+      "nickname": "Jaguars",
+      "conference": "AFC",
+      "division": "AFC South",
+      "color": "#006778",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/jax.png",
+      "tier": "S",
       "rating": 5.14,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": 50,
+      "rating_change": 0.08,
+      "range": [
+        0.4,
+        9.9
+      ],
       "healthy_rating": 5.14,
       "starter": "Trevor Lawrence",
       "breakdown": {
@@ -78,15 +176,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 3
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 50,
+      "strength_of_record": 0.544,
+      "strength_of_record_rank": 7,
+      "best_win": {
+        "opponent": "NE",
+        "score": "35-6",
+        "week": 3,
+        "opponent_rating": 2.9
+      },
+      "worst_loss": {
+        "opponent": "DEN",
+        "score": "20-13",
+        "week": 2,
+        "opponent_rating": 0.9
+      },
+      "remaining_schedule": -0.74,
+      "remaining_schedule_rank": 27,
+      "chance_best": 0.127,
+      "chance_top5": 0.492,
+      "odds": {
+        "projected_wins": 11.2,
+        "make_playoffs": 0.863,
+        "win_division": 0.745,
+        "top_seed": 0.125,
+        "win_conference": 0.174,
+        "win_super_bowl": 0.094
+      },
+      "vegas_rating": 3.59,
+      "vegas_difference": 1.55
     },
     {
+      "rank": 4,
+      "previous_rank": 3,
+      "rank_change": -1,
       "team": "LA",
+      "name": "Los Angeles Rams",
+      "nickname": "Rams",
+      "conference": "NFC",
+      "division": "NFC West",
+      "color": "#003594",
+      "color2": "#FFD100",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+      "tier": "A",
       "rating": 4.27,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -3,
+      "rating_change": -0.9,
+      "range": [
+        -0.5,
+        9.0
+      ],
       "healthy_rating": 4.27,
       "starter": "Matthew Stafford",
       "breakdown": {
@@ -103,40 +244,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 4
-    },
-    {
-      "team": "DET",
-      "rating": 4.16,
-      "wins": 3,
-      "losses": 2,
+      "wins": 2,
+      "losses": 4,
       "ties": 0,
-      "point_diff": 16,
-      "healthy_rating": 4.16,
-      "starter": "Jared Goff",
-      "breakdown": {
-        "offense": 2.87,
-        "defense": -0.72,
-        "special_teams": 0.7,
-        "scoring": 1.31,
-        "quarterback": 0.0,
-        "injuries": -0.0
+      "point_diff": -3,
+      "strength_of_record": 0.961,
+      "strength_of_record_rank": 24,
+      "best_win": {
+        "opponent": "PHI",
+        "score": "24-20",
+        "week": 4,
+        "opponent_rating": -1.1
       },
-      "preseason_rating": 4.07,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": false
+      "worst_loss": {
+        "opponent": "ARI",
+        "score": "18-16",
+        "week": 6,
+        "opponent_rating": -3.5
       },
-      "rank": 5
+      "remaining_schedule": 0.6,
+      "remaining_schedule_rank": 10,
+      "chance_best": 0.079,
+      "chance_top5": 0.398,
+      "odds": {
+        "projected_wins": 8.5,
+        "make_playoffs": 0.379,
+        "win_division": 0.028,
+        "top_seed": 0.008,
+        "win_conference": 0.054,
+        "win_super_bowl": 0.028
+      },
+      "vegas_rating": 4.59,
+      "vegas_difference": -0.32
     },
     {
+      "rank": 5,
+      "previous_rank": 6,
+      "rank_change": 1,
       "team": "KC",
+      "name": "Kansas City Chiefs",
+      "nickname": "Chiefs",
+      "conference": "AFC",
+      "division": "AFC West",
+      "color": "#E31837",
+      "color2": "#FFB612",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+      "tier": "A",
       "rating": 4.16,
-      "wins": 5,
-      "losses": 0,
-      "ties": 0,
-      "point_diff": 57,
+      "rating_change": 0.93,
+      "range": [
+        -0.6,
+        8.9
+      ],
       "healthy_rating": 4.16,
       "starter": "Patrick Mahomes",
       "breakdown": {
@@ -153,15 +312,121 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 6
+      "wins": 5,
+      "losses": 0,
+      "ties": 0,
+      "point_diff": 57,
+      "strength_of_record": 0.154,
+      "strength_of_record_rank": 3,
+      "best_win": {
+        "opponent": "DEN",
+        "score": "31-10",
+        "week": 1,
+        "opponent_rating": 0.9
+      },
+      "worst_loss": null,
+      "remaining_schedule": 1.28,
+      "remaining_schedule_rank": 6,
+      "chance_best": 0.075,
+      "chance_top5": 0.373,
+      "odds": {
+        "projected_wins": 11.9,
+        "make_playoffs": 0.921,
+        "win_division": 0.734,
+        "top_seed": 0.292,
+        "win_conference": 0.186,
+        "win_super_bowl": 0.094
+      },
+      "vegas_rating": 4.22,
+      "vegas_difference": -0.06
     },
     {
-      "team": "SEA",
-      "rating": 3.4,
+      "rank": 6,
+      "previous_rank": 5,
+      "rank_change": -1,
+      "team": "DET",
+      "name": "Detroit Lions",
+      "nickname": "Lions",
+      "conference": "NFC",
+      "division": "NFC North",
+      "color": "#0076B6",
+      "color2": "#B0B7BC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/det.png",
+      "tier": "A",
+      "rating": 4.16,
+      "rating_change": 0.16,
+      "range": [
+        -0.6,
+        8.9
+      ],
+      "healthy_rating": 4.16,
+      "starter": "Jared Goff",
+      "breakdown": {
+        "offense": 2.87,
+        "defense": -0.72,
+        "special_teams": 0.7,
+        "scoring": 1.31,
+        "quarterback": 0.0,
+        "injuries": -0.0
+      },
+      "preseason_rating": 4.07,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": false
+      },
       "wins": 3,
-      "losses": 3,
+      "losses": 2,
       "ties": 0,
-      "point_diff": 26,
+      "point_diff": 16,
+      "strength_of_record": 0.714,
+      "strength_of_record_rank": 16,
+      "best_win": {
+        "opponent": "NYJ",
+        "score": "31-24",
+        "week": 3,
+        "opponent_rating": -3.3
+      },
+      "worst_loss": {
+        "opponent": "CAR",
+        "score": "32-26",
+        "week": 4,
+        "opponent_rating": 0.5
+      },
+      "remaining_schedule": -0.57,
+      "remaining_schedule_rank": 24,
+      "chance_best": 0.077,
+      "chance_top5": 0.394,
+      "odds": {
+        "projected_wins": 10.5,
+        "make_playoffs": 0.728,
+        "win_division": 0.278,
+        "top_seed": 0.086,
+        "win_conference": 0.117,
+        "win_super_bowl": 0.062
+      },
+      "vegas_rating": 2.82,
+      "vegas_difference": 1.34
+    },
+    {
+      "rank": 7,
+      "previous_rank": 7,
+      "rank_change": 0,
+      "team": "SEA",
+      "name": "Seattle Seahawks",
+      "nickname": "Seahawks",
+      "conference": "NFC",
+      "division": "NFC West",
+      "color": "#002244",
+      "color2": "#69be28",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+      "tier": "B",
+      "rating": 3.4,
+      "rating_change": 0.39,
+      "range": [
+        -1.4,
+        8.2
+      ],
       "healthy_rating": 5.35,
       "starter": "Drew Lock",
       "breakdown": {
@@ -178,15 +443,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 7
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "point_diff": 26,
+      "strength_of_record": 0.822,
+      "strength_of_record_rank": 17,
+      "best_win": {
+        "opponent": "NE",
+        "score": "13-10",
+        "week": 1,
+        "opponent_rating": 2.9
+      },
+      "worst_loss": {
+        "opponent": "WAS",
+        "score": "33-31",
+        "week": 3,
+        "opponent_rating": -1.5
+      },
+      "remaining_schedule": 0.66,
+      "remaining_schedule_rank": 8,
+      "chance_best": 0.056,
+      "chance_top5": 0.309,
+      "odds": {
+        "projected_wins": 9.8,
+        "make_playoffs": 0.619,
+        "win_division": 0.101,
+        "top_seed": 0.033,
+        "win_conference": 0.11,
+        "win_super_bowl": 0.064
+      },
+      "vegas_rating": 4.96,
+      "vegas_difference": -1.57
     },
     {
+      "rank": 8,
+      "previous_rank": 10,
+      "rank_change": 2,
       "team": "CHI",
+      "name": "Chicago Bears",
+      "nickname": "Bears",
+      "conference": "NFC",
+      "division": "NFC North",
+      "color": "#0B162A",
+      "color2": "#E64100",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/chi.png",
+      "tier": "B",
       "rating": 3.29,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": 31,
+      "rating_change": 2.17,
+      "range": [
+        -1.5,
+        8.0
+      ],
       "healthy_rating": 3.29,
       "starter": "Caleb Williams",
       "breakdown": {
@@ -203,15 +511,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 8
-    },
-    {
-      "team": "NE",
-      "rating": 2.9,
       "wins": 4,
       "losses": 2,
       "ties": 0,
-      "point_diff": 23,
+      "point_diff": 31,
+      "strength_of_record": 0.552,
+      "strength_of_record_rank": 9,
+      "best_win": {
+        "opponent": "CAR",
+        "score": "59-37",
+        "week": 1,
+        "opponent_rating": 0.5
+      },
+      "worst_loss": {
+        "opponent": "GB",
+        "score": "31-7",
+        "week": 5,
+        "opponent_rating": 1.4
+      },
+      "remaining_schedule": 1.35,
+      "remaining_schedule_rank": 4,
+      "chance_best": 0.053,
+      "chance_top5": 0.304,
+      "odds": {
+        "projected_wins": 10.1,
+        "make_playoffs": 0.651,
+        "win_division": 0.164,
+        "top_seed": 0.049,
+        "win_conference": 0.083,
+        "win_super_bowl": 0.04
+      },
+      "vegas_rating": 1.54,
+      "vegas_difference": 1.75
+    },
+    {
+      "rank": 9,
+      "previous_rank": 9,
+      "rank_change": 0,
+      "team": "NE",
+      "name": "New England Patriots",
+      "nickname": "Patriots",
+      "conference": "AFC",
+      "division": "AFC East",
+      "color": "#002244",
+      "color2": "#C60C30",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ne.png",
+      "tier": "B",
+      "rating": 2.9,
+      "rating_change": 0.4,
+      "range": [
+        -1.9,
+        7.7
+      ],
       "healthy_rating": 2.9,
       "starter": "Drake Maye",
       "breakdown": {
@@ -228,15 +579,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 9
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 23,
+      "strength_of_record": 0.452,
+      "strength_of_record_rank": 6,
+      "best_win": {
+        "opponent": "BUF",
+        "score": "29-26",
+        "week": 4,
+        "opponent_rating": 5.6
+      },
+      "worst_loss": {
+        "opponent": "JAX",
+        "score": "35-6",
+        "week": 3,
+        "opponent_rating": 5.1
+      },
+      "remaining_schedule": 0.19,
+      "remaining_schedule_rank": 13,
+      "chance_best": 0.042,
+      "chance_top5": 0.261,
+      "odds": {
+        "projected_wins": 10.3,
+        "make_playoffs": 0.75,
+        "win_division": 0.319,
+        "top_seed": 0.083,
+        "win_conference": 0.097,
+        "win_super_bowl": 0.047
+      },
+      "vegas_rating": 0.98,
+      "vegas_difference": 1.92
     },
     {
+      "rank": 10,
+      "previous_rank": 8,
+      "rank_change": -2,
       "team": "MIN",
+      "name": "Minnesota Vikings",
+      "nickname": "Vikings",
+      "conference": "NFC",
+      "division": "NFC North",
+      "color": "#4F2683",
+      "color2": "#FFC62F",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+      "tier": "B",
       "rating": 2.66,
-      "wins": 5,
-      "losses": 0,
-      "ties": 0,
-      "point_diff": 45,
+      "rating_change": 0.09,
+      "range": [
+        -2.1,
+        7.4
+      ],
       "healthy_rating": 2.66,
       "starter": "Kyler Murray",
       "breakdown": {
@@ -253,15 +647,53 @@
         "veteran_qb": true,
         "coach_changed": false
       },
-      "rank": 10
+      "wins": 5,
+      "losses": 0,
+      "ties": 0,
+      "point_diff": 45,
+      "strength_of_record": 0.098,
+      "strength_of_record_rank": 2,
+      "best_win": {
+        "opponent": "CHI",
+        "score": "9-3",
+        "week": 2,
+        "opponent_rating": 3.3
+      },
+      "worst_loss": null,
+      "remaining_schedule": 1.35,
+      "remaining_schedule_rank": 3,
+      "chance_best": 0.034,
+      "chance_top5": 0.245,
+      "odds": {
+        "projected_wins": 11.4,
+        "make_playoffs": 0.848,
+        "win_division": 0.443,
+        "top_seed": 0.191,
+        "win_conference": 0.125,
+        "win_super_bowl": 0.058
+      },
+      "vegas_rating": 2.04,
+      "vegas_difference": 0.62
     },
     {
+      "rank": 11,
+      "previous_rank": 12,
+      "rank_change": 1,
       "team": "GB",
+      "name": "Green Bay Packers",
+      "nickname": "Packers",
+      "conference": "NFC",
+      "division": "NFC North",
+      "color": "#203731",
+      "color2": "#FFB612",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/gb.png",
+      "tier": "C",
       "rating": 1.41,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": 2,
+      "rating_change": 1.13,
+      "range": [
+        -3.3,
+        6.2
+      ],
       "healthy_rating": 1.41,
       "starter": "Jordan Love",
       "breakdown": {
@@ -278,15 +710,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 11
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 2,
+      "strength_of_record": 0.582,
+      "strength_of_record_rank": 10,
+      "best_win": {
+        "opponent": "CHI",
+        "score": "31-7",
+        "week": 5,
+        "opponent_rating": 3.3
+      },
+      "worst_loss": {
+        "opponent": "ATL",
+        "score": "35-14",
+        "week": 3,
+        "opponent_rating": -0.6
+      },
+      "remaining_schedule": 1.48,
+      "remaining_schedule_rank": 1,
+      "chance_best": 0.018,
+      "chance_top5": 0.153,
+      "odds": {
+        "projected_wins": 9.5,
+        "make_playoffs": 0.52,
+        "win_division": 0.115,
+        "top_seed": 0.027,
+        "win_conference": 0.047,
+        "win_super_bowl": 0.023
+      },
+      "vegas_rating": 0.73,
+      "vegas_difference": 0.68
     },
     {
+      "rank": 12,
+      "previous_rank": 17,
+      "rank_change": 5,
       "team": "HOU",
+      "name": "Houston Texans",
+      "nickname": "Texans",
+      "conference": "AFC",
+      "division": "AFC South",
+      "color": "#03202F",
+      "color2": "#A71930",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/hou.png",
+      "tier": "C",
       "rating": 1.09,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": 1,
+      "rating_change": 1.79,
+      "range": [
+        -3.7,
+        5.8
+      ],
       "healthy_rating": 1.09,
       "starter": "C.J. Stroud",
       "breakdown": {
@@ -303,15 +778,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 12
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": 1,
+      "strength_of_record": 0.961,
+      "strength_of_record_rank": 25,
+      "best_win": {
+        "opponent": "JAX",
+        "score": "34-31",
+        "week": 6,
+        "opponent_rating": 5.1
+      },
+      "worst_loss": {
+        "opponent": "DAL",
+        "score": "34-30",
+        "week": 4,
+        "opponent_rating": -0.9
+      },
+      "remaining_schedule": -1.1,
+      "remaining_schedule_rank": 30,
+      "chance_best": 0.013,
+      "chance_top5": 0.133,
+      "odds": {
+        "projected_wins": 8.1,
+        "make_playoffs": 0.303,
+        "win_division": 0.148,
+        "top_seed": 0.003,
+        "win_conference": 0.031,
+        "win_super_bowl": 0.013
+      },
+      "vegas_rating": 2.25,
+      "vegas_difference": -1.16
     },
     {
+      "rank": 13,
+      "previous_rank": 11,
+      "rank_change": -2,
       "team": "CIN",
+      "name": "Cincinnati Bengals",
+      "nickname": "Bengals",
+      "conference": "AFC",
+      "division": "AFC North",
+      "color": "#FB4F14",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
+      "tier": "C",
       "rating": 0.96,
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": 19,
+      "rating_change": 0.02,
+      "range": [
+        -3.8,
+        5.7
+      ],
       "healthy_rating": 0.96,
       "starter": "Joe Burrow",
       "breakdown": {
@@ -328,15 +846,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 13
-    },
-    {
-      "team": "DEN",
-      "rating": 0.91,
-      "wins": 4,
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "point_diff": -11,
+      "point_diff": 19,
+      "strength_of_record": 0.713,
+      "strength_of_record_rank": 15,
+      "best_win": {
+        "opponent": "HOU",
+        "score": "20-6",
+        "week": 2,
+        "opponent_rating": 1.1
+      },
+      "worst_loss": {
+        "opponent": "PIT",
+        "score": "30-27",
+        "week": 3,
+        "opponent_rating": -0.8
+      },
+      "remaining_schedule": -1.25,
+      "remaining_schedule_rank": 32,
+      "chance_best": 0.015,
+      "chance_top5": 0.128,
+      "odds": {
+        "projected_wins": 9.8,
+        "make_playoffs": 0.601,
+        "win_division": 0.303,
+        "top_seed": 0.044,
+        "win_conference": 0.058,
+        "win_super_bowl": 0.026
+      },
+      "vegas_rating": 2.0,
+      "vegas_difference": -1.04
+    },
+    {
+      "rank": 14,
+      "previous_rank": 15,
+      "rank_change": 1,
+      "team": "DEN",
+      "name": "Denver Broncos",
+      "nickname": "Broncos",
+      "conference": "AFC",
+      "division": "AFC West",
+      "color": "#002244",
+      "color2": "#FB4F14",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
+      "tier": "C",
+      "rating": 0.91,
+      "rating_change": 1.26,
+      "range": [
+        -3.8,
+        5.7
+      ],
       "healthy_rating": 0.91,
       "starter": "Bo Nix",
       "breakdown": {
@@ -353,15 +914,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 14
-    },
-    {
-      "team": "CAR",
-      "rating": 0.45,
-      "wins": 3,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "point_diff": 23,
+      "point_diff": -11,
+      "strength_of_record": 0.345,
+      "strength_of_record_rank": 5,
+      "best_win": {
+        "opponent": "SEA",
+        "score": "17-14",
+        "week": 6,
+        "opponent_rating": 5.4
+      },
+      "worst_loss": {
+        "opponent": "KC",
+        "score": "31-10",
+        "week": 1,
+        "opponent_rating": 4.2
+      },
+      "remaining_schedule": -0.94,
+      "remaining_schedule_rank": 28,
+      "chance_best": 0.014,
+      "chance_top5": 0.125,
+      "odds": {
+        "projected_wins": 10.1,
+        "make_playoffs": 0.656,
+        "win_division": 0.232,
+        "top_seed": 0.066,
+        "win_conference": 0.063,
+        "win_super_bowl": 0.028
+      },
+      "vegas_rating": 2.48,
+      "vegas_difference": -1.57
+    },
+    {
+      "rank": 15,
+      "previous_rank": 18,
+      "rank_change": 3,
+      "team": "CAR",
+      "name": "Carolina Panthers",
+      "nickname": "Panthers",
+      "conference": "NFC",
+      "division": "NFC South",
+      "color": "#0085CA",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/car.png",
+      "tier": "C",
+      "rating": 0.45,
+      "rating_change": 1.88,
+      "range": [
+        -4.3,
+        5.2
+      ],
       "healthy_rating": 0.45,
       "starter": "Bryce Young",
       "breakdown": {
@@ -378,15 +982,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 15
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 23,
+      "strength_of_record": 0.656,
+      "strength_of_record_rank": 12,
+      "best_win": {
+        "opponent": "DET",
+        "score": "32-26",
+        "week": 4,
+        "opponent_rating": 4.2
+      },
+      "worst_loss": {
+        "opponent": "CLE",
+        "score": "21-18",
+        "week": 3,
+        "opponent_rating": -4.6
+      },
+      "remaining_schedule": -0.65,
+      "remaining_schedule_rank": 26,
+      "chance_best": 0.01,
+      "chance_top5": 0.1,
+      "odds": {
+        "projected_wins": 9.3,
+        "make_playoffs": 0.677,
+        "win_division": 0.636,
+        "top_seed": 0.032,
+        "win_conference": 0.058,
+        "win_super_bowl": 0.024
+      },
+      "vegas_rating": 0.11,
+      "vegas_difference": 0.34
     },
     {
+      "rank": 16,
+      "previous_rank": 13,
+      "rank_change": -3,
       "team": "IND",
+      "name": "Indianapolis Colts",
+      "nickname": "Colts",
+      "conference": "AFC",
+      "division": "AFC South",
+      "color": "#002C5F",
+      "color2": "#a5acaf",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ind.png",
+      "tier": "D",
       "rating": -0.2,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -20,
+      "rating_change": -0.41,
+      "range": [
+        -5.0,
+        4.6
+      ],
       "healthy_rating": -0.2,
       "starter": "Daniel Jones",
       "breakdown": {
@@ -403,15 +1050,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 16
-    },
-    {
-      "team": "ATL",
-      "rating": -0.57,
       "wins": 2,
       "losses": 4,
       "ties": 0,
-      "point_diff": -11,
+      "point_diff": -20,
+      "strength_of_record": 0.971,
+      "strength_of_record_rank": 28,
+      "best_win": {
+        "opponent": "HOU",
+        "score": "19-17",
+        "week": 3,
+        "opponent_rating": 1.1
+      },
+      "worst_loss": {
+        "opponent": "TEN",
+        "score": "26-20",
+        "week": 6,
+        "opponent_rating": -7.2
+      },
+      "remaining_schedule": -0.63,
+      "remaining_schedule_rank": 25,
+      "chance_best": 0.007,
+      "chance_top5": 0.069,
+      "odds": {
+        "projected_wins": 7.6,
+        "make_playoffs": 0.2,
+        "win_division": 0.103,
+        "top_seed": 0.001,
+        "win_conference": 0.018,
+        "win_super_bowl": 0.007
+      },
+      "vegas_rating": -1.49,
+      "vegas_difference": 1.29
+    },
+    {
+      "rank": 17,
+      "previous_rank": 14,
+      "rank_change": -3,
+      "team": "ATL",
+      "name": "Atlanta Falcons",
+      "nickname": "Falcons",
+      "conference": "NFC",
+      "division": "NFC South",
+      "color": "#A71930",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+      "tier": "D",
+      "rating": -0.57,
+      "rating_change": -0.55,
+      "range": [
+        -5.3,
+        4.2
+      ],
       "healthy_rating": -0.57,
       "starter": "Michael Penix Jr.",
       "breakdown": {
@@ -428,15 +1118,58 @@
         "veteran_qb": true,
         "coach_changed": false
       },
-      "rank": 17
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": -11,
+      "strength_of_record": 0.954,
+      "strength_of_record_rank": 21,
+      "best_win": {
+        "opponent": "GB",
+        "score": "35-14",
+        "week": 3,
+        "opponent_rating": 1.4
+      },
+      "worst_loss": {
+        "opponent": "PIT",
+        "score": "20-13",
+        "week": 1,
+        "opponent_rating": -0.8
+      },
+      "remaining_schedule": 0.03,
+      "remaining_schedule_rank": 16,
+      "chance_best": 0.005,
+      "chance_top5": 0.06,
+      "odds": {
+        "projected_wins": 7.3,
+        "make_playoffs": 0.256,
+        "win_division": 0.191,
+        "top_seed": 0.003,
+        "win_conference": 0.021,
+        "win_super_bowl": 0.009
+      },
+      "vegas_rating": -1.04,
+      "vegas_difference": 0.47
     },
     {
+      "rank": 18,
+      "previous_rank": 19,
+      "rank_change": 1,
       "team": "PIT",
+      "name": "Pittsburgh Steelers",
+      "nickname": "Steelers",
+      "conference": "AFC",
+      "division": "AFC North",
+      "color": "#000000",
+      "color2": "#FFB612",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+      "tier": "D",
       "rating": -0.81,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": 9,
+      "rating_change": 0.93,
+      "range": [
+        -5.6,
+        3.9
+      ],
       "healthy_rating": -0.81,
       "starter": "Aaron Rodgers",
       "breakdown": {
@@ -453,15 +1186,58 @@
         "veteran_qb": false,
         "coach_changed": true
       },
-      "rank": 18
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 9,
+      "strength_of_record": 0.608,
+      "strength_of_record_rank": 11,
+      "best_win": {
+        "opponent": "CIN",
+        "score": "30-27",
+        "week": 3,
+        "opponent_rating": 1.0
+      },
+      "worst_loss": {
+        "opponent": "CLE",
+        "score": "27-24",
+        "week": 4,
+        "opponent_rating": -4.6
+      },
+      "remaining_schedule": -0.21,
+      "remaining_schedule_rank": 19,
+      "chance_best": 0.004,
+      "chance_top5": 0.051,
+      "odds": {
+        "projected_wins": 9.3,
+        "make_playoffs": 0.496,
+        "win_division": 0.204,
+        "top_seed": 0.022,
+        "win_conference": 0.035,
+        "win_super_bowl": 0.013
+      },
+      "vegas_rating": 0.57,
+      "vegas_difference": -1.38
     },
     {
+      "rank": 19,
+      "previous_rank": 16,
+      "rank_change": -3,
       "team": "DAL",
+      "name": "Dallas Cowboys",
+      "nickname": "Cowboys",
+      "conference": "NFC",
+      "division": "NFC East",
+      "color": "#002244",
+      "color2": "#B0B7BC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+      "tier": "D",
       "rating": -0.94,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -8,
+      "rating_change": -0.51,
+      "range": [
+        -5.7,
+        3.8
+      ],
       "healthy_rating": -0.94,
       "starter": "Dak Prescott",
       "breakdown": {
@@ -478,15 +1254,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 19
-    },
-    {
-      "team": "PHI",
-      "rating": -1.07,
       "wins": 2,
       "losses": 4,
       "ties": 0,
-      "point_diff": -31,
+      "point_diff": -8,
+      "strength_of_record": 0.968,
+      "strength_of_record_rank": 27,
+      "best_win": {
+        "opponent": "HOU",
+        "score": "34-30",
+        "week": 4,
+        "opponent_rating": 1.1
+      },
+      "worst_loss": {
+        "opponent": "TB",
+        "score": "24-16",
+        "week": 5,
+        "opponent_rating": -4.3
+      },
+      "remaining_schedule": 0.03,
+      "remaining_schedule_rank": 17,
+      "chance_best": 0.003,
+      "chance_top5": 0.049,
+      "odds": {
+        "projected_wins": 7.2,
+        "make_playoffs": 0.269,
+        "win_division": 0.247,
+        "top_seed": 0.002,
+        "win_conference": 0.019,
+        "win_super_bowl": 0.008
+      },
+      "vegas_rating": 2.91,
+      "vegas_difference": -3.85
+    },
+    {
+      "rank": 20,
+      "previous_rank": 31,
+      "rank_change": 11,
+      "team": "PHI",
+      "name": "Philadelphia Eagles",
+      "nickname": "Eagles",
+      "conference": "NFC",
+      "division": "NFC East",
+      "color": "#004C54",
+      "color2": "#A5ACAF",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
+      "tier": "D",
+      "rating": -1.07,
+      "rating_change": 5.34,
+      "range": [
+        -5.8,
+        3.7
+      ],
       "healthy_rating": -1.07,
       "starter": "Jalen Hurts",
       "breakdown": {
@@ -503,15 +1322,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 20
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": -31,
+      "strength_of_record": 0.96,
+      "strength_of_record_rank": 23,
+      "best_win": {
+        "opponent": "WAS",
+        "score": "24-22",
+        "week": 1,
+        "opponent_rating": -1.5
+      },
+      "worst_loss": {
+        "opponent": "CAR",
+        "score": "25-14",
+        "week": 6,
+        "opponent_rating": 0.5
+      },
+      "remaining_schedule": -0.5,
+      "remaining_schedule_rank": 23,
+      "chance_best": 0.004,
+      "chance_top5": 0.047,
+      "odds": {
+        "projected_wins": 7.3,
+        "make_playoffs": 0.314,
+        "win_division": 0.299,
+        "top_seed": 0.002,
+        "win_conference": 0.021,
+        "win_super_bowl": 0.009
+      },
+      "vegas_rating": -2.05,
+      "vegas_difference": 0.98
     },
     {
+      "rank": 21,
+      "previous_rank": 20,
+      "rank_change": -1,
       "team": "WAS",
+      "name": "Washington Commanders",
+      "nickname": "Commanders",
+      "conference": "NFC",
+      "division": "NFC East",
+      "color": "#5A1414",
+      "color2": "#FFB612",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
+      "tier": "D",
       "rating": -1.49,
-      "wins": 1,
-      "losses": 4,
-      "ties": 1,
-      "point_diff": -40,
+      "rating_change": 0.44,
+      "range": [
+        -6.2,
+        3.3
+      ],
       "healthy_rating": -1.49,
       "starter": "Jayden Daniels",
       "breakdown": {
@@ -528,15 +1390,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 21
+      "wins": 1,
+      "losses": 4,
+      "ties": 1,
+      "point_diff": -40,
+      "strength_of_record": 0.947,
+      "strength_of_record_rank": 20,
+      "best_win": {
+        "opponent": "SEA",
+        "score": "33-31",
+        "week": 3,
+        "opponent_rating": 5.4
+      },
+      "worst_loss": {
+        "opponent": "PHI",
+        "score": "24-22",
+        "week": 1,
+        "opponent_rating": -1.1
+      },
+      "remaining_schedule": -0.5,
+      "remaining_schedule_rank": 22,
+      "chance_best": 0.002,
+      "chance_top5": 0.038,
+      "odds": {
+        "projected_wins": 6.7,
+        "make_playoffs": 0.206,
+        "win_division": 0.186,
+        "top_seed": 0.0,
+        "win_conference": 0.013,
+        "win_super_bowl": 0.005
+      },
+      "vegas_rating": -3.6,
+      "vegas_difference": 2.11
     },
     {
+      "rank": 22,
+      "previous_rank": 21,
+      "rank_change": -1,
       "team": "BAL",
+      "name": "Baltimore Ravens",
+      "nickname": "Ravens",
+      "conference": "AFC",
+      "division": "AFC North",
+      "color": "#241773",
+      "color2": "#9E7C0C",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+      "tier": "D",
       "rating": -1.53,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": 24,
+      "rating_change": 0.56,
+      "range": [
+        -6.3,
+        3.2
+      ],
       "healthy_rating": 2.93,
       "starter": "Tyler Huntley",
       "breakdown": {
@@ -553,15 +1458,58 @@
         "veteran_qb": false,
         "coach_changed": true
       },
-      "rank": 22
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": 24,
+      "strength_of_record": 0.684,
+      "strength_of_record_rank": 13,
+      "best_win": {
+        "opponent": "IND",
+        "score": "41-23",
+        "week": 1,
+        "opponent_rating": -0.2
+      },
+      "worst_loss": {
+        "opponent": "CLE",
+        "score": "13-10",
+        "week": 6,
+        "opponent_rating": -4.6
+      },
+      "remaining_schedule": -0.26,
+      "remaining_schedule_rank": 20,
+      "chance_best": 0.003,
+      "chance_top5": 0.035,
+      "odds": {
+        "projected_wins": 10.3,
+        "make_playoffs": 0.688,
+        "win_division": 0.372,
+        "top_seed": 0.069,
+        "win_conference": 0.095,
+        "win_super_bowl": 0.047
+      },
+      "vegas_rating": 2.01,
+      "vegas_difference": -3.54
     },
     {
+      "rank": 23,
+      "previous_rank": 24,
+      "rank_change": 1,
       "team": "NYJ",
+      "name": "New York Jets",
+      "nickname": "Jets",
+      "conference": "AFC",
+      "division": "AFC East",
+      "color": "#003F2D",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
+      "tier": "E",
       "rating": -3.32,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -10,
+      "rating_change": 1.21,
+      "range": [
+        -8.1,
+        1.4
+      ],
       "healthy_rating": -3.32,
       "starter": "Geno Smith",
       "breakdown": {
@@ -578,15 +1526,58 @@
         "veteran_qb": true,
         "coach_changed": false
       },
-      "rank": 23
-    },
-    {
-      "team": "ARI",
-      "rating": -3.54,
       "wins": 2,
       "losses": 4,
       "ties": 0,
-      "point_diff": -52,
+      "point_diff": -10,
+      "strength_of_record": 0.957,
+      "strength_of_record_rank": 22,
+      "best_win": {
+        "opponent": "CLE",
+        "score": "17-12",
+        "week": 5,
+        "opponent_rating": -4.6
+      },
+      "worst_loss": {
+        "opponent": "GB",
+        "score": "20-17",
+        "week": 2,
+        "opponent_rating": 1.4
+      },
+      "remaining_schedule": -0.4,
+      "remaining_schedule_rank": 21,
+      "chance_best": 0.0,
+      "chance_top5": 0.011,
+      "odds": {
+        "projected_wins": 6.7,
+        "make_playoffs": 0.11,
+        "win_division": 0.018,
+        "top_seed": 0.001,
+        "win_conference": 0.005,
+        "win_super_bowl": 0.002
+      },
+      "vegas_rating": -3.37,
+      "vegas_difference": 0.05
+    },
+    {
+      "rank": 24,
+      "previous_rank": 27,
+      "rank_change": 3,
+      "team": "ARI",
+      "name": "Arizona Cardinals",
+      "nickname": "Cardinals",
+      "conference": "NFC",
+      "division": "NFC West",
+      "color": "#97233F",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+      "tier": "E",
+      "rating": -3.54,
+      "rating_change": 1.74,
+      "range": [
+        -8.3,
+        1.2
+      ],
       "healthy_rating": -3.54,
       "starter": "Jacoby Brissett",
       "breakdown": {
@@ -603,15 +1594,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 24
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": -52,
+      "strength_of_record": 0.92,
+      "strength_of_record_rank": 19,
+      "best_win": {
+        "opponent": "LA",
+        "score": "18-16",
+        "week": 6,
+        "opponent_rating": 4.3
+      },
+      "worst_loss": {
+        "opponent": "NYG",
+        "score": "36-24",
+        "week": 4,
+        "opponent_rating": -4.1
+      },
+      "remaining_schedule": 0.01,
+      "remaining_schedule_rank": 18,
+      "chance_best": 0.001,
+      "chance_top5": 0.01,
+      "odds": {
+        "projected_wins": 6.5,
+        "make_playoffs": 0.06,
+        "win_division": 0.003,
+        "top_seed": 0.0,
+        "win_conference": 0.004,
+        "win_super_bowl": 0.002
+      },
+      "vegas_rating": -3.93,
+      "vegas_difference": 0.38
     },
     {
+      "rank": 25,
+      "previous_rank": 23,
+      "rank_change": -2,
       "team": "LV",
+      "name": "Las Vegas Raiders",
+      "nickname": "Raiders",
+      "conference": "AFC",
+      "division": "AFC West",
+      "color": "#000000",
+      "color2": "#A5ACAF",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
+      "tier": "E",
       "rating": -3.67,
-      "wins": 3,
-      "losses": 3,
-      "ties": 0,
-      "point_diff": 0,
+      "rating_change": 0.71,
+      "range": [
+        -8.4,
+        1.1
+      ],
       "healthy_rating": -3.67,
       "starter": "Kirk Cousins",
       "breakdown": {
@@ -628,15 +1662,58 @@
         "veteran_qb": true,
         "coach_changed": true
       },
-      "rank": 25
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "point_diff": 0,
+      "strength_of_record": 0.838,
+      "strength_of_record_rank": 18,
+      "best_win": {
+        "opponent": "NO",
+        "score": "35-27",
+        "week": 3,
+        "opponent_rating": -3.9
+      },
+      "worst_loss": {
+        "opponent": "NE",
+        "score": "45-17",
+        "week": 5,
+        "opponent_rating": 2.9
+      },
+      "remaining_schedule": 0.11,
+      "remaining_schedule_rank": 15,
+      "chance_best": 0.0,
+      "chance_top5": 0.008,
+      "odds": {
+        "projected_wins": 7.4,
+        "make_playoffs": 0.154,
+        "win_division": 0.034,
+        "top_seed": 0.001,
+        "win_conference": 0.007,
+        "win_super_bowl": 0.003
+      },
+      "vegas_rating": -2.25,
+      "vegas_difference": -1.42
     },
     {
+      "rank": 26,
+      "previous_rank": 26,
+      "rank_change": 0,
       "team": "NO",
+      "name": "New Orleans Saints",
+      "nickname": "Saints",
+      "conference": "NFC",
+      "division": "NFC South",
+      "color": "#D3BC8D",
+      "color2": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
+      "tier": "E",
       "rating": -3.88,
-      "wins": 2,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -26,
+      "rating_change": 1.14,
+      "range": [
+        -8.6,
+        0.9
+      ],
       "healthy_rating": -3.88,
       "starter": "Tyler Shough",
       "breakdown": {
@@ -653,15 +1730,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 26
+      "wins": 2,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": -26,
+      "strength_of_record": 0.962,
+      "strength_of_record_rank": 26,
+      "best_win": {
+        "opponent": "BAL",
+        "score": "24-17",
+        "week": 2,
+        "opponent_rating": 2.9
+      },
+      "worst_loss": {
+        "opponent": "LV",
+        "score": "35-27",
+        "week": 3,
+        "opponent_rating": -3.7
+      },
+      "remaining_schedule": -1.04,
+      "remaining_schedule_rank": 29,
+      "chance_best": 0.0,
+      "chance_top5": 0.009,
+      "odds": {
+        "projected_wins": 6.7,
+        "make_playoffs": 0.15,
+        "win_division": 0.121,
+        "top_seed": 0.0,
+        "win_conference": 0.007,
+        "win_super_bowl": 0.002
+      },
+      "vegas_rating": -2.31,
+      "vegas_difference": -1.57
     },
     {
+      "rank": 27,
+      "previous_rank": 25,
+      "rank_change": -2,
       "team": "NYG",
+      "name": "New York Giants",
+      "nickname": "Giants",
+      "conference": "NFC",
+      "division": "NFC East",
+      "color": "#0B2265",
+      "color2": "#A71930",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png",
+      "tier": "E",
       "rating": -4.12,
-      "wins": 3,
-      "losses": 2,
-      "ties": 1,
-      "point_diff": -4,
+      "rating_change": 0.57,
+      "range": [
+        -8.9,
+        0.6
+      ],
       "healthy_rating": -4.12,
       "starter": "Jameis Winston",
       "breakdown": {
@@ -678,15 +1798,58 @@
         "veteran_qb": false,
         "coach_changed": true
       },
-      "rank": 27
+      "wins": 3,
+      "losses": 2,
+      "ties": 1,
+      "point_diff": -4,
+      "strength_of_record": 0.702,
+      "strength_of_record_rank": 14,
+      "best_win": {
+        "opponent": "DAL",
+        "score": "28-20",
+        "week": 1,
+        "opponent_rating": -0.9
+      },
+      "worst_loss": {
+        "opponent": "NO",
+        "score": "34-27",
+        "week": 6,
+        "opponent_rating": -3.9
+      },
+      "remaining_schedule": 1.36,
+      "remaining_schedule_rank": 2,
+      "chance_best": 0.0,
+      "chance_top5": 0.007,
+      "odds": {
+        "projected_wins": 7.4,
+        "make_playoffs": 0.291,
+        "win_division": 0.268,
+        "top_seed": 0.002,
+        "win_conference": 0.012,
+        "win_super_bowl": 0.005
+      },
+      "vegas_rating": -5.46,
+      "vegas_difference": 1.33
     },
     {
+      "rank": 28,
+      "previous_rank": 22,
+      "rank_change": -6,
       "team": "TB",
+      "name": "Tampa Bay Buccaneers",
+      "nickname": "Buccaneers",
+      "conference": "NFC",
+      "division": "NFC South",
+      "color": "#A71930",
+      "color2": "#322F2B",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/tb.png",
+      "tier": "E",
       "rating": -4.26,
-      "wins": 1,
-      "losses": 5,
-      "ties": 0,
-      "point_diff": -19,
+      "rating_change": 0.0,
+      "range": [
+        -9.0,
+        0.5
+      ],
       "healthy_rating": -4.26,
       "starter": "Jalon Daniels",
       "breakdown": {
@@ -703,15 +1866,58 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 28
+      "wins": 1,
+      "losses": 5,
+      "ties": 0,
+      "point_diff": -19,
+      "strength_of_record": 0.998,
+      "strength_of_record_rank": 30,
+      "best_win": {
+        "opponent": "DAL",
+        "score": "24-16",
+        "week": 5,
+        "opponent_rating": -0.9
+      },
+      "worst_loss": {
+        "opponent": "CLE",
+        "score": "23-19",
+        "week": 2,
+        "opponent_rating": -4.6
+      },
+      "remaining_schedule": 0.41,
+      "remaining_schedule_rank": 11,
+      "chance_best": 0.0,
+      "chance_top5": 0.006,
+      "odds": {
+        "projected_wins": 5.2,
+        "make_playoffs": 0.059,
+        "win_division": 0.052,
+        "top_seed": 0.0,
+        "win_conference": 0.002,
+        "win_super_bowl": 0.001
+      },
+      "vegas_rating": -2.48,
+      "vegas_difference": -1.79
     },
     {
+      "rank": 29,
+      "previous_rank": 29,
+      "rank_change": 0,
       "team": "LAC",
+      "name": "Los Angeles Chargers",
+      "nickname": "Chargers",
+      "conference": "AFC",
+      "division": "AFC West",
+      "color": "#007BC7",
+      "color2": "#ffc20e",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
+      "tier": "E",
       "rating": -4.37,
-      "wins": 0,
-      "losses": 6,
-      "ties": 0,
-      "point_diff": -61,
+      "rating_change": 1.41,
+      "range": [
+        -9.1,
+        0.4
+      ],
       "healthy_rating": -4.37,
       "starter": "Justin Herbert",
       "breakdown": {
@@ -728,15 +1934,53 @@
         "veteran_qb": false,
         "coach_changed": false
       },
-      "rank": 29
+      "wins": 0,
+      "losses": 6,
+      "ties": 0,
+      "point_diff": -61,
+      "strength_of_record": 1.0,
+      "strength_of_record_rank": 31,
+      "best_win": null,
+      "worst_loss": {
+        "opponent": "LV",
+        "score": "26-14",
+        "week": 2,
+        "opponent_rating": -3.7
+      },
+      "remaining_schedule": 0.68,
+      "remaining_schedule_rank": 7,
+      "chance_best": 0.0,
+      "chance_top5": 0.005,
+      "odds": {
+        "projected_wins": 4.1,
+        "make_playoffs": 0.005,
+        "win_division": 0.001,
+        "top_seed": 0.0,
+        "win_conference": 0.0,
+        "win_super_bowl": 0.0
+      },
+      "vegas_rating": -0.91,
+      "vegas_difference": -3.46
     },
     {
+      "rank": 30,
+      "previous_rank": 28,
+      "rank_change": -2,
       "team": "CLE",
+      "name": "Cleveland Browns",
+      "nickname": "Browns",
+      "conference": "AFC",
+      "division": "AFC North",
+      "color": "#FF3C00",
+      "color2": "#311D00",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+      "tier": "E",
       "rating": -4.59,
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "point_diff": -16,
+      "rating_change": 0.73,
+      "range": [
+        -9.3,
+        0.2
+      ],
       "healthy_rating": -4.59,
       "starter": "Deshaun Watson",
       "breakdown": {
@@ -753,15 +1997,58 @@
         "veteran_qb": true,
         "coach_changed": true
       },
-      "rank": 30
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "point_diff": -16,
+      "strength_of_record": 0.551,
+      "strength_of_record_rank": 8,
+      "best_win": {
+        "opponent": "BAL",
+        "score": "13-10",
+        "week": 6,
+        "opponent_rating": 2.9
+      },
+      "worst_loss": {
+        "opponent": "NYJ",
+        "score": "17-12",
+        "week": 5,
+        "opponent_rating": -3.3
+      },
+      "remaining_schedule": -1.11,
+      "remaining_schedule_rank": 31,
+      "chance_best": 0.0,
+      "chance_top5": 0.004,
+      "odds": {
+        "projected_wins": 8.5,
+        "make_playoffs": 0.31,
+        "win_division": 0.121,
+        "top_seed": 0.006,
+        "win_conference": 0.01,
+        "win_super_bowl": 0.004
+      },
+      "vegas_rating": -3.73,
+      "vegas_difference": -0.86
     },
     {
+      "rank": 31,
+      "previous_rank": 30,
+      "rank_change": -1,
       "team": "MIA",
+      "name": "Miami Dolphins",
+      "nickname": "Dolphins",
+      "conference": "AFC",
+      "division": "AFC East",
+      "color": "#008E97",
+      "color2": "#F58220",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/mia.png",
+      "tier": "F",
       "rating": -6.19,
-      "wins": 0,
-      "losses": 5,
-      "ties": 0,
-      "point_diff": -62,
+      "rating_change": 0.08,
+      "range": [
+        -10.9,
+        -1.4
+      ],
       "healthy_rating": -6.19,
       "starter": "Malik Willis",
       "breakdown": {
@@ -778,15 +2065,53 @@
         "veteran_qb": false,
         "coach_changed": true
       },
-      "rank": 31
-    },
-    {
-      "team": "TEN",
-      "rating": -7.16,
-      "wins": 1,
+      "wins": 0,
       "losses": 5,
       "ties": 0,
-      "point_diff": -45,
+      "point_diff": -62,
+      "strength_of_record": 1.0,
+      "strength_of_record_rank": 32,
+      "best_win": null,
+      "worst_loss": {
+        "opponent": "LV",
+        "score": "27-13",
+        "week": 1,
+        "opponent_rating": -3.7
+      },
+      "remaining_schedule": 1.29,
+      "remaining_schedule_rank": 5,
+      "chance_best": 0.0,
+      "chance_top5": 0.001,
+      "odds": {
+        "projected_wins": 3.7,
+        "make_playoffs": 0.005,
+        "win_division": 0.001,
+        "top_seed": 0.0,
+        "win_conference": 0.0,
+        "win_super_bowl": 0.0
+      },
+      "vegas_rating": -6.29,
+      "vegas_difference": 0.1
+    },
+    {
+      "rank": 32,
+      "previous_rank": 32,
+      "rank_change": 0,
+      "team": "TEN",
+      "name": "Tennessee Titans",
+      "nickname": "Titans",
+      "conference": "AFC",
+      "division": "AFC South",
+      "color": "#4495D2",
+      "color2": "#D50A0A",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ten.png",
+      "tier": "F",
+      "rating": -7.16,
+      "rating_change": 1.72,
+      "range": [
+        -11.9,
+        -2.4
+      ],
       "healthy_rating": -7.16,
       "starter": "Cam Ward",
       "breakdown": {
@@ -803,110 +2128,194 @@
         "veteran_qb": false,
         "coach_changed": true
       },
-      "rank": 32
+      "wins": 1,
+      "losses": 5,
+      "ties": 0,
+      "point_diff": -45,
+      "strength_of_record": 0.998,
+      "strength_of_record_rank": 29,
+      "best_win": {
+        "opponent": "IND",
+        "score": "26-20",
+        "week": 6,
+        "opponent_rating": -0.2
+      },
+      "worst_loss": {
+        "opponent": "NYG",
+        "score": "12-7",
+        "week": 3,
+        "opponent_rating": -4.1
+      },
+      "remaining_schedule": 0.64,
+      "remaining_schedule_rank": 9,
+      "chance_best": 0.0,
+      "chance_top5": 0.0,
+      "odds": {
+        "projected_wins": 4.3,
+        "make_playoffs": 0.01,
+        "win_division": 0.004,
+        "top_seed": 0.0,
+        "win_conference": 0.0,
+        "win_super_bowl": 0.0
+      },
+      "vegas_rating": -6.64,
+      "vegas_difference": -0.52
     }
   ],
-  "next_week": {
-    "week": 7,
-    "games": [
-      {
-        "home": "CHI",
-        "away": "NE",
-        "neutral": false,
-        "model_line": 2.6,
-        "market_line": 3.0
-      },
-      {
-        "home": "NO",
-        "away": "PIT",
-        "neutral": true,
-        "model_line": -3.1,
-        "market_line": -3.5
-      },
-      {
-        "home": "BAL",
-        "away": "CIN",
-        "neutral": false,
-        "model_line": -0.3,
-        "market_line": 3.0
-      },
-      {
-        "home": "TEN",
-        "away": "CLE",
-        "neutral": false,
-        "model_line": -0.4,
-        "market_line": -1.5
-      },
-      {
-        "home": "MIN",
-        "away": "IND",
-        "neutral": false,
-        "model_line": 5.1,
-        "market_line": 6.5
-      },
-      {
-        "home": "NYJ",
-        "away": "MIA",
-        "neutral": false,
-        "model_line": 5.1,
-        "market_line": 4.5
-      },
-      {
-        "home": "HOU",
-        "away": "NYG",
-        "neutral": false,
-        "model_line": 7.4,
-        "market_line": 10.0
-      },
-      {
-        "home": "ATL",
-        "away": "SF",
-        "neutral": false,
-        "model_line": -4.8,
-        "market_line": -3.0
-      },
-      {
-        "home": "CAR",
-        "away": "TB",
-        "neutral": false,
-        "model_line": 6.9,
-        "market_line": 3.5
-      },
-      {
-        "home": "ARI",
-        "away": "DEN",
-        "neutral": false,
-        "model_line": -2.2,
-        "market_line": -4.5
-      },
-      {
-        "home": "DET",
-        "away": "GB",
-        "neutral": false,
-        "model_line": 4.9,
-        "market_line": 3.0
-      },
-      {
-        "home": "LV",
-        "away": "LA",
-        "neutral": false,
-        "model_line": -5.7,
-        "market_line": -4.5
-      },
-      {
-        "home": "SEA",
-        "away": "KC",
-        "neutral": false,
-        "model_line": 1.4,
-        "market_line": 2.5
-      },
-      {
-        "home": "PHI",
-        "away": "DAL",
-        "neutral": false,
-        "model_line": 2.1,
-        "market_line": -4.5
-      }
-    ]
-  }
+  "games": [
+    {
+      "home": "CHI",
+      "away": "NE",
+      "neutral": false,
+      "gameday": "2026-10-22",
+      "home_starter": "Caleb Williams",
+      "away_starter": "Drake Maye",
+      "model_line": 2.6,
+      "home_win_probability": 0.576,
+      "market_line": 3.0
+    },
+    {
+      "home": "NO",
+      "away": "PIT",
+      "neutral": true,
+      "gameday": "2026-10-25",
+      "home_starter": "Tyler Shough",
+      "away_starter": "Aaron Rodgers",
+      "model_line": -3.1,
+      "home_win_probability": 0.41,
+      "market_line": -3.5
+    },
+    {
+      "home": "BAL",
+      "away": "CIN",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Tyler Huntley",
+      "away_starter": "Joe Burrow",
+      "model_line": -0.3,
+      "home_win_probability": 0.491,
+      "market_line": 3.0
+    },
+    {
+      "home": "TEN",
+      "away": "CLE",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Cam Ward",
+      "away_starter": "Deshaun Watson",
+      "model_line": -0.4,
+      "home_win_probability": 0.489,
+      "market_line": -1.5
+    },
+    {
+      "home": "MIN",
+      "away": "IND",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Kyler Murray",
+      "away_starter": "Daniel Jones",
+      "model_line": 5.1,
+      "home_win_probability": 0.647,
+      "market_line": 6.5
+    },
+    {
+      "home": "NYJ",
+      "away": "MIA",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Geno Smith",
+      "away_starter": "Malik Willis",
+      "model_line": 5.1,
+      "home_win_probability": 0.647,
+      "market_line": 4.5
+    },
+    {
+      "home": "HOU",
+      "away": "NYG",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "C.J. Stroud",
+      "away_starter": "Jameis Winston",
+      "model_line": 7.4,
+      "home_win_probability": 0.71,
+      "market_line": 10.0
+    },
+    {
+      "home": "ATL",
+      "away": "SF",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Michael Penix Jr.",
+      "away_starter": "Brock Purdy",
+      "model_line": -4.8,
+      "home_win_probability": 0.361,
+      "market_line": -3.0
+    },
+    {
+      "home": "CAR",
+      "away": "TB",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Bryce Young",
+      "away_starter": "Jalon Daniels",
+      "model_line": 6.9,
+      "home_win_probability": 0.697,
+      "market_line": 3.5
+    },
+    {
+      "home": "ARI",
+      "away": "DEN",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Jacoby Brissett",
+      "away_starter": "Bo Nix",
+      "model_line": -2.2,
+      "home_win_probability": 0.434,
+      "market_line": -4.5
+    },
+    {
+      "home": "DET",
+      "away": "GB",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Jared Goff",
+      "away_starter": "Jordan Love",
+      "model_line": 4.9,
+      "home_win_probability": 0.644,
+      "market_line": 3.0
+    },
+    {
+      "home": "LV",
+      "away": "LA",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Kirk Cousins",
+      "away_starter": "Matthew Stafford",
+      "model_line": -5.7,
+      "home_win_probability": 0.335,
+      "market_line": -4.5
+    },
+    {
+      "home": "SEA",
+      "away": "KC",
+      "neutral": false,
+      "gameday": "2026-10-25",
+      "home_starter": "Drew Lock",
+      "away_starter": "Patrick Mahomes",
+      "model_line": 1.4,
+      "home_win_probability": 0.543,
+      "market_line": 2.5
+    },
+    {
+      "home": "PHI",
+      "away": "DAL",
+      "neutral": false,
+      "gameday": "2026-10-26",
+      "home_starter": "Jalen Hurts",
+      "away_starter": "Dak Prescott",
+      "model_line": 2.1,
+      "home_win_probability": 0.561,
+      "market_line": -4.5
+    }
+  ]
 }
