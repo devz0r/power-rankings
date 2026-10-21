@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T11:58:50+00:00",
+  "generated": "2026-10-21T12:08:34+00:00",
   "season": 2026,
   "through_week": 6,
   "next_week": 7,
@@ -15,6 +15,7 @@
       "previous_rank": 2,
       "rank_change": 1,
       "team": "SF",
+      "abbr": "SF",
       "name": "San Francisco 49ers",
       "nickname": "49ers",
       "conference": "NFC",
@@ -49,13 +50,16 @@
       "losses": 0,
       "ties": 0,
       "point_diff": 67,
-      "strength_of_record": 0.051,
+      "strength_of_record": 0.062,
       "strength_of_record_rank": 1,
       "best_win": {
-        "opponent": "SEA",
-        "score": "32-29",
-        "week": 5,
-        "opponent_rating": 5.4
+        "opponent": "LA",
+        "opponent_abbr": "LAR",
+        "opponent_name": "Rams",
+        "opponent_starter": "Matthew Stafford",
+        "score": "27-7",
+        "week": 1,
+        "opponent_rating": 4.3
       },
       "worst_loss": null,
       "remaining_schedule": 0.23,
@@ -72,8 +76,8 @@
       },
       "vegas_rating": 3.09,
       "vegas_difference": 3.33,
-      "note_hash": "5c4cb51c26376500",
-      "note": "The 49ers are 6-0 and sit at No. 1, with a +67 point differential. The offense (+3.9 points) is the engine. The model likes them 3.3 points more than the betting market does.",
+      "note_hash": "2efbcf890cd4a4d1",
+      "note": "The 49ers are 6-0 and back on top at No. 1, helped by a 23-17 win over the Commanders. The offense (+3.9 points) carries them, and next they visit the Falcons as 4.8-point favorites.",
       "note_source": "ai"
     },
     {
@@ -81,6 +85,7 @@
       "previous_rank": 1,
       "rank_change": -1,
       "team": "BUF",
+      "abbr": "BUF",
       "name": "Buffalo Bills",
       "nickname": "Bills",
       "conference": "AFC",
@@ -115,19 +120,25 @@
       "losses": 1,
       "ties": 0,
       "point_diff": 26,
-      "strength_of_record": 0.195,
+      "strength_of_record": 0.217,
       "strength_of_record_rank": 4,
       "best_win": {
         "opponent": "LA",
+        "opponent_abbr": "LAR",
+        "opponent_name": "Rams",
+        "opponent_starter": "Matthew Stafford",
         "score": "37-34",
         "week": 5,
         "opponent_rating": 4.3
       },
       "worst_loss": {
         "opponent": "NE",
+        "opponent_abbr": "NE",
+        "opponent_name": "Patriots",
+        "opponent_starter": "Drake Maye",
         "score": "29-26",
         "week": 4,
-        "opponent_rating": 2.9
+        "opponent_rating": 1.7
       },
       "remaining_schedule": 0.13,
       "remaining_schedule_rank": 14,
@@ -143,8 +154,8 @@
       },
       "vegas_rating": 4.64,
       "vegas_difference": 0.93,
-      "note_hash": "793c290f37b24c6e",
-      "note": "Buffalo slipped to No. 2 after a 33-30 win at Las Vegas that wasn't pretty. The offense is +4.8 points, but the defense is -1.2 points and that keeps showing up.",
+      "note_hash": "de3e3303e69ce19e",
+      "note": "Buffalo slips to No. 2 despite a 33-30 win at Las Vegas, and the defense (-1.2 points) is the reason it feels shaky. The offense at +4.8 points keeps them in the S tier.",
       "note_source": "ai"
     },
     {
@@ -152,6 +163,7 @@
       "previous_rank": 4,
       "rank_change": 1,
       "team": "JAX",
+      "abbr": "JAX",
       "name": "Jacksonville Jaguars",
       "nickname": "Jaguars",
       "conference": "AFC",
@@ -186,19 +198,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 50,
-      "strength_of_record": 0.544,
-      "strength_of_record_rank": 7,
+      "strength_of_record": 0.587,
+      "strength_of_record_rank": 8,
       "best_win": {
         "opponent": "NE",
+        "opponent_abbr": "NE",
+        "opponent_name": "Patriots",
+        "opponent_starter": "Drake Maye",
         "score": "35-6",
         "week": 3,
-        "opponent_rating": 2.9
+        "opponent_rating": 2.6
       },
       "worst_loss": {
-        "opponent": "DEN",
-        "score": "20-13",
-        "week": 2,
-        "opponent_rating": 0.9
+        "opponent": "HOU",
+        "opponent_abbr": "HOU",
+        "opponent_name": "Texans",
+        "opponent_starter": "C.J. Stroud",
+        "score": "34-31",
+        "week": 6,
+        "opponent_rating": -0.0
       },
       "remaining_schedule": -0.74,
       "remaining_schedule_rank": 27,
@@ -214,8 +232,8 @@
       },
       "vegas_rating": 3.59,
       "vegas_difference": 1.55,
-      "note_hash": "e92f3bcd8c51d711",
-      "note": "Jacksonville moved up one spot to No. 3 despite a 34-31 loss to Houston. At 4-2 they have a 74% shot at the division.",
+      "note_hash": "4f889408ea946214",
+      "note": "Jacksonville moves up to No. 3 even after a 34-31 loss to the Texans. Their 74 percent division odds say the standing is still solid, and the Colts come to town in week 8.",
       "note_source": "ai"
     },
     {
@@ -223,6 +241,7 @@
       "previous_rank": 3,
       "rank_change": -1,
       "team": "LA",
+      "abbr": "LAR",
       "name": "Los Angeles Rams",
       "nickname": "Rams",
       "conference": "NFC",
@@ -257,19 +276,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -3,
-      "strength_of_record": 0.961,
-      "strength_of_record_rank": 24,
+      "strength_of_record": 0.969,
+      "strength_of_record_rank": 23,
       "best_win": {
-        "opponent": "PHI",
-        "score": "24-20",
-        "week": 4,
-        "opponent_rating": -1.1
+        "opponent": "NYG",
+        "opponent_abbr": "NYG",
+        "opponent_name": "Giants",
+        "opponent_starter": "Jaxson Dart",
+        "score": "28-6",
+        "week": 2,
+        "opponent_rating": -3.4
       },
       "worst_loss": {
         "opponent": "ARI",
+        "opponent_abbr": "ARI",
+        "opponent_name": "Cardinals",
+        "opponent_starter": "Jacoby Brissett",
         "score": "18-16",
         "week": 6,
-        "opponent_rating": -3.5
+        "opponent_rating": -4.7
       },
       "remaining_schedule": 0.6,
       "remaining_schedule_rank": 10,
@@ -285,8 +310,8 @@
       },
       "vegas_rating": 4.59,
       "vegas_difference": -0.32,
-      "note_hash": "bfc28e0603bec86d",
-      "note": "The Rams are 2-4 and still ranked No. 4, because the rating (+4.3) sees a better team than the record. Losing 18-16 to Arizona cost them 0.9 points.",
+      "note_hash": "bf7a3e8df4fae55f",
+      "note": "At 2-4 the Rams are still ranked No. 4, which says more about their +4.3 rating than their results. The 18-16 home loss to the Cardinals leaves their playoff odds at 38 percent.",
       "note_source": "ai"
     },
     {
@@ -294,6 +319,7 @@
       "previous_rank": 6,
       "rank_change": 1,
       "team": "KC",
+      "abbr": "KC",
       "name": "Kansas City Chiefs",
       "nickname": "Chiefs",
       "conference": "AFC",
@@ -328,10 +354,13 @@
       "losses": 0,
       "ties": 0,
       "point_diff": 57,
-      "strength_of_record": 0.154,
+      "strength_of_record": 0.17,
       "strength_of_record_rank": 3,
       "best_win": {
         "opponent": "DEN",
+        "opponent_abbr": "DEN",
+        "opponent_name": "Broncos",
+        "opponent_starter": "Bo Nix",
         "score": "31-10",
         "week": 1,
         "opponent_rating": 0.9
@@ -351,8 +380,8 @@
       },
       "vegas_rating": 4.22,
       "vegas_difference": -0.06,
-      "note_hash": "a322f42422c555b3",
-      "note": "Kansas City is 5-0 after beating the Chargers 22-6, and the offense leads at +1.7 points. Next comes a trip to Seattle, where the model has them as underdog by 1.4.",
+      "note_hash": "5b8b76d0432e1f0f",
+      "note": "Kansas City is 5-0 after a 22-6 win over the Chargers and climbs to No. 5. The trip to Seattle looks tricky, since the model has them as 1.4-point underdogs.",
       "note_source": "ai"
     },
     {
@@ -360,6 +389,7 @@
       "previous_rank": 5,
       "rank_change": -1,
       "team": "DET",
+      "abbr": "DET",
       "name": "Detroit Lions",
       "nickname": "Lions",
       "conference": "NFC",
@@ -394,19 +424,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 16,
-      "strength_of_record": 0.714,
+      "strength_of_record": 0.745,
       "strength_of_record_rank": 16,
       "best_win": {
         "opponent": "NYJ",
+        "opponent_abbr": "NYJ",
+        "opponent_name": "Jets",
+        "opponent_starter": "Geno Smith",
         "score": "31-24",
         "week": 3,
-        "opponent_rating": -3.3
+        "opponent_rating": -3.7
       },
       "worst_loss": {
         "opponent": "CAR",
+        "opponent_abbr": "CAR",
+        "opponent_name": "Panthers",
+        "opponent_starter": "Bryce Young",
         "score": "32-26",
         "week": 4,
-        "opponent_rating": 0.5
+        "opponent_rating": -0.6
       },
       "remaining_schedule": -0.57,
       "remaining_schedule_rank": 24,
@@ -422,8 +458,8 @@
       },
       "vegas_rating": 2.82,
       "vegas_difference": 1.34,
-      "note_hash": "81922b20cf56d68c",
-      "note": "Detroit used the bye week to hold at No. 6 at 3-2. The offense is +2.9 points and the defense is the soft spot at -0.7. Green Bay visits next.",
+      "note_hash": "13c39ff0d0e7b856",
+      "note": "Detroit used its bye week to drop a spot to No. 6, even though their rating rose 0.2. The Packers visit in week 7, and the Lions are favored by 4.9.",
       "note_source": "ai"
     },
     {
@@ -431,6 +467,7 @@
       "previous_rank": 7,
       "rank_change": 0,
       "team": "SEA",
+      "abbr": "SEA",
       "name": "Seattle Seahawks",
       "nickname": "Seahawks",
       "conference": "NFC",
@@ -465,19 +502,25 @@
       "losses": 3,
       "ties": 0,
       "point_diff": 26,
-      "strength_of_record": 0.822,
+      "strength_of_record": 0.853,
       "strength_of_record_rank": 17,
       "best_win": {
         "opponent": "NE",
+        "opponent_abbr": "NE",
+        "opponent_name": "Patriots",
+        "opponent_starter": "Drake Maye",
         "score": "13-10",
         "week": 1,
-        "opponent_rating": 2.9
+        "opponent_rating": 2.7
       },
       "worst_loss": {
         "opponent": "WAS",
+        "opponent_abbr": "WAS",
+        "opponent_name": "Commanders",
+        "opponent_starter": "Jayden Daniels",
         "score": "33-31",
         "week": 3,
-        "opponent_rating": -1.5
+        "opponent_rating": -2.9
       },
       "remaining_schedule": 0.66,
       "remaining_schedule_rank": 8,
@@ -493,8 +536,8 @@
       },
       "vegas_rating": 4.96,
       "vegas_difference": -1.57,
-      "note_hash": "33b8f09d0a704bda",
-      "note": "Seattle stays at No. 7 despite the 17-14 loss at Denver. Drew Lock starting puts them 1.8 points below their usual quarterback situation, yet they're still favored by 1.4 over Kansas City.",
+      "note_hash": "547492e4aefab60b",
+      "note": "Seattle holds at No. 7 after a 17-14 loss in Denver. Drew Lock starts next, which the model puts 1.8 points below their usual quarterback situation, yet they're still 1.4-point favorites over the Chiefs.",
       "note_source": "ai"
     },
     {
@@ -502,6 +545,7 @@
       "previous_rank": 10,
       "rank_change": 2,
       "team": "CHI",
+      "abbr": "CHI",
       "name": "Chicago Bears",
       "nickname": "Bears",
       "conference": "NFC",
@@ -536,19 +580,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 31,
-      "strength_of_record": 0.552,
+      "strength_of_record": 0.602,
       "strength_of_record_rank": 9,
       "best_win": {
         "opponent": "CAR",
+        "opponent_abbr": "CAR",
+        "opponent_name": "Panthers",
+        "opponent_starter": "Bryce Young",
         "score": "59-37",
         "week": 1,
         "opponent_rating": 0.5
       },
       "worst_loss": {
         "opponent": "GB",
+        "opponent_abbr": "GB",
+        "opponent_name": "Packers",
+        "opponent_starter": "Jordan Love",
         "score": "31-7",
         "week": 5,
-        "opponent_rating": 1.4
+        "opponent_rating": 0.4
       },
       "remaining_schedule": 1.35,
       "remaining_schedule_rank": 4,
@@ -564,8 +614,8 @@
       },
       "vegas_rating": 1.54,
       "vegas_difference": 1.75,
-      "note_hash": "9fa376736569e59a",
-      "note": "Chicago jumped two spots to No. 8 on a 31-23 road win at Atlanta. The rating rose 2.2 points, with injuries accounting for +1.4 of it.",
+      "note_hash": "f28387b8084f9b8c",
+      "note": "The Bears jump two spots to No. 8 on the back of a 31-23 win at Atlanta. Their rating rose 2.2 points, and the Patriots visit next with Chicago favored by 2.6.",
       "note_source": "ai"
     },
     {
@@ -573,6 +623,7 @@
       "previous_rank": 9,
       "rank_change": 0,
       "team": "NE",
+      "abbr": "NE",
       "name": "New England Patriots",
       "nickname": "Patriots",
       "conference": "AFC",
@@ -607,18 +658,24 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 23,
-      "strength_of_record": 0.452,
+      "strength_of_record": 0.473,
       "strength_of_record_rank": 6,
       "best_win": {
         "opponent": "BUF",
+        "opponent_abbr": "BUF",
+        "opponent_name": "Bills",
+        "opponent_starter": "Josh Allen",
         "score": "29-26",
         "week": 4,
-        "opponent_rating": 5.6
+        "opponent_rating": 5.5
       },
       "worst_loss": {
-        "opponent": "JAX",
-        "score": "35-6",
-        "week": 3,
+        "opponent": "SEA",
+        "opponent_abbr": "SEA",
+        "opponent_name": "Seahawks",
+        "opponent_starter": "Sam Darnold",
+        "score": "13-10",
+        "week": 1,
         "opponent_rating": 5.1
       },
       "remaining_schedule": 0.19,
@@ -635,8 +692,8 @@
       },
       "vegas_rating": 0.98,
       "vegas_difference": 1.92,
-      "note_hash": "7208644744197b5a",
-      "note": "New England has won 3 straight and holds at No. 9. Next is a road game at Chicago, where the model has them as underdog by 2.6.",
+      "note_hash": "466b9a8558584d02",
+      "note": "New England has won 3 straight, most recently 26-19 over the Jets, and stays at No. 9. The next test is a trip to Chicago, where the model has them as 2.6-point underdogs.",
       "note_source": "ai"
     },
     {
@@ -644,6 +701,7 @@
       "previous_rank": 8,
       "rank_change": -2,
       "team": "MIN",
+      "abbr": "MIN",
       "name": "Minnesota Vikings",
       "nickname": "Vikings",
       "conference": "NFC",
@@ -678,10 +736,13 @@
       "losses": 0,
       "ties": 0,
       "point_diff": 45,
-      "strength_of_record": 0.098,
+      "strength_of_record": 0.089,
       "strength_of_record_rank": 2,
       "best_win": {
         "opponent": "CHI",
+        "opponent_abbr": "CHI",
+        "opponent_name": "Bears",
+        "opponent_starter": "Caleb Williams",
         "score": "9-3",
         "week": 2,
         "opponent_rating": 3.3
@@ -701,8 +762,8 @@
       },
       "vegas_rating": 2.04,
       "vegas_difference": 0.62,
-      "note_hash": "08b40563163f8112",
-      "note": "Minnesota is 5-0 but ranked only No. 10. The defense (+2.5 points) does the work while the offense sits at -1.8 points.",
+      "note_hash": "c67fdefa69b5e41c",
+      "note": "Minnesota is 5-0 and still falls two spots to No. 10 after a bye week. The model sees a defense at +2.5 points and an offense at -1.8 points.",
       "note_source": "ai"
     },
     {
@@ -710,6 +771,7 @@
       "previous_rank": 12,
       "rank_change": 1,
       "team": "GB",
+      "abbr": "GB",
       "name": "Green Bay Packers",
       "nickname": "Packers",
       "conference": "NFC",
@@ -744,19 +806,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 2,
-      "strength_of_record": 0.582,
+      "strength_of_record": 0.63,
       "strength_of_record_rank": 10,
       "best_win": {
         "opponent": "CHI",
+        "opponent_abbr": "CHI",
+        "opponent_name": "Bears",
+        "opponent_starter": "Tyson Bagent",
         "score": "31-7",
         "week": 5,
-        "opponent_rating": 3.3
+        "opponent_rating": -0.4
       },
       "worst_loss": {
         "opponent": "ATL",
+        "opponent_abbr": "ATL",
+        "opponent_name": "Falcons",
+        "opponent_starter": "Michael Penix Jr.",
         "score": "35-14",
         "week": 3,
-        "opponent_rating": -0.6
+        "opponent_rating": -0.7
       },
       "remaining_schedule": 1.48,
       "remaining_schedule_rank": 1,
@@ -772,8 +840,8 @@
       },
       "vegas_rating": 0.73,
       "vegas_difference": 0.68,
-      "note_hash": "da872817a6137450",
-      "note": "Green Bay won 23-13 over Dallas for a third straight win and rose to No. 11. A 2-point point differential says it's been closer than the record.",
+      "note_hash": "a3e4a9b23a5749a4",
+      "note": "Green Bay has won 3 straight, the latest a 23-13 win over Dallas, and rises to No. 11. The Lions are next, and the model has the Packers as 4.9-point underdogs.",
       "note_source": "ai"
     },
     {
@@ -781,6 +849,7 @@
       "previous_rank": 17,
       "rank_change": 5,
       "team": "HOU",
+      "abbr": "HOU",
       "name": "Houston Texans",
       "nickname": "Texans",
       "conference": "AFC",
@@ -815,19 +884,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": 1,
-      "strength_of_record": 0.961,
-      "strength_of_record_rank": 25,
+      "strength_of_record": 0.965,
+      "strength_of_record_rank": 21,
       "best_win": {
         "opponent": "JAX",
+        "opponent_abbr": "JAX",
+        "opponent_name": "Jaguars",
+        "opponent_starter": "Trevor Lawrence",
         "score": "34-31",
         "week": 6,
-        "opponent_rating": 5.1
+        "opponent_rating": 4.9
       },
       "worst_loss": {
         "opponent": "DAL",
+        "opponent_abbr": "DAL",
+        "opponent_name": "Cowboys",
+        "opponent_starter": "Dak Prescott",
         "score": "34-30",
         "week": 4,
-        "opponent_rating": -0.9
+        "opponent_rating": -1.3
       },
       "remaining_schedule": -1.1,
       "remaining_schedule_rank": 30,
@@ -843,8 +918,8 @@
       },
       "vegas_rating": 2.25,
       "vegas_difference": -1.16,
-      "note_hash": "5bc8ce4eeb69bad7",
-      "note": "Houston climbed five spots to No. 12 by beating Jacksonville 34-31 on the road. The offense improved 0.8 points. At 2-4, they host the Giants next.",
+      "note_hash": "59a2e54b75803807",
+      "note": "Houston jumps five spots to No. 12 after beating Jacksonville 34-31 on the road. They're only 2-4, but the Giants are next and Houston is favored by 7.4.",
       "note_source": "ai"
     },
     {
@@ -852,6 +927,7 @@
       "previous_rank": 11,
       "rank_change": -2,
       "team": "CIN",
+      "abbr": "CIN",
       "name": "Cincinnati Bengals",
       "nickname": "Bengals",
       "conference": "AFC",
@@ -886,19 +962,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 19,
-      "strength_of_record": 0.713,
-      "strength_of_record_rank": 15,
+      "strength_of_record": 0.7,
+      "strength_of_record_rank": 13,
       "best_win": {
         "opponent": "HOU",
+        "opponent_abbr": "HOU",
+        "opponent_name": "Texans",
+        "opponent_starter": "C.J. Stroud",
         "score": "20-6",
         "week": 2,
-        "opponent_rating": 1.1
+        "opponent_rating": -0.0
       },
       "worst_loss": {
         "opponent": "PIT",
+        "opponent_abbr": "PIT",
+        "opponent_name": "Steelers",
+        "opponent_starter": "Aaron Rodgers",
         "score": "30-27",
         "week": 3,
-        "opponent_rating": -0.8
+        "opponent_rating": -1.0
       },
       "remaining_schedule": -1.25,
       "remaining_schedule_rank": 32,
@@ -914,8 +996,8 @@
       },
       "vegas_rating": 2.0,
       "vegas_difference": -1.04,
-      "note_hash": "9a724459373cc08c",
-      "note": "Cincinnati used the bye week and slid two spots to No. 13 without changing its rating. The defense at -1.0 points is the problem. Baltimore is next, with the model favoring them by 0.3.",
+      "note_hash": "b0ca56ff61b0cc7c",
+      "note": "Cincinnati had a bye and drops two spots to No. 13 with no change in its rating. The Bengals visit Baltimore next as a slim 0.3-point favorite.",
       "note_source": "ai"
     },
     {
@@ -923,6 +1005,7 @@
       "previous_rank": 15,
       "rank_change": 1,
       "team": "DEN",
+      "abbr": "DEN",
       "name": "Denver Broncos",
       "nickname": "Broncos",
       "conference": "AFC",
@@ -957,19 +1040,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": -11,
-      "strength_of_record": 0.345,
+      "strength_of_record": 0.414,
       "strength_of_record_rank": 5,
       "best_win": {
-        "opponent": "SEA",
-        "score": "17-14",
-        "week": 6,
-        "opponent_rating": 5.4
+        "opponent": "JAX",
+        "opponent_abbr": "JAX",
+        "opponent_name": "Jaguars",
+        "opponent_starter": "Trevor Lawrence",
+        "score": "20-13",
+        "week": 2,
+        "opponent_rating": 5.1
       },
       "worst_loss": {
         "opponent": "KC",
+        "opponent_abbr": "KC",
+        "opponent_name": "Chiefs",
+        "opponent_starter": "Patrick Mahomes",
         "score": "31-10",
         "week": 1,
-        "opponent_rating": 4.2
+        "opponent_rating": 3.4
       },
       "remaining_schedule": -0.94,
       "remaining_schedule_rank": 28,
@@ -985,8 +1074,8 @@
       },
       "vegas_rating": 2.48,
       "vegas_difference": -1.57,
-      "note_hash": "4b94ffd7f38540d1",
-      "note": "Denver beat Seattle 17-14 and moved up one to No. 14. They're 4-2 with a -11 point differential, and the defense (+1.3 points) carries them.",
+      "note_hash": "ee011053e5e9743a",
+      "note": "Denver beat Seattle 17-14 and edges up to No. 14. The point differential of -11 is a flag, though the defense at +1.3 points keeps them afloat.",
       "note_source": "ai"
     },
     {
@@ -994,6 +1083,7 @@
       "previous_rank": 18,
       "rank_change": 3,
       "team": "CAR",
+      "abbr": "CAR",
       "name": "Carolina Panthers",
       "nickname": "Panthers",
       "conference": "NFC",
@@ -1028,19 +1118,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 23,
-      "strength_of_record": 0.656,
-      "strength_of_record_rank": 12,
+      "strength_of_record": 0.704,
+      "strength_of_record_rank": 14,
       "best_win": {
         "opponent": "DET",
+        "opponent_abbr": "DET",
+        "opponent_name": "Lions",
+        "opponent_starter": "Jared Goff",
         "score": "32-26",
         "week": 4,
-        "opponent_rating": 4.2
+        "opponent_rating": 3.8
       },
       "worst_loss": {
         "opponent": "CLE",
+        "opponent_abbr": "CLE",
+        "opponent_name": "Browns",
+        "opponent_starter": "Deshaun Watson",
         "score": "21-18",
         "week": 3,
-        "opponent_rating": -4.6
+        "opponent_rating": -4.9
       },
       "remaining_schedule": -0.65,
       "remaining_schedule_rank": 26,
@@ -1056,8 +1152,8 @@
       },
       "vegas_rating": 0.11,
       "vegas_difference": 0.34,
-      "note_hash": "f85386cc95e5a1bd",
-      "note": "Carolina rose three spots to No. 15 with a 25-14 win in Philadelphia. The rating gained 1.9 points, and they have a 64% chance to win the division.",
+      "note_hash": "686fb3ec66fd5bd1",
+      "note": "Carolina climbs three spots to No. 15 after a 25-14 win in Philadelphia. The Panthers are 3-2 with 64 percent division odds, and Tampa Bay comes next.",
       "note_source": "ai"
     },
     {
@@ -1065,6 +1161,7 @@
       "previous_rank": 13,
       "rank_change": -3,
       "team": "IND",
+      "abbr": "IND",
       "name": "Indianapolis Colts",
       "nickname": "Colts",
       "conference": "AFC",
@@ -1099,19 +1196,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -20,
-      "strength_of_record": 0.971,
+      "strength_of_record": 0.979,
       "strength_of_record_rank": 28,
       "best_win": {
         "opponent": "HOU",
+        "opponent_abbr": "HOU",
+        "opponent_name": "Texans",
+        "opponent_starter": "C.J. Stroud",
         "score": "19-17",
         "week": 3,
-        "opponent_rating": 1.1
+        "opponent_rating": 0.2
       },
       "worst_loss": {
         "opponent": "TEN",
+        "opponent_abbr": "TEN",
+        "opponent_name": "Titans",
+        "opponent_starter": "Cam Ward",
         "score": "26-20",
         "week": 6,
-        "opponent_rating": -7.2
+        "opponent_rating": -8.0
       },
       "remaining_schedule": -0.63,
       "remaining_schedule_rank": 25,
@@ -1127,8 +1230,8 @@
       },
       "vegas_rating": -1.49,
       "vegas_difference": 1.29,
-      "note_hash": "ff41b941c2810bfa",
-      "note": "Indianapolis fell three spots to No. 16 after losing 26-20 at home to Tennessee, the 32nd-ranked team. At 2-4, their playoff odds are 20%.",
+      "note_hash": "d42aaaf2a215d809",
+      "note": "Indianapolis falls three spots to No. 16 after a 26-20 home loss to the Titans, the last-ranked team. At 2-4, their playoff odds are down to 20 percent.",
       "note_source": "ai"
     },
     {
@@ -1136,6 +1239,7 @@
       "previous_rank": 14,
       "rank_change": -3,
       "team": "ATL",
+      "abbr": "ATL",
       "name": "Atlanta Falcons",
       "nickname": "Falcons",
       "conference": "NFC",
@@ -1170,19 +1274,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -11,
-      "strength_of_record": 0.954,
-      "strength_of_record_rank": 21,
+      "strength_of_record": 0.972,
+      "strength_of_record_rank": 26,
       "best_win": {
         "opponent": "GB",
+        "opponent_abbr": "GB",
+        "opponent_name": "Packers",
+        "opponent_starter": "Jordan Love",
         "score": "35-14",
         "week": 3,
-        "opponent_rating": 1.4
+        "opponent_rating": 0.4
       },
       "worst_loss": {
-        "opponent": "PIT",
-        "score": "20-13",
-        "week": 1,
-        "opponent_rating": -0.8
+        "opponent": "BAL",
+        "opponent_abbr": "BAL",
+        "opponent_name": "Ravens",
+        "opponent_starter": "Tyler Huntley",
+        "score": "30-23",
+        "week": 5,
+        "opponent_rating": -1.9
       },
       "remaining_schedule": 0.03,
       "remaining_schedule_rank": 16,
@@ -1198,8 +1308,8 @@
       },
       "vegas_rating": -1.04,
       "vegas_difference": 0.47,
-      "note_hash": "e8b79d3322e345c2",
-      "note": "Atlanta dropped three spots to No. 17 after a 31-23 home loss to Chicago. The offense at -1.6 points is the weak link, and San Francisco comes next.",
+      "note_hash": "1cc2aa3ddf523c7c",
+      "note": "Atlanta drops three spots to No. 17 after a 31-23 home loss to the Bears. The offense at -1.6 points is the problem, and the 49ers are next.",
       "note_source": "ai"
     },
     {
@@ -1207,6 +1317,7 @@
       "previous_rank": 19,
       "rank_change": 1,
       "team": "PIT",
+      "abbr": "PIT",
       "name": "Pittsburgh Steelers",
       "nickname": "Steelers",
       "conference": "AFC",
@@ -1241,19 +1352,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 9,
-      "strength_of_record": 0.608,
+      "strength_of_record": 0.674,
       "strength_of_record_rank": 11,
       "best_win": {
         "opponent": "CIN",
+        "opponent_abbr": "CIN",
+        "opponent_name": "Bengals",
+        "opponent_starter": "Joe Burrow",
         "score": "30-27",
         "week": 3,
-        "opponent_rating": 1.0
+        "opponent_rating": 0.2
       },
       "worst_loss": {
         "opponent": "CLE",
+        "opponent_abbr": "CLE",
+        "opponent_name": "Browns",
+        "opponent_starter": "Deshaun Watson",
         "score": "27-24",
         "week": 4,
-        "opponent_rating": -4.6
+        "opponent_rating": -5.5
       },
       "remaining_schedule": -0.21,
       "remaining_schedule_rank": 19,
@@ -1269,8 +1386,8 @@
       },
       "vegas_rating": 0.57,
       "vegas_difference": -1.38,
-      "note_hash": "2051d877d7282a15",
-      "note": "Pittsburgh won 26-19 at Tampa Bay and moved up one to No. 18. The rating gained 0.9 points, but the offense is still -0.9.",
+      "note_hash": "660e115153152511",
+      "note": "Pittsburgh won 26-19 at Tampa Bay and moves up to No. 18. At 4-2 they're ahead of where the rating sits, and a trip to the Saints is next.",
       "note_source": "ai"
     },
     {
@@ -1278,6 +1395,7 @@
       "previous_rank": 16,
       "rank_change": -3,
       "team": "DAL",
+      "abbr": "DAL",
       "name": "Dallas Cowboys",
       "nickname": "Cowboys",
       "conference": "NFC",
@@ -1312,19 +1430,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -8,
-      "strength_of_record": 0.968,
+      "strength_of_record": 0.974,
       "strength_of_record_rank": 27,
       "best_win": {
         "opponent": "HOU",
+        "opponent_abbr": "HOU",
+        "opponent_name": "Texans",
+        "opponent_starter": "C.J. Stroud",
         "score": "34-30",
         "week": 4,
-        "opponent_rating": 1.1
+        "opponent_rating": 0.3
       },
       "worst_loss": {
         "opponent": "TB",
+        "opponent_abbr": "TB",
+        "opponent_name": "Buccaneers",
+        "opponent_starter": "Jalon Daniels",
         "score": "24-16",
         "week": 5,
-        "opponent_rating": -4.3
+        "opponent_rating": -5.6
       },
       "remaining_schedule": 0.03,
       "remaining_schedule_rank": 17,
@@ -1340,8 +1464,8 @@
       },
       "vegas_rating": 2.91,
       "vegas_difference": -3.85,
-      "note_hash": "6b5b46d37d90e535",
-      "note": "Dallas fell three spots to No. 19 after a 23-13 loss at Green Bay. The defense is -2.2 points, and the model rates them 3.9 points lower than the market does.",
+      "note_hash": "bc65f33b132a779b",
+      "note": "Dallas falls three spots to No. 19 after a 23-13 loss at Green Bay. The defense at -2.2 points is the biggest hole, and the Eagles are next.",
       "note_source": "ai"
     },
     {
@@ -1349,6 +1473,7 @@
       "previous_rank": 31,
       "rank_change": 11,
       "team": "PHI",
+      "abbr": "PHI",
       "name": "Philadelphia Eagles",
       "nickname": "Eagles",
       "conference": "NFC",
@@ -1383,19 +1508,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -31,
-      "strength_of_record": 0.96,
-      "strength_of_record_rank": 23,
+      "strength_of_record": 0.97,
+      "strength_of_record_rank": 24,
       "best_win": {
         "opponent": "WAS",
+        "opponent_abbr": "WAS",
+        "opponent_name": "Commanders",
+        "opponent_starter": "Jayden Daniels",
         "score": "24-22",
         "week": 1,
         "opponent_rating": -1.5
       },
       "worst_loss": {
         "opponent": "CAR",
+        "opponent_abbr": "CAR",
+        "opponent_name": "Panthers",
+        "opponent_starter": "Bryce Young",
         "score": "25-14",
         "week": 6,
-        "opponent_rating": 0.5
+        "opponent_rating": -0.4
       },
       "remaining_schedule": -0.5,
       "remaining_schedule_rank": 23,
@@ -1411,8 +1542,8 @@
       },
       "vegas_rating": -2.05,
       "vegas_difference": 0.98,
-      "note_hash": "f0cc000766a95bdb",
-      "note": "Philadelphia jumped 11 spots to No. 20, the biggest move of the week, mostly from the quarterback situation (+4.9 points). They've still lost 4 straight, the latest 25-14 to Carolina.",
+      "note_hash": "c707f0076347b086",
+      "note": "Philadelphia leaps 11 spots to No. 20, even after losing 4 straight. The quarterback situation moved their rating +4.9 points, and Jalen Hurts is expected to start against Dallas.",
       "note_source": "ai"
     },
     {
@@ -1420,6 +1551,7 @@
       "previous_rank": 20,
       "rank_change": -1,
       "team": "WAS",
+      "abbr": "WAS",
       "name": "Washington Commanders",
       "nickname": "Commanders",
       "conference": "NFC",
@@ -1454,19 +1586,25 @@
       "losses": 4,
       "ties": 1,
       "point_diff": -40,
-      "strength_of_record": 0.947,
+      "strength_of_record": 0.959,
       "strength_of_record_rank": 20,
       "best_win": {
         "opponent": "SEA",
+        "opponent_abbr": "SEA",
+        "opponent_name": "Seahawks",
+        "opponent_starter": "Drew Lock",
         "score": "33-31",
         "week": 3,
-        "opponent_rating": 5.4
+        "opponent_rating": 2.6
       },
       "worst_loss": {
-        "opponent": "PHI",
-        "score": "24-22",
-        "week": 1,
-        "opponent_rating": -1.1
+        "opponent": "DAL",
+        "opponent_abbr": "DAL",
+        "opponent_name": "Cowboys",
+        "opponent_starter": "Dak Prescott",
+        "score": "37-20",
+        "week": 2,
+        "opponent_rating": -1.7
       },
       "remaining_schedule": -0.5,
       "remaining_schedule_rank": 22,
@@ -1482,8 +1620,8 @@
       },
       "vegas_rating": -3.6,
       "vegas_difference": 2.11,
-      "note_hash": "68612e17d27b5d81",
-      "note": "Washington lost 23-17 at San Francisco and slipped to No. 21. They're 1-4-1 with a -40 point differential, but the model likes them 2.1 points more than the market does.",
+      "note_hash": "24a319ea7914713d",
+      "note": "Washington slips to No. 21 after a 23-17 loss to the 49ers. The record is 1-4-1, but the model likes them 2.1 points more than the betting market does.",
       "note_source": "ai"
     },
     {
@@ -1491,6 +1629,7 @@
       "previous_rank": 21,
       "rank_change": -1,
       "team": "BAL",
+      "abbr": "BAL",
       "name": "Baltimore Ravens",
       "nickname": "Ravens",
       "conference": "AFC",
@@ -1525,19 +1664,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": 24,
-      "strength_of_record": 0.684,
-      "strength_of_record_rank": 13,
+      "strength_of_record": 0.697,
+      "strength_of_record_rank": 12,
       "best_win": {
         "opponent": "IND",
+        "opponent_abbr": "IND",
+        "opponent_name": "Colts",
+        "opponent_starter": "Daniel Jones",
         "score": "41-23",
         "week": 1,
         "opponent_rating": -0.2
       },
       "worst_loss": {
         "opponent": "CLE",
+        "opponent_abbr": "CLE",
+        "opponent_name": "Browns",
+        "opponent_starter": "Deshaun Watson",
         "score": "13-10",
         "week": 6,
-        "opponent_rating": -4.6
+        "opponent_rating": -4.9
       },
       "remaining_schedule": -0.26,
       "remaining_schedule_rank": 20,
@@ -1553,8 +1698,8 @@
       },
       "vegas_rating": 2.01,
       "vegas_difference": -3.54,
-      "note_hash": "ec3614b85931dde1",
-      "note": "Baltimore lost 13-10 at Cleveland and sits at No. 22. Tyler Huntley starting puts them 3.7 points below their usual quarterback situation, and the model is 3.5 points lower than the market.",
+      "note_hash": "359d7ee69477b146",
+      "note": "Baltimore lost 13-10 in Cleveland and slides to No. 22. Tyler Huntley is expected to start, which puts them 3.7 points below their usual quarterback situation.",
       "note_source": "ai"
     },
     {
@@ -1562,6 +1707,7 @@
       "previous_rank": 24,
       "rank_change": 1,
       "team": "NYJ",
+      "abbr": "NYJ",
       "name": "New York Jets",
       "nickname": "Jets",
       "conference": "AFC",
@@ -1596,19 +1742,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -10,
-      "strength_of_record": 0.957,
-      "strength_of_record_rank": 22,
+      "strength_of_record": 0.97,
+      "strength_of_record_rank": 25,
       "best_win": {
         "opponent": "CLE",
+        "opponent_abbr": "CLE",
+        "opponent_name": "Browns",
+        "opponent_starter": "Deshaun Watson",
         "score": "17-12",
         "week": 5,
-        "opponent_rating": -4.6
+        "opponent_rating": -5.5
       },
       "worst_loss": {
-        "opponent": "GB",
-        "score": "20-17",
-        "week": 2,
-        "opponent_rating": 1.4
+        "opponent": "CHI",
+        "opponent_abbr": "CHI",
+        "opponent_name": "Bears",
+        "opponent_starter": "Case Keenum",
+        "score": "23-12",
+        "week": 4,
+        "opponent_rating": -1.0
       },
       "remaining_schedule": -0.4,
       "remaining_schedule_rank": 21,
@@ -1624,8 +1776,8 @@
       },
       "vegas_rating": -3.37,
       "vegas_difference": 0.05,
-      "note_hash": "0a722f6fea512ab8",
-      "note": "The Jets rose one to No. 23 despite a 26-19 loss at New England. The offense at -2.0 points holds them back, but Miami visits next.",
+      "note_hash": "e2eb00c0f311e76b",
+      "note": "The Jets nudge up to No. 23 despite a 26-19 loss to the Patriots. The offense at -2.0 points is the weak spot, but Miami visits next and New York is favored by 5.1.",
       "note_source": "ai"
     },
     {
@@ -1633,6 +1785,7 @@
       "previous_rank": 27,
       "rank_change": 3,
       "team": "ARI",
+      "abbr": "ARI",
       "name": "Arizona Cardinals",
       "nickname": "Cardinals",
       "conference": "NFC",
@@ -1667,16 +1820,22 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -52,
-      "strength_of_record": 0.92,
+      "strength_of_record": 0.936,
       "strength_of_record_rank": 19,
       "best_win": {
         "opponent": "LA",
+        "opponent_abbr": "LAR",
+        "opponent_name": "Rams",
+        "opponent_starter": "Matthew Stafford",
         "score": "18-16",
         "week": 6,
         "opponent_rating": 4.3
       },
       "worst_loss": {
         "opponent": "NYG",
+        "opponent_abbr": "NYG",
+        "opponent_name": "Giants",
+        "opponent_starter": "Jameis Winston",
         "score": "36-24",
         "week": 4,
         "opponent_rating": -4.1
@@ -1695,8 +1854,8 @@
       },
       "vegas_rating": -3.93,
       "vegas_difference": 0.38,
-      "note_hash": "aa710a5037ada18b",
-      "note": "Arizona beat the Rams 18-16 and climbed three spots to No. 24. They're 2-4 with a -52 point differential, so the move is modest.",
+      "note_hash": "2eb30c1d0db4dc68",
+      "note": "Arizona rises three spots to No. 24 after an 18-16 win over the Rams. They're 2-4 with a point differential of -52, so the rating of -3.5 is still low.",
       "note_source": "ai"
     },
     {
@@ -1704,6 +1863,7 @@
       "previous_rank": 23,
       "rank_change": -2,
       "team": "LV",
+      "abbr": "LV",
       "name": "Las Vegas Raiders",
       "nickname": "Raiders",
       "conference": "AFC",
@@ -1738,19 +1898,25 @@
       "losses": 3,
       "ties": 0,
       "point_diff": 0,
-      "strength_of_record": 0.838,
+      "strength_of_record": 0.855,
       "strength_of_record_rank": 18,
       "best_win": {
         "opponent": "NO",
+        "opponent_abbr": "NO",
+        "opponent_name": "Saints",
+        "opponent_starter": "Tyler Shough",
         "score": "35-27",
         "week": 3,
-        "opponent_rating": -3.9
+        "opponent_rating": -4.0
       },
       "worst_loss": {
         "opponent": "NE",
+        "opponent_abbr": "NE",
+        "opponent_name": "Patriots",
+        "opponent_starter": "Drake Maye",
         "score": "45-17",
         "week": 5,
-        "opponent_rating": 2.9
+        "opponent_rating": 1.0
       },
       "remaining_schedule": 0.11,
       "remaining_schedule_rank": 15,
@@ -1766,8 +1932,8 @@
       },
       "vegas_rating": -2.25,
       "vegas_difference": -1.42,
-      "note_hash": "c8843970b3d92775",
-      "note": "Las Vegas has lost 3 straight, the latest 33-30 to Buffalo, and fell two spots to No. 25. The offense at -1.6 points is the weakest unit. Next is the Rams.",
+      "note_hash": "5b26196b1fe932ac",
+      "note": "The Raiders have lost 3 straight, the latest 33-30 to Buffalo, and fall two spots to No. 25. The Rams visit next, and Las Vegas is a 5.7-point underdog.",
       "note_source": "ai"
     },
     {
@@ -1775,6 +1941,7 @@
       "previous_rank": 26,
       "rank_change": 0,
       "team": "NO",
+      "abbr": "NO",
       "name": "New Orleans Saints",
       "nickname": "Saints",
       "conference": "NFC",
@@ -1809,19 +1976,25 @@
       "losses": 4,
       "ties": 0,
       "point_diff": -26,
-      "strength_of_record": 0.962,
-      "strength_of_record_rank": 26,
+      "strength_of_record": 0.967,
+      "strength_of_record_rank": 22,
       "best_win": {
         "opponent": "BAL",
+        "opponent_abbr": "BAL",
+        "opponent_name": "Ravens",
+        "opponent_starter": "Lamar Jackson",
         "score": "24-17",
         "week": 2,
-        "opponent_rating": 2.9
+        "opponent_rating": 2.3
       },
       "worst_loss": {
         "opponent": "LV",
+        "opponent_abbr": "LV",
+        "opponent_name": "Raiders",
+        "opponent_starter": "Kirk Cousins",
         "score": "35-27",
         "week": 3,
-        "opponent_rating": -3.7
+        "opponent_rating": -4.0
       },
       "remaining_schedule": -1.04,
       "remaining_schedule_rank": 29,
@@ -1837,8 +2010,8 @@
       },
       "vegas_rating": -2.31,
       "vegas_difference": -1.57,
-      "note_hash": "a50eadecc7ec275f",
-      "note": "New Orleans stays at No. 26 after a 34-27 win over the Giants. The rating gained 1.1 points, and Pittsburgh is next on a neutral field.",
+      "note_hash": "6e2862e218564a62",
+      "note": "New Orleans holds at No. 26 after a 34-27 win over the Giants. They're 2-4, and the offense at -1.4 points keeps them down. Pittsburgh is next on a neutral field.",
       "note_source": "ai"
     },
     {
@@ -1846,6 +2019,7 @@
       "previous_rank": 25,
       "rank_change": -2,
       "team": "NYG",
+      "abbr": "NYG",
       "name": "New York Giants",
       "nickname": "Giants",
       "conference": "NFC",
@@ -1880,19 +2054,25 @@
       "losses": 2,
       "ties": 1,
       "point_diff": -4,
-      "strength_of_record": 0.702,
-      "strength_of_record_rank": 14,
+      "strength_of_record": 0.728,
+      "strength_of_record_rank": 15,
       "best_win": {
         "opponent": "DAL",
+        "opponent_abbr": "DAL",
+        "opponent_name": "Cowboys",
+        "opponent_starter": "Dak Prescott",
         "score": "28-20",
         "week": 1,
-        "opponent_rating": -0.9
+        "opponent_rating": -1.2
       },
       "worst_loss": {
         "opponent": "NO",
+        "opponent_abbr": "NO",
+        "opponent_name": "Saints",
+        "opponent_starter": "Tyler Shough",
         "score": "34-27",
         "week": 6,
-        "opponent_rating": -3.9
+        "opponent_rating": -4.4
       },
       "remaining_schedule": 1.36,
       "remaining_schedule_rank": 2,
@@ -1908,8 +2088,8 @@
       },
       "vegas_rating": -5.46,
       "vegas_difference": 1.33,
-      "note_hash": "3ce5cffec165eeed",
-      "note": "The Giants fell two spots to No. 27 after losing 34-27 at home to New Orleans. They're 3-2-1, and Houston is a tough road trip, with the model giving them underdog status by 7.4.",
+      "note_hash": "7395a29dc6ce7d9f",
+      "note": "The Giants fall two spots to No. 27 after a 34-27 loss to the Saints. Houston is next, and the model has New York as 7.4-point underdogs.",
       "note_source": "ai"
     },
     {
@@ -1917,6 +2097,7 @@
       "previous_rank": 22,
       "rank_change": -6,
       "team": "TB",
+      "abbr": "TB",
       "name": "Tampa Bay Buccaneers",
       "nickname": "Buccaneers",
       "conference": "NFC",
@@ -1955,15 +2136,21 @@
       "strength_of_record_rank": 30,
       "best_win": {
         "opponent": "DAL",
+        "opponent_abbr": "DAL",
+        "opponent_name": "Cowboys",
+        "opponent_starter": "Dak Prescott",
         "score": "24-16",
         "week": 5,
-        "opponent_rating": -0.9
+        "opponent_rating": -1.4
       },
       "worst_loss": {
         "opponent": "CLE",
+        "opponent_abbr": "CLE",
+        "opponent_name": "Browns",
+        "opponent_starter": "Deshaun Watson",
         "score": "23-19",
         "week": 2,
-        "opponent_rating": -4.6
+        "opponent_rating": -5.1
       },
       "remaining_schedule": 0.41,
       "remaining_schedule_rank": 11,
@@ -1979,8 +2166,8 @@
       },
       "vegas_rating": -2.48,
       "vegas_difference": -1.79,
-      "note_hash": "b4599e3db20ffd61",
-      "note": "Tampa Bay fell six spots to No. 28, the steepest drop this week, after a 26-19 home loss to Pittsburgh. At 1-5, Jalon Daniels starting puts them 3.1 points below their usual quarterback situation.",
+      "note_hash": "0b7a371014047e33",
+      "note": "Tampa Bay's six-spot drop to No. 28 is the biggest this week, following a 26-19 home loss to Pittsburgh. At 1-5, they're 6.9-point underdogs at Carolina.",
       "note_source": "ai"
     },
     {
@@ -1988,6 +2175,7 @@
       "previous_rank": 29,
       "rank_change": 0,
       "team": "LAC",
+      "abbr": "LAC",
       "name": "Los Angeles Chargers",
       "nickname": "Chargers",
       "conference": "AFC",
@@ -2026,10 +2214,13 @@
       "strength_of_record_rank": 31,
       "best_win": null,
       "worst_loss": {
-        "opponent": "LV",
+        "opponent": "ARI",
+        "opponent_abbr": "ARI",
+        "opponent_name": "Cardinals",
+        "opponent_starter": "Jacoby Brissett",
         "score": "26-14",
-        "week": 2,
-        "opponent_rating": -3.7
+        "week": 1,
+        "opponent_rating": -5.1
       },
       "remaining_schedule": 0.68,
       "remaining_schedule_rank": 7,
@@ -2045,8 +2236,8 @@
       },
       "vegas_rating": -0.91,
       "vegas_difference": -3.46,
-      "note_hash": "7e4b511ac4a57bba",
-      "note": "The Chargers are 0-6 after a 22-6 loss at Kansas City, with a -61 point differential. The offense at -3.0 points is the core issue. Playoff odds are 0%.",
+      "note_hash": "a7857e14a67a911b",
+      "note": "The Chargers are 0-6 after a 22-6 loss in Kansas City, and playoff odds are 0 percent. The offense at -3.0 points is the main issue, and the Rams are next as a 10.8-point test.",
       "note_source": "ai"
     },
     {
@@ -2054,6 +2245,7 @@
       "previous_rank": 28,
       "rank_change": -2,
       "team": "CLE",
+      "abbr": "CLE",
       "name": "Cleveland Browns",
       "nickname": "Browns",
       "conference": "AFC",
@@ -2088,19 +2280,25 @@
       "losses": 2,
       "ties": 0,
       "point_diff": -16,
-      "strength_of_record": 0.551,
-      "strength_of_record_rank": 8,
+      "strength_of_record": 0.585,
+      "strength_of_record_rank": 7,
       "best_win": {
-        "opponent": "BAL",
-        "score": "13-10",
-        "week": 6,
-        "opponent_rating": 2.9
+        "opponent": "TB",
+        "opponent_abbr": "TB",
+        "opponent_name": "Buccaneers",
+        "opponent_starter": "Baker Mayfield",
+        "score": "23-19",
+        "week": 2,
+        "opponent_rating": -0.3
       },
       "worst_loss": {
         "opponent": "NYJ",
+        "opponent_abbr": "NYJ",
+        "opponent_name": "Jets",
+        "opponent_starter": "Geno Smith",
         "score": "17-12",
         "week": 5,
-        "opponent_rating": -3.3
+        "opponent_rating": -4.5
       },
       "remaining_schedule": -1.11,
       "remaining_schedule_rank": 31,
@@ -2116,8 +2314,8 @@
       },
       "vegas_rating": -3.73,
       "vegas_difference": -0.86,
-      "note_hash": "60516cd9e6b3f7d8",
-      "note": "Cleveland is 4-2 but ranked No. 30, with a -16 point differential. The 13-10 win over Baltimore didn't change that, since the offense is -3.0 points.",
+      "note_hash": "82c0bdb05c79139d",
+      "note": "Cleveland is 4-2 but ranked No. 30, after a 13-10 win over the Ravens. The offense at -3.0 points explains the gap, and the Browns visit the Titans as 0.4-point favorites.",
       "note_source": "ai"
     },
     {
@@ -2125,6 +2323,7 @@
       "previous_rank": 30,
       "rank_change": -1,
       "team": "MIA",
+      "abbr": "MIA",
       "name": "Miami Dolphins",
       "nickname": "Dolphins",
       "conference": "AFC",
@@ -2164,9 +2363,12 @@
       "best_win": null,
       "worst_loss": {
         "opponent": "LV",
+        "opponent_abbr": "LV",
+        "opponent_name": "Raiders",
+        "opponent_starter": "Kirk Cousins",
         "score": "27-13",
         "week": 1,
-        "opponent_rating": -3.7
+        "opponent_rating": -4.1
       },
       "remaining_schedule": 1.29,
       "remaining_schedule_rank": 5,
@@ -2182,8 +2384,8 @@
       },
       "vegas_rating": -6.29,
       "vegas_difference": 0.1,
-      "note_hash": "a606e8032af5d7a7",
-      "note": "Miami is 0-5 after a bye week and has lost 5 straight. The -62 point differential and -2.4 points on offense explain the No. 31 spot. The Jets are next.",
+      "note_hash": "1223a816cbc7e16a",
+      "note": "Miami is 0-5 after a bye and has lost 5 straight. The offense at -2.4 points is the weak spot, and the Jets are next with Miami a 5.1-point underdog.",
       "note_source": "ai"
     },
     {
@@ -2191,6 +2393,7 @@
       "previous_rank": 32,
       "rank_change": 0,
       "team": "TEN",
+      "abbr": "TEN",
       "name": "Tennessee Titans",
       "nickname": "Titans",
       "conference": "AFC",
@@ -2229,12 +2432,18 @@
       "strength_of_record_rank": 29,
       "best_win": {
         "opponent": "IND",
+        "opponent_abbr": "IND",
+        "opponent_name": "Colts",
+        "opponent_starter": "Daniel Jones",
         "score": "26-20",
         "week": 6,
-        "opponent_rating": -0.2
+        "opponent_rating": -0.6
       },
       "worst_loss": {
         "opponent": "NYG",
+        "opponent_abbr": "NYG",
+        "opponent_name": "Giants",
+        "opponent_starter": "Jameis Winston",
         "score": "12-7",
         "week": 3,
         "opponent_rating": -4.1
@@ -2253,8 +2462,8 @@
       },
       "vegas_rating": -6.64,
       "vegas_difference": -0.52,
-      "note_hash": "8720d97a043d05ac",
-      "note": "Tennessee is still at No. 32 despite a 26-20 win at Indianapolis. The rating rose 1.7 points, yet it's still -7.2, and Cleveland visits next.",
+      "note_hash": "27c8f09f9c233308",
+      "note": "Tennessee stays at No. 32 even after a 26-20 win over the Colts on the road. Their rating rose 1.7 points, but -7.2 is still the league's worst. Cleveland visits next.",
       "note_source": "ai"
     }
   ],
