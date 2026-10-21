@@ -63,7 +63,7 @@ def team_context(team: str, played: list[Game], upcoming: list[Game], rank: dict
         score = f"{max(g.home_score, g.away_score)}-{min(g.home_score, g.away_score)}"
         word = "win over" if margin > 0 else "loss to" if margin < 0 else "tie with"
         place = "at home" if g.home == team and not g.neutral else "on the road" if g.away == team else "on a neutral field"
-        ctx["last_game"] = f"a {score} {word} {teams[opp].nickname} (ranked #{rank[opp]}) {place}"
+        ctx["last_game"] = f"a {score} {word} the {teams[opp].nickname} (ranked #{rank[opp]}) {place}"
     results = ["W" if (g.home_margin if g.home == team else -g.home_margin) > 0 else
                "L" if (g.home_margin if g.home == team else -g.home_margin) < 0 else "T" for g in mine]
     if results:
@@ -82,7 +82,7 @@ def team_context(team: str, played: list[Game], upcoming: list[Game], rank: dict
         line = model.predict(nxt) * (1 if home else -1)
         where = "at home" if home and not nxt.neutral else "on the road" if not home else "on a neutral field"
         side = "favored" if line > 0 else "underdog"
-        ctx["next_game"] = f"week {nxt.week}, {where} against {teams[opp].nickname} (ranked #{rank[opp]}), model has them as {side} by {abs(line):.1f}"
+        ctx["next_game"] = f"week {nxt.week}, {where} against the {teams[opp].nickname} (ranked #{rank[opp]}), model has them as {side} by {abs(line):.1f}"
     return ctx
 
 
@@ -127,7 +127,13 @@ def build(
 
     # Résumé, judged against current healthy strength.
     reference = float(np.mean(sorted(healthy.values(), reverse=True)[:SOR_REFERENCE_TEAMS]))
-    sor = {t: resume.strength_of_record(t, played, healthy, hfa, reference) for t in season_teams}
+    # Each past opponent as fielded that day: its QB and that week's injuries.
+    faced = {
+        (g.game_id, t): model.rating_with(t, qb) + model.injury_cost(g.season, g.week, t)
+        for g in played
+        for t, qb in ((g.home, g.home_qb), (g.away, g.away_qb))
+    }
+    sor = {t: resume.strength_of_record(t, played, faced, hfa, reference) for t in season_teams}
     remaining = {t: resume.remaining_schedule(t, upcoming, healthy, hfa) for t in season_teams}
 
     # How sure: chance each team is truly the best / top five.
@@ -167,6 +173,7 @@ def build(
             "previous_rank": prev_rank[t],
             "rank_change": prev_rank[t] - rank[t],
             "team": t,
+            "abbr": info.display_abbr,
             "name": info.name,
             "nickname": info.nickname,
             "conference": info.conference,
@@ -189,7 +196,7 @@ def build(
             **rec,
             "strength_of_record": round(sor[t], 3),
             "strength_of_record_rank": sor_rank[t],
-            **resume.notable_results(t, played, healthy),
+            **resume.notable_results(t, played, faced, teams),
             "remaining_schedule": None if remaining[t] is None else round(remaining[t], 2),
             "remaining_schedule_rank": sos_rank.get(t),
             "chance_best": round(chance_best[t], 3),

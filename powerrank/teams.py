@@ -10,6 +10,8 @@ from powerrank.data import CACHE_DIR, TEAM_ALIASES
 
 # Old abbreviations, plus a duplicate Rams row (schedules use "LA").
 NOT_CURRENT = set(TEAM_ALIASES) | {"LAR"}
+# nflverse calls the Rams "LA", which is ambiguous next to the Chargers.
+DISPLAY_ABBR = {"LA": "LAR"}
 
 
 @dataclass(frozen=True)
@@ -22,6 +24,10 @@ class Team:
     color: str
     color2: str
     logo: str
+
+    @property
+    def display_abbr(self) -> str:
+        return DISPLAY_ABBR.get(self.abbr, self.abbr)
 
 
 def load_teams(refresh: bool = False) -> dict[str, Team]:

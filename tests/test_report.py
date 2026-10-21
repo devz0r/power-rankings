@@ -30,27 +30,45 @@ def test_tiers_use_letters_from_the_top():
     assert assigned["t0"] == "F"
 
 
+def faced(games, ratings):
+    """Every team at its listed rating in every game."""
+    return {(g.game_id, t): ratings[t] for g in games for t in (g.home, g.away)}
+
+
 def test_strength_of_record_rewards_tougher_wins():
     ratings = {"us": 0.0, "strong": 6.0, "weak": -6.0}
     vs_strong = [game(i, "us", "strong", week=i + 1, margin=3) for i in range(3)]
     vs_weak = [game(i, "us", "weak", week=i + 1, margin=3) for i in range(3)]
-    tough = resume.strength_of_record("us", vs_strong, ratings, hfa=0.0, reference=2.0)
-    easy = resume.strength_of_record("us", vs_weak, ratings, hfa=0.0, reference=2.0)
+    tough = resume.strength_of_record("us", vs_strong, faced(vs_strong, ratings), hfa=0.0, reference=2.0)
+    easy = resume.strength_of_record("us", vs_weak, faced(vs_weak, ratings), hfa=0.0, reference=2.0)
     assert tough < easy  # a typical playoff team would rarely go 3-0 against strong teams
 
 
 def test_strength_of_record_coin_flip():
     ratings = {"us": 0.0, "them": 0.0}
-    assert resume.strength_of_record("us", [game(0, "us", "them", margin=1)], ratings, 0.0, 0.0) == pytest.approx(0.5)
-    assert resume.strength_of_record("us", [game(0, "us", "them", margin=-1)], ratings, 0.0, 0.0) == pytest.approx(1.0)
+    won, lost = [game(0, "us", "them", margin=1)], [game(0, "us", "them", margin=-1)]
+    assert resume.strength_of_record("us", won, faced(won, ratings), 0.0, 0.0) == pytest.approx(0.5)
+    assert resume.strength_of_record("us", lost, faced(lost, ratings), 0.0, 0.0) == pytest.approx(1.0)
 
 
 def test_notable_results():
     ratings = {"us": 0.0, "good": 5.0, "bad": -5.0, "meh": 0.0}
     played = [game(0, "us", "good", margin=7), game(1, "us", "bad", week=2, margin=-3), game(2, "meh", "us", week=3, margin=-10)]
-    notable = resume.notable_results("us", played, ratings)
+    notable = resume.notable_results("us", played, faced(played, ratings))
     assert notable["best_win"]["opponent"] == "good"
     assert notable["worst_loss"]["opponent"] == "bad"
+
+
+def test_opponents_are_judged_as_fielded_that_day():
+    # Same opponent twice: once with its starter (+5), once with a backup (-3).
+    played = [game(0, "us", "them", margin=3), game(1, "us", "them", week=2, margin=3)]
+    strength = {("g0", "them"): 5.0, ("g1", "them"): -3.0, ("g0", "us"): 0.0, ("g1", "us"): 0.0}
+    best = resume.notable_results("us", played, strength)["best_win"]
+    assert best["week"] == 1 and best["opponent_rating"] == 5.0
+    # Beating the full-strength version is harder for a reference team to match.
+    only_starter = resume.strength_of_record("us", played[:1], strength, 0.0, 0.0)
+    only_backup = resume.strength_of_record("us", played[1:], strength, 0.0, 0.0)
+    assert only_starter < only_backup
 
 
 def test_market_ratings_recover_spreads():

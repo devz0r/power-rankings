@@ -26,7 +26,7 @@ function el(tag, attrs = {}, ...kids) {
 function logo(team, cls = "logo") {
   const img = el("img", { class: cls, src: team.logo, alt: "", loading: "lazy" });
   img.addEventListener("error", () => {
-    const fallback = el("span", { class: "logo-fallback", text: team.team });
+    const fallback = el("span", { class: "logo-fallback", text: team.abbr });
     fallback.style.background = team.color;
     img.replaceWith(fallback);
   });
@@ -121,7 +121,7 @@ function renderTiers() {
       if (!members.length) body.append(el("span", { class: "empty", text: "No teams in this tier right now" }));
       for (const t of members) {
         const btn = el("button", { class: "logo-btn", title: `${t.rank}. ${t.name} (${fmt.pts(t.rating)})`, "aria-label": `${t.rank}. ${t.name}, rating ${fmt.pts(t.rating)}` });
-        btn.append(logo(t, ""), el("span", { class: "abbr", text: t.team }));
+        btn.append(logo(t, ""), el("span", { class: "abbr", text: t.abbr }));
         btn.addEventListener("click", () => showDetail(t));
         body.append(btn);
       }
@@ -146,7 +146,7 @@ function renderGames() {
       return el(
         "tr",
         {},
-        el("td", {}, el("div", { class: "team" }, logo(away), `${g.away} @ ${g.home}`, logo(home))),
+        el("td", {}, el("div", { class: "team" }, logo(away), `${away.abbr} @ ${home.abbr}`, logo(home))),
         el("td", { class: "num", text: fmt.pts(g.model_line) }),
         el("td", { class: "num", text: g.market_line == null ? "–" : fmt.pts(g.market_line) }),
         el("td", { class: "num " + (gap == null ? "flat" : Math.abs(gap) >= 3 ? "up" : "flat"), text: gap == null ? "–" : fmt.pts(gap) }),
@@ -173,7 +173,8 @@ function showDetail(t) {
     return el("div", { class: "bar" }, el("span", { text: name }), el("div", { class: "track" }, fill), el("span", { class: "val", text: fmt.pts(v) }));
   });
 
-  const game = (g) => (g ? `${g.opponent} ${g.score}, week ${g.week}` : "–");
+  const game = (g) =>
+    g ? `${g.opponent_name} ${g.score}, week ${g.week}${g.opponent_starter ? ` (vs ${g.opponent_starter})` : ""}` : "–";
   const off = t.offseason;
   const why = [off.qb_changed && (off.veteran_qb ? "new veteran QB" : "new QB"), off.coach_changed && "new head coach"].filter(Boolean).join(", ");
   const kv = (rows) => el("div", { class: "kv" }, ...rows.map(([a, b]) => el("div", {}, el("span", { text: a }), el("span", { text: b }))));
