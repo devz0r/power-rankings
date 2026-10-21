@@ -75,12 +75,12 @@ The ranking is predictive: who would win on a neutral field next Sunday? Each te
 
 ## Build order
 1. Data pipeline, backtest harness, simple baseline. **Done:** Elo and ridge baselines; see README for results.
-2. Opponent-adjusted EPA model with garbage-time and luck adjustments.
+2. Opponent-adjusted EPA model with garbage-time and luck adjustments. **Done:** ties the score baseline on held-out seasons; adjustments tested and measured as noise-level. See README.
 3. Preseason priors and weekly updating.
 4. QB and injury adjustments.
 5. Résumé columns, uncertainty, season simulation, Vegas disagreement.
 6. Export to JSON and build the static site (ranked and tier views).
-7. Weekly run after Monday Night Football.
+7. Weekly run after Monday Night Football. **Done:** GitHub Actions, Tuesdays with retries.
 
 ## Model and effort
 - Modeling and backtest: Opus 5.5, high effort.

@@ -28,6 +28,7 @@ def make_season(season: int, ratings: dict[str, float], hfa: float = 0.0, noise:
                 home=home,
                 away=away,
                 neutral=False,
+                gameday=None,
                 home_score=30 + margin if margin > 0 else 30,
                 away_score=30 if margin > 0 else 30 - margin,
                 spread_line=0.0,

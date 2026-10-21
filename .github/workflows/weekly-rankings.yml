@@ -1,0 +1,57 @@
+name: Weekly rankings
+
+# Tuesday after Monday Night Football (times are UTC; 15:00 is 10-11am Eastern).
+# The later runs are retries: if the week isn't finished or nflverse hasn't
+# published play-by-play yet, `rank` exits with an error and the next run
+# picks it up. A run with nothing new commits nothing.
+on:
+  schedule:
+    - cron: "0 15 * * 2"
+    - cron: "0 21 * * 2"
+    - cron: "0 15 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-rankings
+  cancel-in-progress: false
+
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Restore nflverse data cache
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: nflverse-${{ github.run_id }}
+          restore-keys: nflverse-
+
+      - run: pip install -r requirements.txt
+
+      - run: python -m pytest -q
+
+      - name: Rank
+        run: python -m powerrank --refresh rank
+
+      - name: Commit if the rankings changed
+        run: |
+          if git diff --quiet -I '"generated":' -- output/rankings.json; then
+            echo "No change."
+            exit 0
+          fi
+          week=$(python -c "import json; print(json.load(open('output/rankings.json'))['through_week'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add output/rankings.json
+          git commit -m "Rankings through week ${week}"
+          git push

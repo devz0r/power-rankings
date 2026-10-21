@@ -25,6 +25,7 @@ class Game:
     home: str
     away: str
     neutral: bool
+    gameday: str | None
     home_score: int | None
     away_score: int | None
     # nflverse convention: positive means the home team is favored by that many points.
@@ -71,6 +72,7 @@ def to_games(df: pl.DataFrame) -> list[Game]:
             home=r["home_team"],
             away=r["away_team"],
             neutral=r["location"] == "Neutral",
+            gameday=r["gameday"],
             home_score=r["home_score"],
             away_score=r["away_score"],
             spread_line=r["spread_line"],

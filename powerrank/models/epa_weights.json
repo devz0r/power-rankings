@@ -1,0 +1,25 @@
+{
+  "fitted_on": "2006-2025",
+  "games": 5431,
+  "cross_validated_mae": 10.496,
+  "params": {
+    "prior_plays": 100.0,
+    "prior_scale": {},
+    "carryover": 0.6,
+    "garbage_weight": 1.0,
+    "st_prior_games": 4.0,
+    "half_life": null,
+    "neutralize_fumbles": true
+  },
+  "weights": {
+    "off_pass": 13.8597,
+    "def_pass": -7.3216,
+    "off_rush": 11.6177,
+    "def_rush": -8.6658,
+    "off_int": -1.7739,
+    "def_int": -1.845,
+    "st_kick": 0.0889,
+    "st_return": 0.3933,
+    "margin": 0.5932
+  }
+}

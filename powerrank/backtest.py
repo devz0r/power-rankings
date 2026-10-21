@@ -34,8 +34,17 @@ def group_weeks(games: Iterable[Game]) -> list[tuple[int, int, list[Game]]]:
     return weeks
 
 
-def run(model: RatingModel, games: list[Game], through_season: int | None = None) -> list[Prediction]:
-    """Replay every played game in order, returning a pre-game prediction for each."""
+def run(
+    model: RatingModel,
+    games: list[Game],
+    through_season: int | None = None,
+    observe: Callable[[Game], None] | None = None,
+) -> list[Prediction]:
+    """Replay every played game in order, returning a pre-game prediction for each.
+
+    `observe`, if given, is called for each game just before the model sees
+    its result, so callers can capture any pre-game model state.
+    """
     played = [g for g in games if g.played and (through_season is None or g.season <= through_season)]
     predictions: list[Prediction] = []
     current_season = None
@@ -44,7 +53,10 @@ def run(model: RatingModel, games: list[Game], through_season: int | None = None
             teams = {t for g in played if g.season == season for t in (g.home, g.away)}
             model.start_season(season, teams)
             current_season = season
-        predictions.extend(Prediction(g, model.predict(g)) for g in week_games)
+        for g in week_games:
+            predictions.append(Prediction(g, model.predict(g)))
+            if observe:
+                observe(g)
         model.update_week(week_games)
     return predictions
 
