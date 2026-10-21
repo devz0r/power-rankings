@@ -85,3 +85,6 @@ The ranking is predictive: who would win on a neutral field next Sunday? Each te
 ## Model and effort
 - Modeling and backtest: Opus 5.5, high effort.
 - Website and tier list: Sonnet 5.5, medium effort.
+
+## Team notes
+A short note per team on why it moved: facts computed in code, prose by Claude with a number check, template fallback. **Done.**

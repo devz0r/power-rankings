@@ -63,6 +63,14 @@ tbody tr.row { cursor: pointer; border-bottom: 1px solid var(--line); }
 tbody tr.row:last-child { border-bottom: 0; }
 tbody tr.row:hover { background: var(--panel-2); }
 
+.toggle { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; margin: 0 0 10px 2px; cursor: pointer; }
+.toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
+tr.row.has-note { border-bottom: 0 !important; }
+tr.note-row { border-bottom: 1px solid var(--line); cursor: pointer; }
+tr.note-row:last-child { border-bottom: 0; }
+tr.note-row td { padding: 0 14px 12px 58px; color: #c9c9ce; font-size: 14px; white-space: normal; line-height: 1.45; }
+tr.note-row:hover, tr.row.has-note:hover, tr.row.has-note:hover + tr.note-row { background: var(--panel-2); }
+.d-note { margin: 0; font-size: 15px; line-height: 1.5; color: #dcdce0; }
 .team { display: flex; align-items: center; gap: 10px; font-weight: 600; }
 .team small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
 .logo { width: 30px; height: 30px; object-fit: contain; flex: none; }
@@ -137,6 +145,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
   .hide-md { display: none; }
 }
 @media (max-width: 560px) {
+  tr.note-row td { padding-left: 14px; }
   .hide-sm { display: none; }
   .range-col { display: none; }
   h1 { font-size: 22px; }

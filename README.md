@@ -68,6 +68,22 @@ the market's line.
 The résumé, odds and Vegas numbers are shown beside the ranking; none of
 them feed into it.
 
+## Team notes
+
+Each team gets a one-to-two sentence note on why it moved. The code works out
+the facts (what moved the rating, last game, streak, QB and injury situation,
+odds, Vegas gap); `claude-sonnet-5-5` turns them into prose, seeing all 32
+teams in one request so the notes don't repeat each other. Every number in a
+note has to appear in that team's facts, and any note that fails the check,
+or any API trouble, falls back to a plain template (`note_source` in the JSON
+says which). A note is reused until its facts change, so a rerun with nothing
+new costs nothing and doesn't change the page.
+
+Set the repo secret `ANTHROPIC_API_KEY` (Settings -> Secrets and variables ->
+Actions) to turn on Claude-written notes; without it every note is a
+template. Locally, export the same variable, or run
+`python -m powerrank rank --no-ai`. `POWERRANK_NOTES_MODEL` overrides the model.
+
 ## Weekly update
 
 `.github/workflows/weekly-rankings.yml` runs every Tuesday after Monday Night

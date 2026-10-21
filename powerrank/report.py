@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 
 import numpy as np
 
-from powerrank import backtest, market, resume, simulate, tiers, uncertainty
+from powerrank import backtest, market, notes, resume, simulate, tiers, uncertainty
 from powerrank.data import Game
 from powerrank.models.base import win_probability
 from powerrank.models.epa import EpaModel
@@ -51,6 +51,41 @@ def ranks(values: dict[str, float], reverse: bool = True) -> dict[str, int]:
     return {t: i + 1 for i, t in enumerate(order)}
 
 
+def team_context(team: str, played: list[Game], upcoming: list[Game], rank: dict[str, int],
+                 teams: dict[str, Team], model: EpaModel, through: int) -> dict:
+    """Last game, streak and next game, for the team's weekly note."""
+    mine = [g for g in played if team in (g.home, g.away)]
+    ctx: dict = {}
+    if mine and mine[-1].week == through:
+        g = mine[-1]
+        margin = g.home_margin if g.home == team else -g.home_margin
+        opp = g.away if g.home == team else g.home
+        score = f"{max(g.home_score, g.away_score)}-{min(g.home_score, g.away_score)}"
+        word = "win over" if margin > 0 else "loss to" if margin < 0 else "tie with"
+        place = "at home" if g.home == team and not g.neutral else "on the road" if g.away == team else "on a neutral field"
+        ctx["last_game"] = f"a {score} {word} {teams[opp].nickname} (ranked #{rank[opp]}) {place}"
+    results = ["W" if (g.home_margin if g.home == team else -g.home_margin) > 0 else
+               "L" if (g.home_margin if g.home == team else -g.home_margin) < 0 else "T" for g in mine]
+    if results:
+        run = 0
+        for r in reversed(results):
+            if r == results[-1]:
+                run += 1
+            else:
+                break
+        if run >= 3 and results[-1] in "WL":
+            ctx["streak"] = f"{'won' if results[-1] == 'W' else 'lost'} {run} straight"
+    nxt = next((g for g in upcoming if team in (g.home, g.away)), None)
+    if nxt is not None:
+        home = nxt.home == team
+        opp = nxt.away if home else nxt.home
+        line = model.predict(nxt) * (1 if home else -1)
+        where = "at home" if home and not nxt.neutral else "on the road" if not home else "on a neutral field"
+        side = "favored" if line > 0 else "underdog"
+        ctx["next_game"] = f"{where} against {teams[opp].nickname} (ranked #{rank[opp]}), model has them as {side} by {abs(line):.1f}"
+    return ctx
+
+
 def build(
     model: EpaModel,
     games: list[Game],
@@ -58,6 +93,8 @@ def build(
     through: int,
     teams: dict[str, Team],
     calibration: dict,
+    previous_notes: dict[str, dict] | None = None,
+    client=None,
 ) -> dict:
     """Replay history through `through` and assemble the full report."""
     season_games = [g for g in games if g.season == season]
@@ -70,7 +107,12 @@ def build(
     if model._season != season:
         model.start_season(season, season_teams)
     last_upcoming = [g for g in season_games if g.week >= through]
-    previous = {t: this_week(model, t, last_upcoming, qb_names)["rating"] for t in season_teams}
+    last_week = {t: this_week(model, t, last_upcoming, qb_names) for t in season_teams}
+    previous = {t: v["rating"] for t, v in last_week.items()}
+    previous_breakdown = {
+        t: model.breakdown(t) | {"quarterback": last_week[t]["qb_points"], "injuries": last_week[t]["injury_points"]}
+        for t in season_teams
+    }
     model.update_week([g for g in season_games if g.week == through and g.played])
 
     played = [g for g in season_games if g.played and g.week <= through]
@@ -164,6 +206,12 @@ def build(
             "vegas_difference": round(rating[t] - vegas[t], 2) if t in vegas else None,
         })
 
+    contexts = {
+        t: team_context(t, played, upcoming, rank, teams, model, through) | {"previous_breakdown": previous_breakdown[t]}
+        for t in season_teams
+    }
+    note_counts = notes.attach(entries, contexts, previous_notes or {}, client)
+
     matchups = []
     for g in season_games:
         if g.week != next_week:
@@ -194,4 +242,5 @@ def build(
         "strength_of_record_reference": round(reference, 2),
         "teams": entries,
         "games": matchups,
+        "note_counts": note_counts,
     }

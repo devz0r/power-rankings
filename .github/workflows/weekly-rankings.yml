@@ -48,6 +48,9 @@ jobs:
       - run: python -m pytest -q
 
       - name: Rank
+        # Without the secret the team notes fall back to templates.
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python -m powerrank --refresh rank
 
       - name: Commit if the rankings changed

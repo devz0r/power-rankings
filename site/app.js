@@ -3,7 +3,7 @@
 const TIERS = ["S", "A", "B", "C", "D", "E", "F"];
 const $ = (sel, root = document) => root.querySelector(sel);
 
-const state = { data: null, sort: "rank", asc: true };
+const state = { data: null, sort: "rank", asc: true, notes: true };
 
 const fmt = {
   pts: (v) => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(1),
@@ -84,9 +84,9 @@ function renderRankings() {
 
   const body = $("#rank-table tbody");
   body.replaceChildren(
-    ...rows.map((t) => {
+    ...rows.flatMap((t) => {
       const vd = t.vegas_difference;
-      const tr = el("tr", { class: "row", tabindex: "0" });
+      const tr = el("tr", { class: "row" + (state.notes && t.note ? " has-note" : ""), tabindex: "0" });
       tr.append(
         el("td", { class: "num", text: t.rank }),
         el("td", { class: "chg" }, change(t)),
@@ -102,7 +102,10 @@ function renderRankings() {
       const open = () => showDetail(t);
       tr.addEventListener("click", open);
       tr.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), open()));
-      return tr;
+      if (!state.notes || !t.note) return [tr];
+      const noteRow = el("tr", { class: "note-row" }, el("td", { colspan: "10", text: t.note }));
+      noteRow.addEventListener("click", open);
+      return [tr, noteRow];
     }),
   );
 }
@@ -182,6 +185,7 @@ function showDetail(t) {
       el("button", { class: "d-close", "aria-label": "Close", text: "×", onclick: () => d.close() }),
     ),
     el("div", { class: "d-body" },
+      t.note ? el("p", { class: "d-note", text: t.note }) : null,
       el("div", { class: "stats" },
         stat(fmt.pts(t.rating), "rating this week"),
         stat(fmt.pts(t.healthy_rating), "healthy, main QB"),
@@ -247,6 +251,15 @@ function init(data) {
     th.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), sort()));
   });
   document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => setView(b.dataset.view)));
+  try { state.notes = localStorage.getItem("notes") !== "off"; } catch (e) { /* ignore */ }
+  const toggle = $("#show-notes");
+  toggle.checked = state.notes;
+  toggle.addEventListener("change", () => {
+    state.notes = toggle.checked;
+    try { localStorage.setItem("notes", state.notes ? "on" : "off"); } catch (e) { /* ignore */ }
+    renderRankings();
+  });
+  renderRankings();
   $("#detail").addEventListener("click", (e) => e.target === e.currentTarget && e.currentTarget.close());
 
   let saved = null;

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T10:48:52+00:00",
+  "generated": "2026-10-21T11:48:51+00:00",
   "season": 2026,
   "through_week": 6,
   "next_week": 7,
@@ -71,7 +71,10 @@
         "win_super_bowl": 0.167
       },
       "vegas_rating": 3.09,
-      "vegas_difference": 3.33
+      "vegas_difference": 3.33,
+      "note_hash": "c5a7ee928ac43b9b",
+      "note": "Up 1 to #1 after a 23-17 win over Commanders (ranked #21) at home. The biggest swing was injuries, +1.3 points. The model rates them 3.3 points higher than the betting market does.",
+      "note_source": "template"
     },
     {
       "rank": 2,
@@ -139,7 +142,10 @@
         "win_super_bowl": 0.119
       },
       "vegas_rating": 4.64,
-      "vegas_difference": 0.93
+      "vegas_difference": 0.93,
+      "note_hash": "8e098ac21a730517",
+      "note": "Slips 1 to #2 after a 33-30 win over Raiders (ranked #25) on the road. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 3,
@@ -207,7 +213,10 @@
         "win_super_bowl": 0.094
       },
       "vegas_rating": 3.59,
-      "vegas_difference": 1.55
+      "vegas_difference": 1.55,
+      "note_hash": "9824c2fcf5966ba9",
+      "note": "Up 1 to #3 after a 34-31 loss to Texans (ranked #12) on a neutral field. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 4,
@@ -275,7 +284,10 @@
         "win_super_bowl": 0.028
       },
       "vegas_rating": 4.59,
-      "vegas_difference": -0.32
+      "vegas_difference": -0.32,
+      "note_hash": "3aa67e9c330ea0a1",
+      "note": "Slips 1 to #4 after a 18-16 loss to Cardinals (ranked #24) at home. Mostly scoring margin: -0.5 points.",
+      "note_source": "template"
     },
     {
       "rank": 5,
@@ -338,7 +350,10 @@
         "win_super_bowl": 0.094
       },
       "vegas_rating": 4.22,
-      "vegas_difference": -0.06
+      "vegas_difference": -0.06,
+      "note_hash": "0a2689f68308ca66",
+      "note": "Up 1 to #5 after a 22-6 win over Chargers (ranked #29) at home. The biggest swing was injuries, +0.5 points.",
+      "note_source": "template"
     },
     {
       "rank": 6,
@@ -406,7 +421,10 @@
         "win_super_bowl": 0.062
       },
       "vegas_rating": 2.82,
-      "vegas_difference": 1.34
+      "vegas_difference": 1.34,
+      "note_hash": "f93f36289f23f6ff",
+      "note": "Slips 1 to #6 after the bye week. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 7,
@@ -474,7 +492,10 @@
         "win_super_bowl": 0.064
       },
       "vegas_rating": 4.96,
-      "vegas_difference": -1.57
+      "vegas_difference": -1.57,
+      "note_hash": "e3b307ca577a8eb1",
+      "note": "Holds at #7 after a 17-14 loss to Broncos (ranked #14) on the road. Mostly injuries: +0.7 points. This week's starter puts them 1.8 points below their usual quarterback situation.",
+      "note_source": "template"
     },
     {
       "rank": 8,
@@ -542,7 +563,10 @@
         "win_super_bowl": 0.04
       },
       "vegas_rating": 1.54,
-      "vegas_difference": 1.75
+      "vegas_difference": 1.75,
+      "note_hash": "c69d98cd68556eb1",
+      "note": "Up 2 to #8 after a 31-23 win over Falcons (ranked #17) on the road. Mostly injuries: +1.4 points.",
+      "note_source": "template"
     },
     {
       "rank": 9,
@@ -610,7 +634,10 @@
         "win_super_bowl": 0.047
       },
       "vegas_rating": 0.98,
-      "vegas_difference": 1.92
+      "vegas_difference": 1.92,
+      "note_hash": "1d1043121b238fdb",
+      "note": "Holds at #9 after a 26-19 win over Jets (ranked #23) at home. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 10,
@@ -673,7 +700,10 @@
         "win_super_bowl": 0.058
       },
       "vegas_rating": 2.04,
-      "vegas_difference": 0.62
+      "vegas_difference": 0.62,
+      "note_hash": "1a764629d312af33",
+      "note": "Slips 2 to #10 after the bye week. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 11,
@@ -741,7 +771,10 @@
         "win_super_bowl": 0.023
       },
       "vegas_rating": 0.73,
-      "vegas_difference": 0.68
+      "vegas_difference": 0.68,
+      "note_hash": "5b87563dceea8f32",
+      "note": "Up 1 to #11 after a 23-13 win over Cowboys (ranked #19) at home. The biggest swing was injuries, +0.8 points.",
+      "note_source": "template"
     },
     {
       "rank": 12,
@@ -809,7 +842,10 @@
         "win_super_bowl": 0.013
       },
       "vegas_rating": 2.25,
-      "vegas_difference": -1.16
+      "vegas_difference": -1.16,
+      "note_hash": "605c6a47af9b036f",
+      "note": "Climbs 5 spots to #12 after a 34-31 win over Jaguars (ranked #3) on the road. Mostly injuries: +1.1 points.",
+      "note_source": "template"
     },
     {
       "rank": 13,
@@ -877,7 +913,10 @@
         "win_super_bowl": 0.026
       },
       "vegas_rating": 2.0,
-      "vegas_difference": -1.04
+      "vegas_difference": -1.04,
+      "note_hash": "64931cb5a557fc77",
+      "note": "Slips 2 to #13 after the bye week. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 14,
@@ -945,7 +984,10 @@
         "win_super_bowl": 0.028
       },
       "vegas_rating": 2.48,
-      "vegas_difference": -1.57
+      "vegas_difference": -1.57,
+      "note_hash": "5bbc5abd8309f8ef",
+      "note": "Up 1 to #14 after a 17-14 win over Seahawks (ranked #7) at home. The biggest swing was injuries, +1.2 points.",
+      "note_source": "template"
     },
     {
       "rank": 15,
@@ -1013,7 +1055,10 @@
         "win_super_bowl": 0.024
       },
       "vegas_rating": 0.11,
-      "vegas_difference": 0.34
+      "vegas_difference": 0.34,
+      "note_hash": "55799dcff2f66ed5",
+      "note": "Climbs 3 spots to #15 after a 25-14 win over Eagles (ranked #20) on the road. Mostly injuries: +0.8 points.",
+      "note_source": "template"
     },
     {
       "rank": 16,
@@ -1081,7 +1126,10 @@
         "win_super_bowl": 0.007
       },
       "vegas_rating": -1.49,
-      "vegas_difference": 1.29
+      "vegas_difference": 1.29,
+      "note_hash": "cb99c7f191545106",
+      "note": "Falls 3 spots to #16 after a 26-20 loss to Titans (ranked #32) at home. Mostly scoring margin: -0.5 points.",
+      "note_source": "template"
     },
     {
       "rank": 17,
@@ -1149,7 +1197,10 @@
         "win_super_bowl": 0.009
       },
       "vegas_rating": -1.04,
-      "vegas_difference": 0.47
+      "vegas_difference": 0.47,
+      "note_hash": "6c7e11a3c58d8b6d",
+      "note": "Falls 3 spots to #17 after a 31-23 loss to Bears (ranked #8) at home. Mostly injuries: +0.7 points. This week's starter puts them 2.3 points above their usual quarterback situation.",
+      "note_source": "template"
     },
     {
       "rank": 18,
@@ -1217,7 +1268,10 @@
         "win_super_bowl": 0.013
       },
       "vegas_rating": 0.57,
-      "vegas_difference": -1.38
+      "vegas_difference": -1.38,
+      "note_hash": "6410d916506ab577",
+      "note": "Up 1 to #18 after a 26-19 win over Buccaneers (ranked #28) on the road. The biggest swing was injuries, +0.5 points.",
+      "note_source": "template"
     },
     {
       "rank": 19,
@@ -1285,7 +1339,10 @@
         "win_super_bowl": 0.008
       },
       "vegas_rating": 2.91,
-      "vegas_difference": -3.85
+      "vegas_difference": -3.85,
+      "note_hash": "189ba9ec3160f0f4",
+      "note": "Falls 3 spots to #19 after a 23-13 loss to Packers (ranked #11) on the road. Mostly the offense: -0.5 points. The model rates them 3.9 points lower than the betting market does.",
+      "note_source": "template"
     },
     {
       "rank": 20,
@@ -1353,7 +1410,10 @@
         "win_super_bowl": 0.009
       },
       "vegas_rating": -2.05,
-      "vegas_difference": 0.98
+      "vegas_difference": 0.98,
+      "note_hash": "8a32788ad2ac807e",
+      "note": "Climbs 11 spots to #20 after a 25-14 loss to Panthers (ranked #15) at home. The biggest swing was the quarterback situation, +4.9 points.",
+      "note_source": "template"
     },
     {
       "rank": 21,
@@ -1421,7 +1481,10 @@
         "win_super_bowl": 0.005
       },
       "vegas_rating": -3.6,
-      "vegas_difference": 2.11
+      "vegas_difference": 2.11,
+      "note_hash": "a6f863e8e8318073",
+      "note": "Slips 1 to #21 after a 23-17 loss to 49ers (ranked #1) on the road. Mostly injuries: +0.7 points. The model rates them 2.1 points higher than the betting market does.",
+      "note_source": "template"
     },
     {
       "rank": 22,
@@ -1489,7 +1552,10 @@
         "win_super_bowl": 0.047
       },
       "vegas_rating": 2.01,
-      "vegas_difference": -3.54
+      "vegas_difference": -3.54,
+      "note_hash": "ae77183a3b5c450d",
+      "note": "Slips 1 to #22 after a 13-10 loss to Browns (ranked #30) on the road. The biggest swing was injuries, +0.6 points. This week's starter puts them 3.7 points below their usual quarterback situation.",
+      "note_source": "template"
     },
     {
       "rank": 23,
@@ -1557,7 +1623,10 @@
         "win_super_bowl": 0.002
       },
       "vegas_rating": -3.37,
-      "vegas_difference": 0.05
+      "vegas_difference": 0.05,
+      "note_hash": "173219edce0a25e9",
+      "note": "Up 1 to #23 after a 26-19 loss to Patriots (ranked #9) on the road. The biggest swing was injuries, +1.0 points.",
+      "note_source": "template"
     },
     {
       "rank": 24,
@@ -1625,7 +1694,10 @@
         "win_super_bowl": 0.002
       },
       "vegas_rating": -3.93,
-      "vegas_difference": 0.38
+      "vegas_difference": 0.38,
+      "note_hash": "f130e501ae7b32b4",
+      "note": "Climbs 3 spots to #24 after a 18-16 win over Rams (ranked #4) on the road. Mostly injuries: +1.1 points.",
+      "note_source": "template"
     },
     {
       "rank": 25,
@@ -1693,7 +1765,10 @@
         "win_super_bowl": 0.003
       },
       "vegas_rating": -2.25,
-      "vegas_difference": -1.42
+      "vegas_difference": -1.42,
+      "note_hash": "4ea95182eba72dff",
+      "note": "Slips 2 to #25 after a 33-30 loss to Bills (ranked #2) at home. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 26,
@@ -1761,7 +1836,10 @@
         "win_super_bowl": 0.002
       },
       "vegas_rating": -2.31,
-      "vegas_difference": -1.57
+      "vegas_difference": -1.57,
+      "note_hash": "8f90bfe1f4800daf",
+      "note": "Holds at #26 after a 34-27 win over Giants (ranked #27) on the road. Mostly injuries: +0.5 points.",
+      "note_source": "template"
     },
     {
       "rank": 27,
@@ -1829,7 +1907,10 @@
         "win_super_bowl": 0.005
       },
       "vegas_rating": -5.46,
-      "vegas_difference": 1.33
+      "vegas_difference": 1.33,
+      "note_hash": "96174875ff09b7f5",
+      "note": "Slips 2 to #27 after a 34-27 loss to Saints (ranked #26) at home. Mostly injuries: +1.1 points.",
+      "note_source": "template"
     },
     {
       "rank": 28,
@@ -1897,7 +1978,10 @@
         "win_super_bowl": 0.001
       },
       "vegas_rating": -2.48,
-      "vegas_difference": -1.79
+      "vegas_difference": -1.79,
+      "note_hash": "ea30ff198b75ac92",
+      "note": "Falls 6 spots to #28 after a 26-19 loss to Steelers (ranked #18) at home. The biggest swing was injuries, +0.8 points. This week's starter puts them 3.1 points below their usual quarterback situation.",
+      "note_source": "template"
     },
     {
       "rank": 29,
@@ -1939,7 +2023,7 @@
       "ties": 0,
       "point_diff": -61,
       "strength_of_record": 1.0,
-      "strength_of_record_rank": 32,
+      "strength_of_record_rank": 31,
       "best_win": null,
       "worst_loss": {
         "opponent": "LV",
@@ -1960,7 +2044,10 @@
         "win_super_bowl": 0.0
       },
       "vegas_rating": -0.91,
-      "vegas_difference": -3.46
+      "vegas_difference": -3.46,
+      "note_hash": "895c1e6b3446bafe",
+      "note": "Holds at #29 after a 22-6 loss to Chiefs (ranked #5) on the road. The biggest swing was injuries, +1.9 points. The model rates them 3.5 points lower than the betting market does.",
+      "note_source": "template"
     },
     {
       "rank": 30,
@@ -2028,7 +2115,10 @@
         "win_super_bowl": 0.004
       },
       "vegas_rating": -3.73,
-      "vegas_difference": -0.86
+      "vegas_difference": -0.86,
+      "note_hash": "247bc5ced4793d30",
+      "note": "Slips 2 to #30 after a 13-10 win over Ravens (ranked #22) at home. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 31,
@@ -2070,7 +2160,7 @@
       "ties": 0,
       "point_diff": -62,
       "strength_of_record": 1.0,
-      "strength_of_record_rank": 31,
+      "strength_of_record_rank": 32,
       "best_win": null,
       "worst_loss": {
         "opponent": "LV",
@@ -2091,7 +2181,10 @@
         "win_super_bowl": 0.0
       },
       "vegas_rating": -6.29,
-      "vegas_difference": 0.1
+      "vegas_difference": 0.1,
+      "note_hash": "543af58b6b3e1aba",
+      "note": "Slips 1 to #31 after the bye week. Not much changed under the hood this week.",
+      "note_source": "template"
     },
     {
       "rank": 32,
@@ -2159,7 +2252,10 @@
         "win_super_bowl": 0.0
       },
       "vegas_rating": -6.64,
-      "vegas_difference": -0.52
+      "vegas_difference": -0.52,
+      "note_hash": "38e9f7fb6308168b",
+      "note": "Holds at #32 after a 26-20 win over Colts (ranked #16) on the road. The biggest swing was injuries, +0.9 points.",
+      "note_source": "template"
     }
   ],
   "games": [
@@ -2317,5 +2413,10 @@
       "home_win_probability": 0.561,
       "market_line": -4.5
     }
-  ]
+  ],
+  "note_counts": {
+    "reused": 0,
+    "ai": 0,
+    "template": 32
+  }
 }

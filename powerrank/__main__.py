@@ -11,7 +11,7 @@ from pathlib import Path
 
 import polars as pl
 
-from powerrank import backtest, injuries, preseason, report, uncertainty
+from powerrank import backtest, injuries, notes, preseason, report, uncertainty
 from powerrank.data import Game, load_games
 from powerrank.models import MODELS, RatingModel
 from powerrank.models.epa import (
@@ -170,7 +170,16 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
 
     model = build_model("epa", games, load_inputs(games, args.refresh))
     saved = load_weights()
-    data = report.build(model, games, season, through, load_teams(refresh=args.refresh), saved["uncertainty"])
+    previous_notes = {}
+    if args.out.exists():
+        try:
+            previous_notes = {t["team"]: t for t in json.loads(args.out.read_text()).get("teams", [])}
+        except (ValueError, KeyError):
+            pass
+    client = None if args.no_ai else notes.make_client()
+    data = report.build(
+        model, games, season, through, load_teams(refresh=args.refresh), saved["uncertainty"], previous_notes, client
+    )
     missing = [gid for gid in model.missing_games if gid.startswith(f"{season}_")]
     if missing:
         sys.exit(f"play-by-play not published yet for: {', '.join(missing)}")
@@ -194,7 +203,9 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(data, indent=2) + "\n")
-    print(f"\nwrote {args.out}")
+    counts = data["note_counts"]
+    print(f"\nnotes: {counts['ai']} written by Claude, {counts['template']} from templates, {counts['reused']} reused")
+    print(f"wrote {args.out}")
 
 
 def main() -> None:
@@ -212,6 +223,7 @@ def main() -> None:
 
     rk = sub.add_parser("rank", help="current ratings")
     rk.add_argument("--season", type=int)
+    rk.add_argument("--no-ai", action="store_true", help="write the team notes from templates only")
     rk.add_argument("--out", type=Path, default=DEFAULT_OUTPUT)
 
     args = parser.parse_args()
