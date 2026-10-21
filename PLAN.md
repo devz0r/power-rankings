@@ -74,7 +74,7 @@ The ranking is predictive: who would win on a neutral field next Sunday? Each te
 - A toggle switches between the two views.
 
 ## Build order
-1. Data pipeline, backtest harness, simple baseline.
+1. Data pipeline, backtest harness, simple baseline. **Done:** Elo and ridge baselines; see README for results.
 2. Opponent-adjusted EPA model with garbage-time and luck adjustments.
 3. Preseason priors and weekly updating.
 4. QB and injury adjustments.
