@@ -11,7 +11,7 @@ from pathlib import Path
 
 import polars as pl
 
-from powerrank import backtest, injuries, notes, preseason, report, uncertainty
+from powerrank import backtest, injuries, notes, preseason, report, rosters, uncertainty
 from powerrank.data import Game, load_games
 from powerrank.models import MODELS, RatingModel
 from powerrank.models.epa import (
@@ -177,8 +177,22 @@ def cmd_rank(args: argparse.Namespace, games: list[Game]) -> None:
         except (ValueError, KeyError):
             pass
     client = None if args.no_ai else notes.make_client()
+    try:
+        available = rosters.QbAvailability(rosters.load_rosters(season, refresh=args.refresh))
+    except Exception as exc:  # rosters only refine projections; rank without them
+        print(f"rosters unavailable ({type(exc).__name__}: {exc}); using schedule's projected starters")
+        available = None
+    if available is not None:
+        corrected = rosters.correct_starters(games, available)
+        for old, new in zip(games, corrected):
+            for side in ("home", "away"):
+                if getattr(old, f"{side}_qb") not in (None, getattr(new, f"{side}_qb")):
+                    print(f"week {new.week} {getattr(new, side)}: {getattr(old, f'{side}_qb_name')} isn't active, "
+                          f"projecting {getattr(new, f'{side}_qb_name')}")
+        games = corrected
     data = report.build(
-        model, games, season, through, load_teams(refresh=args.refresh), saved["uncertainty"], previous_notes, client
+        model, games, season, through, load_teams(refresh=args.refresh), saved["uncertainty"], previous_notes, client,
+        available,
     )
     missing = [gid for gid in model.missing_games if gid.startswith(f"{season}_")]
     if missing:

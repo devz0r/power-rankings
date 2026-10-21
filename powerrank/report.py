@@ -20,13 +20,25 @@ SOR_REFERENCE_TEAMS = 14
 N_DRAWS = 10_000
 
 
-def this_week(model: EpaModel, team: str, upcoming: list[Game], qb_names: dict[str, str]) -> dict:
+def this_week(
+    model: EpaModel,
+    team: str,
+    upcoming: list[Game],
+    qb_names: dict[str, str],
+    available=None,
+    played: list[Game] | None = None,
+) -> dict:
     """Strength for the team's next game (projected starter, injury report)
     and when healthy (its main QB, nobody ruled out). If the next starter
-    isn't projected yet (e.g. after a bye), assume the main QB."""
+    isn't projected yet (e.g. after a bye), assume the main QB. A main QB the
+    roster shows as unavailable (e.g. on injured reserve) doesn't count as
+    the main QB; the active replacement does."""
     primary = model.primary_qb(team)
-    healthy = model.rating_with(team, primary)
     game = next((g for g in upcoming if team in (g.home, g.away)), None)
+    if available is not None and game is not None and available.is_out(game.season, game.week, team, primary):
+        primary = available.replacement(game.season, game.week, team, played or []) or primary
+        qb_names = qb_names | {primary: available.names.get(primary)}
+    healthy = model.rating_with(team, primary)
     if game is None:
         return {
             "rating": healthy, "healthy_rating": healthy,
@@ -95,6 +107,7 @@ def build(
     calibration: dict,
     previous_notes: dict[str, dict] | None = None,
     client=None,
+    available=None,
 ) -> dict:
     """Replay history through `through` and assemble the full report."""
     season_games = [g for g in games if g.season == season]
@@ -120,7 +133,7 @@ def build(
     next_week = min((g.week for g in upcoming), default=None)
     hfa = model.hfa.value
 
-    now = {t: this_week(model, t, upcoming, qb_names) for t in season_teams}
+    now = {t: this_week(model, t, upcoming, qb_names, available, played) for t in season_teams}
     rating = {t: v["rating"] for t, v in now.items()}
     healthy = {t: v["healthy_rating"] for t, v in now.items()}
     sd = uncertainty.rating_sd(calibration, next_week or through + 1)

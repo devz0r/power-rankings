@@ -98,3 +98,46 @@ def test_injury_index_counts_recent_snap_share():
     index = build_index(injuries, snaps, players)
     # The starter averaged 90% of snaps; the long-term absence is already priced in; QBs are skipped.
     assert index[(2020, 4, "AAA")] == pytest.approx(0.9)
+
+
+def roster(rows):
+    from powerrank.rosters import QbAvailability
+
+    return QbAvailability(pl.DataFrame(rows, schema=["season", "week", "team", "gsis_id", "full_name", "status"], orient="row"))
+
+
+def sched(i, week, home_qb, played=True):
+    return Game(
+        game_id=f"s{i}", season=2026, week=week, game_type="REG", home="PHI", away="DAL", neutral=False,
+        gameday=None, home_score=20 if played else None, away_score=17 if played else None, spread_line=0.0,
+        home_qb=home_qb, away_qb="dak", home_qb_name=home_qb, away_qb_name="Dak",
+    )
+
+
+def test_inactive_projected_starter_is_replaced():
+    from powerrank.rosters import correct_starters
+
+    available = roster([
+        (2026, 7, "PHI", "hurts", "Jalen Hurts", "RES"),
+        (2026, 7, "PHI", "mckee", "Tanner McKee", "ACT"),
+        (2026, 7, "PHI", "payton", "Cole Payton", "ACT"),
+        (2026, 7, "DAL", "dak", "Dak Prescott", "ACT"),
+    ])
+    games = [sched(1, 5, "hurts"), sched(2, 6, "mckee"), sched(3, 7, "hurts", played=False)]
+    fixed = correct_starters(games, available)
+    assert fixed[0].home_qb == "hurts"  # past games keep their real starter
+    assert fixed[2].home_qb == "mckee" and fixed[2].home_qb_name == "Tanner McKee"
+    assert fixed[2].away_qb == "dak"
+
+
+def test_without_roster_data_nothing_changes():
+    from powerrank.rosters import correct_starters
+
+    games = [sched(3, 7, "hurts", played=False)]
+    assert correct_starters(games, roster([])) == games
+
+
+def test_later_weeks_use_the_latest_published_roster():
+    available = roster([(2026, 7, "PHI", "hurts", "Jalen Hurts", "RES")])
+    assert available.is_out(2026, 9, "PHI", "hurts")
+    assert not available.is_out(2026, 9, "PHI", None)

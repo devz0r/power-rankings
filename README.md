@@ -41,6 +41,14 @@ Live at https://devz0r.github.io/power-rankings/. `.github/workflows/pages.yml`
 deploys `site/` to GitHub Pages whenever it changes and after each weekly run
 (needs Settings -> Pages -> Source: GitHub Actions).
 
+## Projected starters
+
+The schedule's projected starting QB can lag behind the news (a QB placed on
+injured reserve can stay listed). `rank` checks each upcoming starter against
+nflverse's weekly rosters; if he isn't active, it projects the active QB with
+the most starts for that team this season, and a main QB on injured reserve
+no longer counts toward the "healthy" rating.
+
 ## Rankings output
 
 `python -m powerrank rank` writes `site/rankings.json`. For each team:
