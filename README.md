@@ -37,9 +37,9 @@ its breakdown, résumé and playoff odds. Preview locally:
 python -m http.server -d site     # then open http://localhost:8000
 ```
 
-To publish it, serve the `site/` folder (for example GitHub Pages, deploying
-from a workflow or a `/site` folder). The weekly job keeps `site/rankings.json`
-current.
+Live at https://devz0r.github.io/power-rankings/. `.github/workflows/pages.yml`
+deploys `site/` to GitHub Pages whenever it changes and after each weekly run
+(needs Settings -> Pages -> Source: GitHub Actions).
 
 ## Rankings output
 
