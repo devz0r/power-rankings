@@ -34,6 +34,19 @@ jobs:
         with:
           ref: main
 
+      - name: Bundle team logos
+        # Served from the site itself so the page doesn't depend on hotlinking.
+        run: |
+          mkdir -p site/logos
+          python3 - <<'PY'
+          import json, urllib.request
+          for t in json.load(open("site/rankings.json"))["teams"]:
+              try:
+                  urllib.request.urlretrieve(t["logo"], f"site/logos/{t['team']}.png")
+              except Exception as e:
+                  print("skipped", t["team"], e)
+          PY
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

@@ -35,8 +35,14 @@ function el(tag, attrs = {}, ...kids) {
 }
 
 function logo(team, cls = "logo") {
-  const img = el("img", { class: cls, src: team.logo, alt: "", loading: "lazy" });
+  const img = el("img", { class: cls, src: `logos/${team.team}.png`, alt: "", loading: "lazy" });
   img.addEventListener("error", () => {
+    // Bundled copy first, then the original URL, then a lettered circle.
+    if (!img.dataset.retried) {
+      img.dataset.retried = "1";
+      img.src = team.logo;
+      return;
+    }
     const fallback = el("span", { class: "logo-fallback", text: team.abbr });
     fallback.style.background = team.color;
     img.replaceWith(fallback);
