@@ -1,6 +1,17 @@
 "use strict";
 
 const TIERS = ["S", "A", "B", "C", "D", "E", "F"];
+// Tiers split at natural gaps in the ratings, so the names describe standing
+// relative to the league rather than fixed thresholds.
+const TIER_NAMES = {
+  S: "Lombardi or Bust",
+  A: "Legit Threats",
+  B: "Nobody Wants This Matchup",
+  C: "Coin-Flip Club",
+  D: "Hanging Around",
+  E: "Scouting College QBs",
+  F: "On the Clock",
+};
 const $ = (sel, root = document) => root.querySelector(sel);
 
 const state = { data: null, sort: "rank", asc: true, notes: true };
@@ -91,7 +102,7 @@ function renderRankings() {
         el("td", { class: "num", text: t.rank }),
         el("td", { class: "chg" }, change(t)),
         el("td", {}, el("div", { class: "team" }, logo(t), el("div", {}, t.name, el("small", {}, t.starter ?? "")))),
-        el("td", { class: "num" }, el("span", { class: `tier-chip tier-${t.tier}`, text: t.tier }), el("span", { class: "rating", text: fmt.pts(t.rating) })),
+        el("td", { class: "num" }, el("span", { class: `tier-chip tier-${t.tier}`, text: t.tier, title: TIER_NAMES[t.tier] }), el("span", { class: "rating", text: fmt.pts(t.rating) })),
         el("td", { class: "range-col" }, rangeBar(t, lo, hi)),
         el("td", { class: "num", text: fmt.record(t) }),
         el("td", { class: "num hide-sm", text: t.strength_of_record_rank }),
@@ -116,7 +127,7 @@ function renderTiers() {
   list.replaceChildren(
     ...TIERS.map((tier) => {
       const members = teams.filter((t) => t.tier === tier).sort((a, b) => a.rank - b.rank);
-      const label = el("div", { class: `tier-label tier-${tier}`, text: tier });
+      const label = el("div", { class: `tier-label tier-${tier}`, text: TIER_NAMES[tier] });
       const body = el("div", { class: "tier-body" });
       if (!members.length) body.append(el("span", { class: "empty", text: "No teams in this tier right now" }));
       for (const t of members) {
