@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-27T19:49:49+00:00",
+  "generated": "2026-10-28T00:24:37+00:00",
   "season": 2026,
   "through_week": 7,
   "next_week": 8,
   "model": "epa",
   "home_field": 2.05,
-  "vegas_home_field": 1.58,
+  "vegas_home_field": 1.61,
   "rating_sd": 3.71,
   "game_sd": 13.44,
   "strength_of_record_reference": 3.59,
@@ -82,8 +82,8 @@
         "win_conference": 0.152,
         "win_super_bowl": 0.088
       },
-      "vegas_rating": 4.6,
-      "vegas_difference": 1.8,
+      "vegas_rating": 4.58,
+      "vegas_difference": 1.82,
       "note_hash": "9bc9272a4b023e95",
       "note": "Seattle jumps to No. 1 after beating Kansas City 20-3 at home. The defense is the engine at +2.4 points, while the offense sits at just +0.1. Chicago, ranked #7, visits next.",
       "note_source": "ai"
@@ -238,8 +238,8 @@
         "win_conference": 0.243,
         "win_super_bowl": 0.126
       },
-      "vegas_rating": 3.88,
-      "vegas_difference": 1.56,
+      "vegas_rating": 3.87,
+      "vegas_difference": 1.57,
       "note_hash": "f62b4671db5cde96",
       "note": "Buffalo had its bye and slid from No. 1 to No. 3 without playing. The offense is great at +4.7 points, the defense at -1.1 is the soft spot, and Baltimore comes to town as a 10.0-point underdog.",
       "note_source": "ai"
@@ -316,8 +316,8 @@
         "win_conference": 0.205,
         "win_super_bowl": 0.108
       },
-      "vegas_rating": 4.24,
-      "vegas_difference": 0.85,
+      "vegas_rating": 4.55,
+      "vegas_difference": 0.54,
       "note_hash": "a2e459c9c9d26109",
       "note": "Jacksonville rested and dropped one spot to No. 4. They're 4-2 with a 50-point differential and an 82 percent shot at the division. The Colts visit next.",
       "note_source": "ai"
@@ -472,8 +472,8 @@
         "win_conference": 0.117,
         "win_super_bowl": 0.062
       },
-      "vegas_rating": 3.11,
-      "vegas_difference": 0.76,
+      "vegas_rating": 3.06,
+      "vegas_difference": 0.81,
       "note_hash": "94888febe20ff413",
       "note": "Detroit edged Green Bay 20-17 at home but still slipped a spot to No. 6. Next comes a home game against Minnesota, which the model gives them by 3.2.",
       "note_source": "ai"
@@ -550,8 +550,8 @@
         "win_conference": 0.095,
         "win_super_bowl": 0.051
       },
-      "vegas_rating": 2.05,
-      "vegas_difference": 1.55,
+      "vegas_rating": 2.03,
+      "vegas_difference": 1.58,
       "note_hash": "2c08af3426c90c13",
       "note": "Chicago climbed two spots to No. 7 with a 30-24 win over New England. Now comes a trip to Seattle, where the model has the Bears as 4.8-point underdogs.",
       "note_source": "ai"
@@ -628,8 +628,8 @@
         "win_conference": 0.145,
         "win_super_bowl": 0.069
       },
-      "vegas_rating": 4.2,
-      "vegas_difference": -1.15,
+      "vegas_rating": 4.21,
+      "vegas_difference": -1.17,
       "note_hash": "68a375fb8ce7fa96",
       "note": "The Chiefs fell to 8th after a 20-3 loss at Seattle. They're still 5-1 with a 59 percent chance at the division, and next they visit Denver, where the model sees a coin flip, slightly against them.",
       "note_source": "ai"
@@ -698,8 +698,8 @@
         "win_conference": 0.135,
         "win_super_bowl": 0.065
       },
-      "vegas_rating": 1.9,
-      "vegas_difference": 0.77,
+      "vegas_rating": 1.84,
+      "vegas_difference": 0.83,
       "note_hash": "65ba5245efc424c6",
       "note": "Minnesota is 6-0 and has won 6 straight, yet sits ninth because the offense is -2.0 points. The defense at +2.6 does the heavy lifting, and next up is a trip to Detroit.",
       "note_source": "ai"
@@ -776,8 +776,8 @@
         "win_conference": 0.079,
         "win_super_bowl": 0.038
       },
-      "vegas_rating": 1.65,
-      "vegas_difference": 0.91,
+      "vegas_rating": 1.57,
+      "vegas_difference": 0.99,
       "note_hash": "2bac8db899f39bf0",
       "note": "New England lost 30-24 at Chicago but held at No. 10, with injuries adding 1.7 points to their rating. Miami is next, and the model likes them by 6.1.",
       "note_source": "ai"
@@ -854,8 +854,8 @@
         "win_conference": 0.11,
         "win_super_bowl": 0.05
       },
-      "vegas_rating": 3.44,
-      "vegas_difference": -0.93,
+      "vegas_rating": 3.64,
+      "vegas_difference": -1.12,
       "note_hash": "a155a09227932760",
       "note": "Cincinnati beat Baltimore 35-13 on the road and gained 1.6 rating points while staying at No. 11. Tennessee is next, with the model favoring them by 12.1.",
       "note_source": "ai"
@@ -932,8 +932,8 @@
         "win_conference": 0.037,
         "win_super_bowl": 0.018
       },
-      "vegas_rating": -2.03,
-      "vegas_difference": 3.62,
+      "vegas_rating": -2.05,
+      "vegas_difference": 3.64,
       "note_hash": "db925c03317d9215",
       "note": "Tampa Bay vaulted nine spots to No. 12 on the strength of a 43-13 win at Carolina. They're only 2-5, but the rating gained 3.8 points, and the model rates them 3.6 points above the market.",
       "note_source": "ai"
@@ -1010,8 +1010,8 @@
         "win_conference": 0.039,
         "win_super_bowl": 0.019
       },
-      "vegas_rating": 0.85,
-      "vegas_difference": 0.63,
+      "vegas_rating": 0.82,
+      "vegas_difference": 0.66,
       "note_hash": "69e582db166e3dde",
       "note": "Green Bay lost 20-17 at Detroit and slipped to No. 13. They're 4-3 with a point differential of -1, and Carolina visits next as a 4.9-point underdog.",
       "note_source": "ai"
@@ -1088,8 +1088,8 @@
         "win_conference": 0.088,
         "win_super_bowl": 0.037
       },
-      "vegas_rating": 1.98,
-      "vegas_difference": -0.51,
+      "vegas_rating": 1.99,
+      "vegas_difference": -0.53,
       "note_hash": "431168bed7664fc2",
       "note": "Denver has won 3 straight, the latest a 30-16 win at Arizona, and sits 5-2 at No. 14. The Chiefs visit next, and the model leans to Denver by just 0.5.",
       "note_source": "ai"
@@ -1244,8 +1244,8 @@
         "win_conference": 0.028,
         "win_super_bowl": 0.013
       },
-      "vegas_rating": -1.58,
-      "vegas_difference": 1.84,
+      "vegas_rating": -1.6,
+      "vegas_difference": 1.86,
       "note_hash": "527ad0e21f1d9dec",
       "note": "Atlanta rose four spots to No. 16 by beating the 49ers 29-20. This week's starter puts them 2.3 points above their usual quarterback situation. Tampa Bay is next.",
       "note_source": "ai"
@@ -1322,8 +1322,8 @@
         "win_conference": 0.022,
         "win_super_bowl": 0.01
       },
-      "vegas_rating": 2.55,
-      "vegas_difference": -2.41,
+      "vegas_rating": 2.58,
+      "vegas_difference": -2.44,
       "note_hash": "5fa464619685eab7",
       "note": "Houston lost 27-21 at home to the Giants and fell two spots to No. 17. They're 2-5, and the model rates them 2.4 points lower than the market does.",
       "note_source": "ai"
@@ -1400,8 +1400,8 @@
         "win_conference": 0.058,
         "win_super_bowl": 0.022
       },
-      "vegas_rating": 0.05,
-      "vegas_difference": -0.3,
+      "vegas_rating": 0.01,
+      "vegas_difference": -0.25,
       "note_hash": "6599bdb124238f92",
       "note": "Pittsburgh has won 3 straight, the latest 16-10 over New Orleans, and is 5-2. The rating still sits at -0.2, and the offense at -0.7 is the weak spot. Cleveland visits next.",
       "note_source": "ai"
@@ -1478,8 +1478,8 @@
         "win_conference": 0.011,
         "win_super_bowl": 0.005
       },
-      "vegas_rating": -1.75,
-      "vegas_difference": 1.23,
+      "vegas_rating": -1.99,
+      "vegas_difference": 1.46,
       "note_hash": "e1aeefda7139a353",
       "note": "Indianapolis has lost 3 straight, the latest a 16-10 loss at Minnesota. At 2-5 with a -26 point differential, they now travel to face Jacksonville as 7.7-point underdogs.",
       "note_source": "ai"
@@ -1556,8 +1556,8 @@
         "win_conference": 0.022,
         "win_super_bowl": 0.009
       },
-      "vegas_rating": -0.48,
-      "vegas_difference": -0.92,
+      "vegas_rating": -0.49,
+      "vegas_difference": -0.91,
       "note_hash": "df806773e7181d01",
       "note": "Carolina fell seven spots to No. 20 after a 43-13 home loss to Tampa Bay. The scoring margin cost them 1.1 points, and next is a trip to Green Bay.",
       "note_source": "ai"
@@ -1634,8 +1634,8 @@
         "win_conference": 0.012,
         "win_super_bowl": 0.006
       },
-      "vegas_rating": -2.06,
-      "vegas_difference": 0.55,
+      "vegas_rating": -2.09,
+      "vegas_difference": 0.58,
       "note_hash": "de989b6708486d30",
       "note": "Washington used its bye week to drop four spots to No. 21. They're 1-4-1 with a -40 point differential, and the defense at -1.2 is the weakest unit. Philadelphia comes next.",
       "note_source": "ai"
@@ -1712,10 +1712,10 @@
         "win_conference": 0.014,
         "win_super_bowl": 0.006
       },
-      "vegas_rating": 1.02,
-      "vegas_difference": -3.53,
-      "note_hash": "8974ca1e936cfa82",
-      "note": "Baltimore lost 35-13 at home to Cincinnati. This week's starter puts them 3.4 points below their usual quarterback situation, and the model rates them 3.5 points lower than the market.",
+      "vegas_rating": 1.04,
+      "vegas_difference": -3.56,
+      "note_hash": "0b11bb7fca03c83f",
+      "note": "Baltimore sits at 22nd, unchanged, and the bigger story is Tyler Huntley, whose start leaves them 3.4 points below their usual quarterback situation. After a 35-13 home loss to the Bengals, they visit the Bills (ranked #3) as 10.0-point underdogs.",
       "note_source": "ai"
     },
     {
@@ -1790,7 +1790,7 @@
         "win_conference": 0.023,
         "win_super_bowl": 0.008
       },
-      "vegas_rating": -5.1,
+      "vegas_rating": -5.11,
       "vegas_difference": 2.22,
       "note_hash": "c9b6f72a4c1b345e",
       "note": "The Giants climbed nine spots to No. 23, the biggest gain in the group, after a 27-21 win at Houston. The quarterback situation added 1.8 points, and they're 4-2-1.",
@@ -1868,7 +1868,7 @@
         "win_conference": 0.002,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -3.05,
+      "vegas_rating": -3.04,
       "vegas_difference": -0.52,
       "note_hash": "b4f2cea02e2567ef",
       "note": "The Jets lost 28-25 at home to Miami and stayed at No. 24. They're 2-5 with a -13 point differential, and the offense at -1.7 is the problem. Las Vegas is next.",
@@ -2024,8 +2024,8 @@
         "win_conference": 0.003,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -2.36,
-      "vegas_difference": -1.84,
+      "vegas_rating": -2.39,
+      "vegas_difference": -1.81,
       "note_hash": "e8a1c07fa8b092e9",
       "note": "New Orleans lost 16-10 to Pittsburgh and stays at No. 26. They're 2-5 with a -32 point differential, and the offense at -1.5 is the weak spot. Next is week 9 against Cleveland.",
       "note_source": "ai"
@@ -2102,8 +2102,8 @@
         "win_conference": 0.017,
         "win_super_bowl": 0.006
       },
-      "vegas_rating": -3.18,
-      "vegas_difference": -1.12,
+      "vegas_rating": -3.2,
+      "vegas_difference": -1.1,
       "note_hash": "f1536ff0debd4dc7",
       "note": "Cleveland is 5-2 yet ranked 27th, because the offense is -2.6 points and the point differential is -13. They beat Tennessee 27-24 last time and visit Pittsburgh next.",
       "note_source": "ai"
@@ -2180,7 +2180,7 @@
         "win_conference": 0.003,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -2.43,
+      "vegas_rating": -2.44,
       "vegas_difference": -1.97,
       "note_hash": "e2c93357b697df8c",
       "note": "Las Vegas has lost 4 straight, the latest a 35-21 home loss to the Rams, and fell three spots to No. 28. The offense at -1.9 is the weak spot. The Jets are next.",
@@ -2250,8 +2250,8 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -1.13,
-      "vegas_difference": -3.36,
+      "vegas_rating": -1.11,
+      "vegas_difference": -3.38,
       "note_hash": "2dfa0cc20d394f0d",
       "note": "The Chargers are 0-6 and have lost 6 straight, with a -61 point differential. They rested last week, and next they visit the Rams as 11.3-point underdogs.",
       "note_source": "ai"
@@ -2328,8 +2328,8 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -6.19,
-      "vegas_difference": 0.55,
+      "vegas_rating": -6.02,
+      "vegas_difference": 0.38,
       "note_hash": "7be71572897d1890",
       "note": "Miami beat the Jets 28-25 on the road for its first win-column bump, and the offense gained 0.6 points. Still, they're 1-5 at No. 30, and New England visits next.",
       "note_source": "ai"
@@ -2406,8 +2406,8 @@
         "win_conference": 0.001,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -3.37,
-      "vegas_difference": -3.11,
+      "vegas_rating": -3.35,
+      "vegas_difference": -3.13,
       "note_hash": "953bef927b9be6e3",
       "note": "Philadelphia fell eight spots to No. 31 after a 38-21 home loss to Dallas, its fifth straight. The quarterback situation cost them 4.3 points, and Washington is next.",
       "note_source": "ai"
@@ -2484,8 +2484,8 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -6.08,
-      "vegas_difference": -1.47,
+      "vegas_rating": -6.2,
+      "vegas_difference": -1.35,
       "note_hash": "eddd898da3dec16b",
       "note": "Tennessee lost 27-24 at home to Cleveland and sits last at No. 32. They're 1-6, the offense is -3.1 points, and Cincinnati is next as a 12.1-point favorite.",
       "note_source": "ai"
@@ -2556,7 +2556,7 @@
       "away_starter": "Daniel Jones",
       "model_line": 7.7,
       "home_win_probability": 0.716,
-      "market_line": 8.5
+      "market_line": 9.5
     },
     {
       "home": "NYJ",
@@ -2589,7 +2589,7 @@
       "away_starter": "Cam Ward",
       "model_line": 12.1,
       "home_win_probability": 0.816,
-      "market_line": 10.0
+      "market_line": 10.5
     },
     {
       "home": "LA",
@@ -2622,7 +2622,7 @@
       "away_starter": "Drake Maye",
       "model_line": -6.1,
       "home_win_probability": 0.324,
-      "market_line": -7.5
+      "market_line": -7.0
     },
     {
       "home": "WAS",
@@ -2648,8 +2648,8 @@
     }
   ],
   "note_counts": {
-    "reused": 0,
-    "ai": 32,
+    "reused": 31,
+    "ai": 1,
     "template": 0
   }
 }
