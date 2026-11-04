@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03T20:46:27+00:00",
+  "generated": "2026-11-04T01:12:37+00:00",
   "season": 2026,
   "through_week": 8,
   "next_week": 9,
@@ -82,8 +82,8 @@
         "win_conference": 0.257,
         "win_super_bowl": 0.141
       },
-      "vegas_rating": 6.76,
-      "vegas_difference": -0.25,
+      "vegas_rating": 6.74,
+      "vegas_difference": -0.23,
       "note_hash": "8ab61eeda98d8e86",
       "note": "Jacksonville jumps four spots to No. 1 after a 42-7 win over the Colts, with a 96 percent shot at the playoffs. The offense (+2.1 points) is the best unit, and next up is a trip to Baltimore as 8.0-point favorites.",
       "note_source": "ai"
@@ -160,8 +160,8 @@
         "win_conference": 0.261,
         "win_super_bowl": 0.144
       },
-      "vegas_rating": 3.78,
-      "vegas_difference": 2.43,
+      "vegas_rating": 3.77,
+      "vegas_difference": 2.44,
       "note_hash": "ccdf705405fc35a1",
       "note": "Buffalo holds at No. 2 after a 36-10 win over the Ravens, its third straight. The offense is +4.5 points, and the model likes the Bills 2.4 points more than the betting market does.",
       "note_source": "ai"
@@ -238,8 +238,8 @@
         "win_conference": 0.255,
         "win_super_bowl": 0.132
       },
-      "vegas_rating": 4.18,
-      "vegas_difference": 1.54,
+      "vegas_rating": 4.21,
+      "vegas_difference": 1.51,
       "note_hash": "fcf3fe86e79278d1",
       "note": "San Francisco slips to No. 3 without playing, since it was on a bye and its rating barely moved at -0.0. The offense (+3.6 points) still carries the team, and the Raiders come to town.",
       "note_source": "ai"
@@ -316,8 +316,8 @@
         "win_conference": 0.078,
         "win_super_bowl": 0.041
       },
-      "vegas_rating": 4.1,
-      "vegas_difference": 1.21,
+      "vegas_rating": 4.05,
+      "vegas_difference": 1.27,
       "note_hash": "7eb8d244ed700b37",
       "note": "The Rams beat the Chargers 24-9 but still drop a spot to No. 4. At 4-4 their strength of record rank is 18, well behind what the rating says.",
       "note_source": "ai"
@@ -394,8 +394,8 @@
         "win_conference": 0.081,
         "win_super_bowl": 0.043
       },
-      "vegas_rating": 5.16,
-      "vegas_difference": -0.02,
+      "vegas_rating": 5.66,
+      "vegas_difference": -0.51,
       "note_hash": "b03162e34b614783",
       "note": "Seattle lost 34-17 at home to the Bears and falls to No. 5. The defense (+2.0 points) is the strength, and the offense is slightly below average at -0.1 points.",
       "note_source": "ai"
@@ -472,10 +472,10 @@
         "win_conference": 0.137,
         "win_super_bowl": 0.072
       },
-      "vegas_rating": 2.21,
-      "vegas_difference": 2.49,
-      "note_hash": "41acec033d567aac",
-      "note": "Chicago went to Seattle and won 34-17, its third in a row, and moves up to No. 6. The model has the Bears 2.5 points above the betting market.",
+      "vegas_rating": 2.34,
+      "vegas_difference": 2.37,
+      "note_hash": "c435bcd0502fc640",
+      "note": "Chicago has won 3 straight, the latest a 34-17 win over the Seahawks on the road, and the offense (+1.8 points) is doing the heavy lifting. The Bears are 6-2 with an 82% shot at the playoffs, and they host the Buccaneers in week 9.",
       "note_source": "ai"
     },
     {
@@ -550,8 +550,8 @@
         "win_conference": 0.134,
         "win_super_bowl": 0.066
       },
-      "vegas_rating": 2.44,
-      "vegas_difference": 1.82,
+      "vegas_rating": 2.41,
+      "vegas_difference": 1.86,
       "note_hash": "be85cbf39da1ce96",
       "note": "Detroit edged Minnesota 19-15 for a third straight win, but slips one spot to No. 7. The offense is +2.8 points while the defense sits at -0.5.",
       "note_source": "ai"
@@ -628,8 +628,8 @@
         "win_conference": 0.1,
         "win_super_bowl": 0.05
       },
-      "vegas_rating": 3.79,
-      "vegas_difference": -0.82,
+      "vegas_rating": 3.89,
+      "vegas_difference": -0.91,
       "note_hash": "1f8c284194edd23a",
       "note": "Kansas City stays at No. 8 after a 28-24 loss in Denver. The offense is +1.6 points, and the Jets visit next with the Chiefs favored by 8.7.",
       "note_source": "ai"
@@ -706,8 +706,8 @@
         "win_conference": 0.076,
         "win_super_bowl": 0.038
       },
-      "vegas_rating": 1.65,
-      "vegas_difference": 1.13,
+      "vegas_rating": 1.69,
+      "vegas_difference": 1.09,
       "note_hash": "1ca12795e6967388",
       "note": "New England climbs to No. 9 after a 24-19 road win over Miami. At 5-3, the Patriots host the Packers next, favored by 3.2.",
       "note_source": "ai"
@@ -862,8 +862,8 @@
         "win_conference": 0.114,
         "win_super_bowl": 0.051
       },
-      "vegas_rating": 0.5,
-      "vegas_difference": 1.89,
+      "vegas_rating": 0.48,
+      "vegas_difference": 1.9,
       "note_hash": "eec01678169a3613",
       "note": "Minnesota is 6-1 with the top strength of record rank, yet falls two spots to No. 11 after losing 19-15 in Detroit. The offense is -2.1 points, and the Bills come to town.",
       "note_source": "ai"
@@ -940,8 +940,8 @@
         "win_conference": 0.052,
         "win_super_bowl": 0.023
       },
-      "vegas_rating": -2.09,
-      "vegas_difference": 4.25,
+      "vegas_rating": -2.05,
+      "vegas_difference": 4.21,
       "note_hash": "4346691b387db5a6",
       "note": "Tampa Bay shut out Atlanta 16-0 and gained 1.1 points of rating, yet stays at No. 12. At 3-5 the Bucs get a 4.2-point bump from the model over the betting market.",
       "note_source": "ai"
@@ -1018,7 +1018,7 @@
         "win_conference": 0.044,
         "win_super_bowl": 0.02
       },
-      "vegas_rating": 0.51,
+      "vegas_rating": 0.52,
       "vegas_difference": 1.23,
       "note_hash": "3ce8f1e3f450cf0f",
       "note": "Green Bay jumps six spots to No. 13 after beating Carolina 27-19. Injuries accounted for +2.0 points of the 2.3-point rating gain, and the Packers visit New England next.",
@@ -1096,7 +1096,7 @@
         "win_conference": 0.103,
         "win_super_bowl": 0.045
       },
-      "vegas_rating": 3.05,
+      "vegas_rating": 3.06,
       "vegas_difference": -1.37,
       "note_hash": "9d0dd3f5172f1cc0",
       "note": "Denver beat Kansas City 28-24 for its fourth straight win and is 6-2. The rating still has it only at No. 14, with a point differential of 7.",
@@ -1252,10 +1252,10 @@
         "win_conference": 0.013,
         "win_super_bowl": 0.006
       },
-      "vegas_rating": 3.98,
-      "vegas_difference": -3.85,
-      "note_hash": "fa536b5e78806268",
-      "note": "Houston used its bye to sit at 2-5 and drops a spot to No. 16. The model is 3.9 points lower on the Texans than the betting market is.",
+      "vegas_rating": 3.95,
+      "vegas_difference": -3.82,
+      "note_hash": "eef653bff8d897a3",
+      "note": "Houston came off a bye at 2-5 and barely moved, sitting at 16th. The defense (+0.8 points) keeps them afloat while the offense (-0.8 points) drags. The model likes them 3.8 points less than Vegas does, and it has them favored by 2.9 at the Chargers.",
       "note_source": "ai"
     },
     {
@@ -1330,10 +1330,10 @@
         "win_conference": 0.022,
         "win_super_bowl": 0.009
       },
-      "vegas_rating": 2.87,
-      "vegas_difference": -3.07,
-      "note_hash": "fbe41a865b21d07f",
-      "note": "Dallas lost 33-30 to Arizona at home and holds at No. 17. The offense is +2.0 points but the defense is -2.2, and the model is 3.1 points below the betting market.",
+      "vegas_rating": 2.75,
+      "vegas_difference": -2.95,
+      "note_hash": "adbd6a8a900023fa",
+      "note": "Dallas lost 33-30 at home to the Cardinals, who are ranked #27, and stays at 17th. The offense (+2.0 points) is strong, but the defense (-2.2 points) cancels it out. The model has them as 0.4-point underdogs at the Colts in week 9.",
       "note_source": "ai"
     },
     {
@@ -1408,8 +1408,8 @@
         "win_conference": 0.018,
         "win_super_bowl": 0.008
       },
-      "vegas_rating": -2.08,
-      "vegas_difference": 1.13,
+      "vegas_rating": -2.1,
+      "vegas_difference": 1.14,
       "note_hash": "5ede5ffca74bbe77",
       "note": "Washington rises three spots to No. 18 after a 27-10 win over Philadelphia. Injuries account for +1.1 points of a 1.7-point rating gain, and the Rams visit next.",
       "note_source": "ai"
@@ -1486,8 +1486,8 @@
         "win_conference": 0.015,
         "win_super_bowl": 0.006
       },
-      "vegas_rating": -0.96,
-      "vegas_difference": -0.17,
+      "vegas_rating": -0.94,
+      "vegas_difference": -0.2,
       "note_hash": "f33a39f49e491c23",
       "note": "Atlanta fell three spots to No. 19 after a 16-0 loss at Tampa Bay. The offense dropped 0.7 points, and the week's starter at quarterback is still 1.9 points better than their usual situation.",
       "note_source": "ai"
@@ -1642,8 +1642,8 @@
         "win_conference": 0.003,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -2.78,
-      "vegas_difference": 0.76,
+      "vegas_rating": -2.82,
+      "vegas_difference": 0.8,
       "note_hash": "a4507f45cd2667f1",
       "note": "Indianapolis has lost four straight, the latest a 42-7 loss to Jacksonville, and sits at 2-6 with a point differential of -61. The Colts slip to No. 21.",
       "note_source": "ai"
@@ -1720,8 +1720,8 @@
         "win_conference": 0.001,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -3.6,
-      "vegas_difference": 0.02,
+      "vegas_rating": -3.56,
+      "vegas_difference": -0.02,
       "note_hash": "2507dad77b7521da",
       "note": "The Jets climb five spots to No. 22 despite a 38-33 loss to the Raiders, their third straight. Injuries (+1.3 points) drove the rating change, and Kansas City is next.",
       "note_source": "ai"
@@ -1798,8 +1798,8 @@
         "win_conference": 0.005,
         "win_super_bowl": 0.002
       },
-      "vegas_rating": -0.71,
-      "vegas_difference": -2.98,
+      "vegas_rating": -0.72,
+      "vegas_difference": -2.97,
       "note_hash": "3cd6bc4362153f26",
       "note": "Baltimore falls nine spots to No. 23, the week's biggest drop. The quarterback situation cost 4.2 points, and the Ravens have lost three straight.",
       "note_source": "ai"
@@ -1876,8 +1876,8 @@
         "win_conference": 0.006,
         "win_super_bowl": 0.002
       },
-      "vegas_rating": -3.18,
-      "vegas_difference": -0.6,
+      "vegas_rating": -3.17,
+      "vegas_difference": -0.62,
       "note_hash": "d95ffccc6f3d6539",
       "note": "Las Vegas beat the Jets 38-33 and moves up two to No. 24. The offense gained 0.6 points, but a trip to San Francisco as 11.7-point underdogs is next.",
       "note_source": "ai"
@@ -1954,8 +1954,8 @@
         "win_conference": 0.025,
         "win_super_bowl": 0.009
       },
-      "vegas_rating": -2.79,
-      "vegas_difference": -1.38,
+      "vegas_rating": -2.85,
+      "vegas_difference": -1.33,
       "note_hash": "bf7bc002afb62507",
       "note": "New York was on a bye and slips one spot to No. 25 at 4-2-1. This week's quarterback puts the Giants 1.7 points below their usual situation.",
       "note_source": "ai"
@@ -2032,8 +2032,8 @@
         "win_conference": 0.003,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -2.7,
-      "vegas_difference": -1.5,
+      "vegas_rating": -2.71,
+      "vegas_difference": -1.49,
       "note_hash": "e0abe023496e7957",
       "note": "New Orleans fell three spots to No. 26 while sitting out a bye week. The offense is -1.5 points, and the Browns come to town with the Saints favored by 3.0.",
       "note_source": "ai"
@@ -2110,8 +2110,8 @@
         "win_conference": 0.002,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -3.48,
-      "vegas_difference": -0.96,
+      "vegas_rating": -3.96,
+      "vegas_difference": -0.48,
       "note_hash": "c974a6535deb8ab8",
       "note": "Arizona won 33-30 in Dallas and rises two to No. 27. Even so, the point differential is -63, and the defense is the weak spot at -0.9 points.",
       "note_source": "ai"
@@ -2180,8 +2180,8 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -1.36,
-      "vegas_difference": -3.59,
+      "vegas_rating": -1.34,
+      "vegas_difference": -3.6,
       "note_hash": "4e6eaa87267ef8bf",
       "note": "Los Angeles is 0-7 after a 24-9 loss to the Rams, with a 0 percent chance at the playoffs. The offense is -3.5 points, and the model is 3.6 points lower than the market.",
       "note_source": "ai"
@@ -2258,7 +2258,7 @@
         "win_conference": 0.009,
         "win_super_bowl": 0.003
       },
-      "vegas_rating": -3.6,
+      "vegas_rating": -3.61,
       "vegas_difference": -1.38,
       "note_hash": "f38051c311322a43",
       "note": "Cleveland drops four spots to No. 29 after a 27-6 loss in Pittsburgh. The Browns are 5-3, but the offense at -2.9 points explains the ranking.",
@@ -2336,7 +2336,7 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -6.1,
+      "vegas_rating": -6.09,
       "vegas_difference": 0.48,
       "note_hash": "5e3b128236cd88bb",
       "note": "Miami lost 24-19 to New England and stays at No. 30 at 1-6. The offense is -1.7 points, and the Lions visit next as 7.7-point favorites.",
@@ -2414,8 +2414,8 @@
         "win_conference": 0.001,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -4.5,
-      "vegas_difference": -2.55,
+      "vegas_rating": -4.54,
+      "vegas_difference": -2.51,
       "note_hash": "4a5da41c328fab14",
       "note": "Philadelphia has lost six straight, the latest 27-10 at Washington, and holds at No. 31. This week's quarterback puts the Eagles 3.8 points below their usual situation.",
       "note_source": "ai"
@@ -2492,8 +2492,8 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -7.34,
-      "vegas_difference": 0.03,
+      "vegas_rating": -7.35,
+      "vegas_difference": 0.04,
       "note_hash": "baa455807de1bd00",
       "note": "Tennessee is last again at 1-7 after a 43-36 loss to Cincinnati. Injuries added 0.9 points, but the offense is -2.7, and Jacksonville comes to town in week 10.",
       "note_source": "ai"
@@ -2630,7 +2630,7 @@
       "away_starter": "Gardner Minshew",
       "model_line": 11.8,
       "home_win_probability": 0.809,
-      "market_line": 10.5
+      "market_line": 12.5
     },
     {
       "home": "NE",
@@ -2667,8 +2667,8 @@
     }
   ],
   "note_counts": {
-    "reused": 0,
-    "ai": 32,
+    "reused": 29,
+    "ai": 3,
     "template": 0
   }
 }
