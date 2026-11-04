@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T01:12:37+00:00",
+  "generated": "2026-11-04T21:07:13+00:00",
   "season": 2026,
   "through_week": 8,
   "next_week": 9,
   "model": "epa",
   "home_field": 2.17,
-  "vegas_home_field": 1.33,
+  "vegas_home_field": 1.37,
   "rating_sd": 3.71,
   "game_sd": 13.44,
   "strength_of_record_reference": 3.86,
@@ -73,19 +73,19 @@
       "remaining_schedule": -1.04,
       "remaining_schedule_rank": 26,
       "chance_best": 0.173,
-      "chance_top5": 0.597,
+      "chance_top5": 0.598,
       "odds": {
-        "projected_wins": 11.9,
-        "make_playoffs": 0.961,
-        "win_division": 0.922,
-        "top_seed": 0.208,
-        "win_conference": 0.257,
-        "win_super_bowl": 0.141
+        "projected_wins": 12.0,
+        "make_playoffs": 0.964,
+        "win_division": 0.926,
+        "top_seed": 0.217,
+        "win_conference": 0.259,
+        "win_super_bowl": 0.142
       },
-      "vegas_rating": 6.74,
-      "vegas_difference": -0.23,
-      "note_hash": "8ab61eeda98d8e86",
-      "note": "Jacksonville jumps four spots to No. 1 after a 42-7 win over the Colts, with a 96 percent shot at the playoffs. The offense (+2.1 points) is the best unit, and next up is a trip to Baltimore as 8.0-point favorites.",
+      "vegas_rating": 6.8,
+      "vegas_difference": -0.29,
+      "note_hash": "2b9254166df9eff5",
+      "note": "Jacksonville jumps four spots to No. 1 after a 42-7 win over the Colts. The offense is the best unit at +2.1 points, and the Jaguars have a 93 percent shot at the division.",
       "note_source": "ai"
     },
     {
@@ -151,19 +151,19 @@
       "remaining_schedule": 0.22,
       "remaining_schedule_rank": 11,
       "chance_best": 0.159,
-      "chance_top5": 0.569,
+      "chance_top5": 0.57,
       "odds": {
         "projected_wins": 12.5,
-        "make_playoffs": 0.97,
+        "make_playoffs": 0.971,
         "win_division": 0.772,
-        "top_seed": 0.364,
-        "win_conference": 0.261,
+        "top_seed": 0.362,
+        "win_conference": 0.26,
         "win_super_bowl": 0.144
       },
-      "vegas_rating": 3.77,
-      "vegas_difference": 2.44,
-      "note_hash": "ccdf705405fc35a1",
-      "note": "Buffalo holds at No. 2 after a 36-10 win over the Ravens, its third straight. The offense is +4.5 points, and the model likes the Bills 2.4 points more than the betting market does.",
+      "vegas_rating": 3.81,
+      "vegas_difference": 2.4,
+      "note_hash": "40f720f25b533201",
+      "note": "Buffalo holds at No. 2 at 6-1 on a 3-game win streak, the latest a 36-10 win over the Ravens. The offense is at +4.5 points, while the defense sits at -0.8.",
       "note_source": "ai"
     },
     {
@@ -229,7 +229,7 @@
       "remaining_schedule": -0.44,
       "remaining_schedule_rank": 24,
       "chance_best": 0.128,
-      "chance_top5": 0.511,
+      "chance_top5": 0.512,
       "odds": {
         "projected_wins": 12.6,
         "make_playoffs": 0.949,
@@ -238,10 +238,10 @@
         "win_conference": 0.255,
         "win_super_bowl": 0.132
       },
-      "vegas_rating": 4.21,
-      "vegas_difference": 1.51,
-      "note_hash": "fcf3fe86e79278d1",
-      "note": "San Francisco slips to No. 3 without playing, since it was on a bye and its rating barely moved at -0.0. The offense (+3.6 points) still carries the team, and the Raiders come to town.",
+      "vegas_rating": 4.13,
+      "vegas_difference": 1.59,
+      "note_hash": "fb8b7de2aedffa03",
+      "note": "San Francisco sat out the week on a bye and slid two spots to No. 3 without changing rating. The 49ers are 6-1 with an 82 percent chance at the division.",
       "note_source": "ai"
     },
     {
@@ -316,10 +316,10 @@
         "win_conference": 0.078,
         "win_super_bowl": 0.041
       },
-      "vegas_rating": 4.05,
-      "vegas_difference": 1.27,
-      "note_hash": "7eb8d244ed700b37",
-      "note": "The Rams beat the Chargers 24-9 but still drop a spot to No. 4. At 4-4 their strength of record rank is 18, well behind what the rating says.",
+      "vegas_rating": 4.17,
+      "vegas_difference": 1.15,
+      "note_hash": "361edbe81bfe9e3b",
+      "note": "The Rams beat the Chargers 24-9 and still dropped a spot, even though they're 4-4. The offense carries them at +2.4 points, and special teams are at -0.7.",
       "note_source": "ai"
     },
     {
@@ -385,7 +385,7 @@
       "remaining_schedule": -0.07,
       "remaining_schedule_rank": 17,
       "chance_best": 0.098,
-      "chance_top5": 0.44,
+      "chance_top5": 0.441,
       "odds": {
         "projected_wins": 9.7,
         "make_playoffs": 0.5,
@@ -394,10 +394,10 @@
         "win_conference": 0.081,
         "win_super_bowl": 0.043
       },
-      "vegas_rating": 5.66,
-      "vegas_difference": -0.51,
-      "note_hash": "b03162e34b614783",
-      "note": "Seattle lost 34-17 at home to the Bears and falls to No. 5. The defense (+2.0 points) is the strength, and the offense is slightly below average at -0.1 points.",
+      "vegas_rating": 4.67,
+      "vegas_difference": 0.48,
+      "note_hash": "8e75ca1a09578284",
+      "note": "Seattle lost 34-17 at home to the Bears and slipped to No. 5. Injuries helped by +1.6 points, but the scoring margin cost -0.6.",
       "note_source": "ai"
     },
     {
@@ -472,10 +472,10 @@
         "win_conference": 0.137,
         "win_super_bowl": 0.072
       },
-      "vegas_rating": 2.34,
-      "vegas_difference": 2.37,
-      "note_hash": "c435bcd0502fc640",
-      "note": "Chicago has won 3 straight, the latest a 34-17 win over the Seahawks on the road, and the offense (+1.8 points) is doing the heavy lifting. The Bears are 6-2 with an 82% shot at the playoffs, and they host the Buccaneers in week 9.",
+      "vegas_rating": 2.06,
+      "vegas_difference": 2.65,
+      "note_hash": "c9d3087db481f474",
+      "note": "Chicago beat Seattle 34-17 on the road, its 3rd straight win, and moved up to No. 6. At 6-2, the Bears have a 27 percent chance at the division.",
       "note_source": "ai"
     },
     {
@@ -544,16 +544,16 @@
       "chance_top5": 0.356,
       "odds": {
         "projected_wins": 11.0,
-        "make_playoffs": 0.804,
+        "make_playoffs": 0.803,
         "win_division": 0.325,
         "top_seed": 0.159,
-        "win_conference": 0.134,
+        "win_conference": 0.133,
         "win_super_bowl": 0.066
       },
-      "vegas_rating": 2.41,
-      "vegas_difference": 1.86,
-      "note_hash": "be85cbf39da1ce96",
-      "note": "Detroit edged Minnesota 19-15 for a third straight win, but slips one spot to No. 7. The offense is +2.8 points while the defense sits at -0.5.",
+      "vegas_rating": 2.48,
+      "vegas_difference": 1.79,
+      "note_hash": "4ccce3e3a73ab090",
+      "note": "Detroit edged the Vikings 19-15 for its 3rd straight win but fell a spot to No. 7. The offense is at +2.8 points, and the defense is at -0.5.",
       "note_source": "ai"
     },
     {
@@ -622,14 +622,14 @@
       "chance_top5": 0.231,
       "odds": {
         "projected_wins": 10.6,
-        "make_playoffs": 0.818,
+        "make_playoffs": 0.821,
         "win_division": 0.414,
-        "top_seed": 0.081,
-        "win_conference": 0.1,
-        "win_super_bowl": 0.05
+        "top_seed": 0.08,
+        "win_conference": 0.101,
+        "win_super_bowl": 0.051
       },
-      "vegas_rating": 3.89,
-      "vegas_difference": -0.91,
+      "vegas_rating": 3.82,
+      "vegas_difference": -0.84,
       "note_hash": "1f8c284194edd23a",
       "note": "Kansas City stays at No. 8 after a 28-24 loss in Denver. The offense is +1.6 points, and the Jets visit next with the Chiefs favored by 8.7.",
       "note_source": "ai"
@@ -697,19 +697,19 @@
       "remaining_schedule": 0.09,
       "remaining_schedule_rank": 13,
       "chance_best": 0.027,
-      "chance_top5": 0.217,
+      "chance_top5": 0.218,
       "odds": {
         "projected_wins": 10.1,
-        "make_playoffs": 0.762,
+        "make_playoffs": 0.765,
         "win_division": 0.225,
-        "top_seed": 0.042,
-        "win_conference": 0.076,
+        "top_seed": 0.04,
+        "win_conference": 0.075,
         "win_super_bowl": 0.038
       },
-      "vegas_rating": 1.69,
-      "vegas_difference": 1.09,
-      "note_hash": "1ca12795e6967388",
-      "note": "New England climbs to No. 9 after a 24-19 road win over Miami. At 5-3, the Patriots host the Packers next, favored by 3.2.",
+      "vegas_rating": 1.57,
+      "vegas_difference": 1.2,
+      "note_hash": "ef687d3655a6ed8b",
+      "note": "New England won 24-19 in Miami and moved up to No. 9 at 5-3. The offense is its best unit at +0.8 points.",
       "note_source": "ai"
     },
     {
@@ -778,16 +778,16 @@
       "chance_top5": 0.194,
       "odds": {
         "projected_wins": 11.3,
-        "make_playoffs": 0.865,
-        "win_division": 0.502,
-        "top_seed": 0.1,
+        "make_playoffs": 0.867,
+        "win_division": 0.504,
+        "top_seed": 0.099,
         "win_conference": 0.104,
-        "win_super_bowl": 0.05
+        "win_super_bowl": 0.051
       },
-      "vegas_rating": 3.38,
-      "vegas_difference": -0.88,
-      "note_hash": "16741f426a77dde7",
-      "note": "Cincinnati beat Tennessee 43-36 for its third straight win, though the defense at -0.9 points is the obvious worry. The Bengals move up one to No. 10.",
+      "vegas_rating": 3.36,
+      "vegas_difference": -0.86,
+      "note_hash": "73dd710751a833dc",
+      "note": "Cincinnati outlasted Tennessee 43-36 for its 3rd straight win. At 5-2, the Bengals have an 87 percent shot at the playoffs, but the defense is at -0.9 points.",
       "note_source": "ai"
     },
     {
@@ -862,8 +862,8 @@
         "win_conference": 0.114,
         "win_super_bowl": 0.051
       },
-      "vegas_rating": 0.48,
-      "vegas_difference": 1.9,
+      "vegas_rating": 0.56,
+      "vegas_difference": 1.82,
       "note_hash": "eec01678169a3613",
       "note": "Minnesota is 6-1 with the top strength of record rank, yet falls two spots to No. 11 after losing 19-15 in Detroit. The offense is -2.1 points, and the Bills come to town.",
       "note_source": "ai"
@@ -934,16 +934,16 @@
       "chance_top5": 0.167,
       "odds": {
         "projected_wins": 8.1,
-        "make_playoffs": 0.48,
-        "win_division": 0.463,
+        "make_playoffs": 0.478,
+        "win_division": 0.461,
         "top_seed": 0.002,
         "win_conference": 0.052,
         "win_super_bowl": 0.023
       },
-      "vegas_rating": -2.05,
-      "vegas_difference": 4.21,
-      "note_hash": "4346691b387db5a6",
-      "note": "Tampa Bay shut out Atlanta 16-0 and gained 1.1 points of rating, yet stays at No. 12. At 3-5 the Bucs get a 4.2-point bump from the model over the betting market.",
+      "vegas_rating": -2.15,
+      "vegas_difference": 4.31,
+      "note_hash": "b30cdb7548fbe9ac",
+      "note": "Tampa Bay shut out Atlanta 16-0 and gained 1.1 points of rating, yet stays at No. 12 at 3-5. The defense is the strength at +1.7 points.",
       "note_source": "ai"
     },
     {
@@ -1018,8 +1018,8 @@
         "win_conference": 0.044,
         "win_super_bowl": 0.02
       },
-      "vegas_rating": 0.52,
-      "vegas_difference": 1.23,
+      "vegas_rating": 0.47,
+      "vegas_difference": 1.27,
       "note_hash": "3ce8f1e3f450cf0f",
       "note": "Green Bay jumps six spots to No. 13 after beating Carolina 27-19. Injuries accounted for +2.0 points of the 2.3-point rating gain, and the Packers visit New England next.",
       "note_source": "ai"
@@ -1090,14 +1090,14 @@
       "chance_top5": 0.139,
       "odds": {
         "projected_wins": 11.2,
-        "make_playoffs": 0.861,
+        "make_playoffs": 0.863,
         "win_division": 0.541,
-        "top_seed": 0.133,
+        "top_seed": 0.132,
         "win_conference": 0.103,
         "win_super_bowl": 0.045
       },
-      "vegas_rating": 3.06,
-      "vegas_difference": -1.37,
+      "vegas_rating": 3.08,
+      "vegas_difference": -1.4,
       "note_hash": "9d0dd3f5172f1cc0",
       "note": "Denver beat Kansas City 28-24 for its fourth straight win and is 6-2. The rating still has it only at No. 14, with a point differential of 7.",
       "note_source": "ai"
@@ -1165,19 +1165,19 @@
       "remaining_schedule": -1.16,
       "remaining_schedule_rank": 27,
       "chance_best": 0.006,
-      "chance_top5": 0.078,
+      "chance_top5": 0.079,
       "odds": {
         "projected_wins": 10.9,
-        "make_playoffs": 0.798,
-        "win_division": 0.392,
+        "make_playoffs": 0.801,
+        "win_division": 0.395,
         "top_seed": 0.068,
         "win_conference": 0.062,
         "win_super_bowl": 0.024
       },
-      "vegas_rating": -0.23,
-      "vegas_difference": 0.56,
-      "note_hash": "1a04f24052c3f54a",
-      "note": "Pittsburgh won 27-6 over Cleveland, its fourth in a row, and climbs three spots to No. 15. The Steelers are 6-2 but have a rating of just +0.3, and Cincinnati awaits in week 10.",
+      "vegas_rating": -0.27,
+      "vegas_difference": 0.59,
+      "note_hash": "98f783cc50c77602",
+      "note": "Pittsburgh has won 4 straight after a 27-6 win over the Browns and climbed three spots to No. 15. The Steelers are 6-2, though the offense is at -0.5 points.",
       "note_source": "ai"
     },
     {
@@ -1243,19 +1243,19 @@
       "remaining_schedule": -1.8,
       "remaining_schedule_rank": 30,
       "chance_best": 0.005,
-      "chance_top5": 0.069,
+      "chance_top5": 0.07,
       "odds": {
         "projected_wins": 7.5,
         "make_playoffs": 0.188,
-        "win_division": 0.059,
+        "win_division": 0.057,
         "top_seed": 0.0,
         "win_conference": 0.013,
-        "win_super_bowl": 0.006
+        "win_super_bowl": 0.007
       },
-      "vegas_rating": 3.95,
-      "vegas_difference": -3.82,
-      "note_hash": "eef653bff8d897a3",
-      "note": "Houston came off a bye at 2-5 and barely moved, sitting at 16th. The defense (+0.8 points) keeps them afloat while the offense (-0.8 points) drags. The model likes them 3.8 points less than Vegas does, and it has them favored by 2.9 at the Chargers.",
+      "vegas_rating": 4.03,
+      "vegas_difference": -3.9,
+      "note_hash": "770b04a59dc36162",
+      "note": "Houston used its bye week to hold at No. 16 at 2-5. The defense is at +0.8 points, but the offense is at -0.8.",
       "note_source": "ai"
     },
     {
@@ -1321,19 +1321,19 @@
       "remaining_schedule": 0.04,
       "remaining_schedule_rank": 14,
       "chance_best": 0.004,
-      "chance_top5": 0.059,
+      "chance_top5": 0.06,
       "odds": {
         "projected_wins": 7.4,
-        "make_playoffs": 0.245,
-        "win_division": 0.227,
+        "make_playoffs": 0.246,
+        "win_division": 0.228,
         "top_seed": 0.001,
         "win_conference": 0.022,
         "win_super_bowl": 0.009
       },
-      "vegas_rating": 2.75,
-      "vegas_difference": -2.95,
-      "note_hash": "adbd6a8a900023fa",
-      "note": "Dallas lost 33-30 at home to the Cardinals, who are ranked #27, and stays at 17th. The offense (+2.0 points) is strong, but the defense (-2.2 points) cancels it out. The model has them as 0.4-point underdogs at the Colts in week 9.",
+      "vegas_rating": 2.89,
+      "vegas_difference": -3.08,
+      "note_hash": "ee300273ca0f122b",
+      "note": "Dallas lost 33-30 to the Cardinals at home and stays at No. 17. The offense is at +2.0 points, but the defense is at -2.2.",
       "note_source": "ai"
     },
     {
@@ -1402,16 +1402,16 @@
       "chance_top5": 0.041,
       "odds": {
         "projected_wins": 7.2,
-        "make_playoffs": 0.241,
-        "win_division": 0.223,
+        "make_playoffs": 0.242,
+        "win_division": 0.224,
         "top_seed": 0.001,
         "win_conference": 0.018,
         "win_super_bowl": 0.008
       },
-      "vegas_rating": -2.1,
-      "vegas_difference": 1.14,
-      "note_hash": "5ede5ffca74bbe77",
-      "note": "Washington rises three spots to No. 18 after a 27-10 win over Philadelphia. Injuries account for +1.1 points of a 1.7-point rating gain, and the Rams visit next.",
+      "vegas_rating": -2.07,
+      "vegas_difference": 1.12,
+      "note_hash": "5a7b10d3b1ec7169",
+      "note": "Washington beat the Eagles 27-10 and rose three spots to No. 18, gaining 1.7 points of rating. Injuries added +1.1 points, and the Commanders are 2-4-1.",
       "note_source": "ai"
     },
     {
@@ -1480,16 +1480,16 @@
       "chance_top5": 0.034,
       "odds": {
         "projected_wins": 7.2,
-        "make_playoffs": 0.203,
-        "win_division": 0.175,
+        "make_playoffs": 0.202,
+        "win_division": 0.174,
         "top_seed": 0.001,
-        "win_conference": 0.015,
+        "win_conference": 0.014,
         "win_super_bowl": 0.006
       },
-      "vegas_rating": -0.94,
-      "vegas_difference": -0.2,
-      "note_hash": "f33a39f49e491c23",
-      "note": "Atlanta fell three spots to No. 19 after a 16-0 loss at Tampa Bay. The offense dropped 0.7 points, and the week's starter at quarterback is still 1.9 points better than their usual situation.",
+      "vegas_rating": -0.99,
+      "vegas_difference": -0.14,
+      "note_hash": "c981538f6f4efaa0",
+      "note": "Atlanta fell three spots to No. 19 after a 16-0 loss to Tampa Bay. The offense dropped -0.7 points, and it's now at -2.1 points as the weakest unit.",
       "note_source": "ai"
     },
     {
@@ -1564,8 +1564,8 @@
         "win_conference": 0.019,
         "win_super_bowl": 0.008
       },
-      "vegas_rating": -0.87,
-      "vegas_difference": -0.84,
+      "vegas_rating": -0.9,
+      "vegas_difference": -0.81,
       "note_hash": "6c9c96a89920b1c9",
       "note": "Carolina rises two spots to No. 20 despite a 27-19 loss in Green Bay. Injuries added 1.6 points, and the Broncos visit next.",
       "note_source": "ai"
@@ -1637,13 +1637,13 @@
       "odds": {
         "projected_wins": 6.6,
         "make_playoffs": 0.058,
-        "win_division": 0.017,
+        "win_division": 0.016,
         "top_seed": 0.0,
         "win_conference": 0.003,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -2.82,
-      "vegas_difference": 0.8,
+      "vegas_rating": -2.61,
+      "vegas_difference": 0.59,
       "note_hash": "a4507f45cd2667f1",
       "note": "Indianapolis has lost four straight, the latest a 42-7 loss to Jacksonville, and sits at 2-6 with a point differential of -61. The Colts slip to No. 21.",
       "note_source": "ai"
@@ -1720,94 +1720,16 @@
         "win_conference": 0.001,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -3.56,
-      "vegas_difference": -0.02,
-      "note_hash": "2507dad77b7521da",
-      "note": "The Jets climb five spots to No. 22 despite a 38-33 loss to the Raiders, their third straight. Injuries (+1.3 points) drove the rating change, and Kansas City is next.",
+      "vegas_rating": -3.79,
+      "vegas_difference": 0.22,
+      "note_hash": "aa9c1a1542dbcbb8",
+      "note": "The Jets climbed five spots to No. 22 despite a 38-33 loss to the Raiders, their 3rd straight defeat. Injuries added +1.3 points, and they're 2-6.",
       "note_source": "ai"
     },
     {
       "rank": 23,
-      "previous_rank": 14,
-      "rank_change": -9,
-      "team": "BAL",
-      "abbr": "BAL",
-      "name": "Baltimore Ravens",
-      "nickname": "Ravens",
-      "conference": "AFC",
-      "division": "AFC North",
-      "color": "#241773",
-      "color2": "#9E7C0C",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
-      "tier": "E",
-      "rating": -3.69,
-      "rating_change": -4.45,
-      "range": [
-        -8.4,
-        1.1
-      ],
-      "healthy_rating": -3.69,
-      "starter": "Tyler Huntley",
-      "breakdown": {
-        "offense": 0.84,
-        "defense": -0.43,
-        "special_teams": -0.15,
-        "scoring": -0.69,
-        "quarterback": -3.26,
-        "injuries": -0.0
-      },
-      "preseason_rating": 1.12,
-      "offseason": {
-        "qb_changed": false,
-        "veteran_qb": false,
-        "coach_changed": true
-      },
-      "wins": 4,
-      "losses": 4,
-      "ties": 0,
-      "point_diff": -24,
-      "strength_of_record": 0.893,
-      "strength_of_record_rank": 17,
-      "best_win": {
-        "opponent": "DAL",
-        "opponent_abbr": "DAL",
-        "opponent_name": "Cowboys",
-        "opponent_starter": "Dak Prescott",
-        "score": "34-31",
-        "week": 3,
-        "opponent_rating": -1.1
-      },
-      "worst_loss": {
-        "opponent": "CLE",
-        "opponent_abbr": "CLE",
-        "opponent_name": "Browns",
-        "opponent_starter": "Deshaun Watson",
-        "score": "13-10",
-        "week": 6,
-        "opponent_rating": -5.3
-      },
-      "remaining_schedule": -0.21,
-      "remaining_schedule_rank": 20,
-      "chance_best": 0.0,
-      "chance_top5": 0.007,
-      "odds": {
-        "projected_wins": 7.6,
-        "make_playoffs": 0.172,
-        "win_division": 0.026,
-        "top_seed": 0.0,
-        "win_conference": 0.005,
-        "win_super_bowl": 0.002
-      },
-      "vegas_rating": -0.72,
-      "vegas_difference": -2.97,
-      "note_hash": "3cd6bc4362153f26",
-      "note": "Baltimore falls nine spots to No. 23, the week's biggest drop. The quarterback situation cost 4.2 points, and the Ravens have lost three straight.",
-      "note_source": "ai"
-    },
-    {
-      "rank": 24,
       "previous_rank": 26,
-      "rank_change": 2,
+      "rank_change": 3,
       "team": "LV",
       "abbr": "LV",
       "name": "Las Vegas Raiders",
@@ -1870,22 +1792,22 @@
       "chance_top5": 0.007,
       "odds": {
         "projected_wins": 7.7,
-        "make_playoffs": 0.167,
+        "make_playoffs": 0.169,
         "win_division": 0.045,
         "top_seed": 0.0,
-        "win_conference": 0.006,
+        "win_conference": 0.005,
         "win_super_bowl": 0.002
       },
-      "vegas_rating": -3.17,
-      "vegas_difference": -0.62,
-      "note_hash": "d95ffccc6f3d6539",
-      "note": "Las Vegas beat the Jets 38-33 and moves up two to No. 24. The offense gained 0.6 points, but a trip to San Francisco as 11.7-point underdogs is next.",
+      "vegas_rating": -3.2,
+      "vegas_difference": -0.58,
+      "note_hash": "b68a17bfb6ebac00",
+      "note": "Las Vegas beat the Jets 38-33 and rose three spots to No. 23 at 4-4. The offense added +0.6 points but is still the weakest unit at -1.3.",
       "note_source": "ai"
     },
     {
-      "rank": 25,
+      "rank": 24,
       "previous_rank": 24,
-      "rank_change": -1,
+      "rank_change": 0,
       "team": "NYG",
       "abbr": "NYG",
       "name": "New York Giants",
@@ -1948,22 +1870,22 @@
       "chance_top5": 0.004,
       "odds": {
         "projected_wins": 8.7,
-        "make_playoffs": 0.554,
-        "win_division": 0.529,
+        "make_playoffs": 0.551,
+        "win_division": 0.527,
         "top_seed": 0.011,
         "win_conference": 0.025,
         "win_super_bowl": 0.009
       },
-      "vegas_rating": -2.85,
-      "vegas_difference": -1.33,
-      "note_hash": "bf7bc002afb62507",
-      "note": "New York was on a bye and slips one spot to No. 25 at 4-2-1. This week's quarterback puts the Giants 1.7 points below their usual situation.",
+      "vegas_rating": -2.66,
+      "vegas_difference": -1.51,
+      "note_hash": "a62d0f93d17f9ec4",
+      "note": "New York rested on its bye and stays at No. 24 at 4-2-1. Even so, the Giants have a 53 percent chance at the division.",
       "note_source": "ai"
     },
     {
-      "rank": 26,
+      "rank": 25,
       "previous_rank": 23,
-      "rank_change": -3,
+      "rank_change": -2,
       "team": "NO",
       "abbr": "NO",
       "name": "New Orleans Saints",
@@ -2025,23 +1947,23 @@
       "chance_best": 0.0,
       "chance_top5": 0.004,
       "odds": {
-        "projected_wins": 5.9,
-        "make_playoffs": 0.09,
-        "win_division": 0.084,
+        "projected_wins": 6.0,
+        "make_playoffs": 0.094,
+        "win_division": 0.088,
         "top_seed": 0.0,
-        "win_conference": 0.003,
+        "win_conference": 0.004,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -2.71,
-      "vegas_difference": -1.49,
-      "note_hash": "e0abe023496e7957",
-      "note": "New Orleans fell three spots to No. 26 while sitting out a bye week. The offense is -1.5 points, and the Browns come to town with the Saints favored by 3.0.",
+      "vegas_rating": -2.25,
+      "vegas_difference": -1.95,
+      "note_hash": "355c9dbf73acd6d0",
+      "note": "New Orleans took a bye and fell two spots to No. 25 at 2-5. The offense is the problem at -1.5 points.",
       "note_source": "ai"
     },
     {
-      "rank": 27,
+      "rank": 26,
       "previous_rank": 29,
-      "rank_change": 2,
+      "rank_change": 3,
       "team": "ARI",
       "abbr": "ARI",
       "name": "Arizona Cardinals",
@@ -2110,16 +2032,16 @@
         "win_conference": 0.002,
         "win_super_bowl": 0.001
       },
-      "vegas_rating": -3.96,
-      "vegas_difference": -0.48,
-      "note_hash": "c974a6535deb8ab8",
-      "note": "Arizona won 33-30 in Dallas and rises two to No. 27. Even so, the point differential is -63, and the defense is the weak spot at -0.9 points.",
+      "vegas_rating": -3.0,
+      "vegas_difference": -1.44,
+      "note_hash": "756c38241282364e",
+      "note": "Arizona beat Dallas 33-30 on the road and moved up three spots to No. 26. Injuries gave +0.9 points, while the quarterback situation cost -0.8.",
       "note_source": "ai"
     },
     {
-      "rank": 28,
+      "rank": 27,
       "previous_rank": 28,
-      "rank_change": 0,
+      "rank_change": 1,
       "team": "LAC",
       "abbr": "LAC",
       "name": "Los Angeles Chargers",
@@ -2181,93 +2103,15 @@
         "win_super_bowl": 0.0
       },
       "vegas_rating": -1.34,
-      "vegas_difference": -3.6,
-      "note_hash": "4e6eaa87267ef8bf",
-      "note": "Los Angeles is 0-7 after a 24-9 loss to the Rams, with a 0 percent chance at the playoffs. The offense is -3.5 points, and the model is 3.6 points lower than the market.",
+      "vegas_difference": -3.61,
+      "note_hash": "96107270d3e42511",
+      "note": "The Chargers lost 24-9 to the Rams, their 7th straight loss, and are 0-7. The offense at -3.5 points is the biggest problem.",
       "note_source": "ai"
     },
     {
-      "rank": 29,
-      "previous_rank": 25,
-      "rank_change": -4,
-      "team": "CLE",
-      "abbr": "CLE",
-      "name": "Cleveland Browns",
-      "nickname": "Browns",
-      "conference": "AFC",
-      "division": "AFC North",
-      "color": "#FF3C00",
-      "color2": "#311D00",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
-      "tier": "E",
-      "rating": -4.99,
-      "rating_change": -0.68,
-      "range": [
-        -9.7,
-        -0.2
-      ],
-      "healthy_rating": -4.99,
-      "starter": "Deshaun Watson",
-      "breakdown": {
-        "offense": -2.87,
-        "defense": 0.24,
-        "special_teams": -0.34,
-        "scoring": -2.04,
-        "quarterback": 0.01,
-        "injuries": -0.0
-      },
-      "preseason_rating": -5.31,
-      "offseason": {
-        "qb_changed": true,
-        "veteran_qb": true,
-        "coach_changed": true
-      },
-      "wins": 5,
-      "losses": 3,
-      "ties": 0,
-      "point_diff": -34,
-      "strength_of_record": 0.662,
-      "strength_of_record_rank": 14,
-      "best_win": {
-        "opponent": "TB",
-        "opponent_abbr": "TB",
-        "opponent_name": "Buccaneers",
-        "opponent_starter": "Baker Mayfield",
-        "score": "23-19",
-        "week": 2,
-        "opponent_rating": 2.2
-      },
-      "worst_loss": {
-        "opponent": "NYJ",
-        "opponent_abbr": "NYJ",
-        "opponent_name": "Jets",
-        "opponent_starter": "Geno Smith",
-        "score": "17-12",
-        "week": 5,
-        "opponent_rating": -4.8
-      },
-      "remaining_schedule": -1.63,
-      "remaining_schedule_rank": 29,
-      "chance_best": 0.0,
-      "chance_top5": 0.003,
-      "odds": {
-        "projected_wins": 8.7,
-        "make_playoffs": 0.353,
-        "win_division": 0.08,
-        "top_seed": 0.003,
-        "win_conference": 0.009,
-        "win_super_bowl": 0.003
-      },
-      "vegas_rating": -3.61,
-      "vegas_difference": -1.38,
-      "note_hash": "f38051c311322a43",
-      "note": "Cleveland drops four spots to No. 29 after a 27-6 loss in Pittsburgh. The Browns are 5-3, but the offense at -2.9 points explains the ranking.",
-      "note_source": "ai"
-    },
-    {
-      "rank": 30,
+      "rank": 28,
       "previous_rank": 30,
-      "rank_change": 0,
+      "rank_change": 2,
       "team": "MIA",
       "abbr": "MIA",
       "name": "Miami Dolphins",
@@ -2336,16 +2180,94 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -6.09,
-      "vegas_difference": 0.48,
-      "note_hash": "5e3b128236cd88bb",
-      "note": "Miami lost 24-19 to New England and stays at No. 30 at 1-6. The offense is -1.7 points, and the Lions visit next as 7.7-point favorites.",
+      "vegas_rating": -6.15,
+      "vegas_difference": 0.54,
+      "note_hash": "5d0370f0a2924282",
+      "note": "Miami lost 24-19 to New England but rose two spots to No. 28, helped by +0.8 points from injuries. The Dolphins are 1-6.",
       "note_source": "ai"
     },
     {
-      "rank": 31,
+      "rank": 29,
+      "previous_rank": 14,
+      "rank_change": -15,
+      "team": "BAL",
+      "abbr": "BAL",
+      "name": "Baltimore Ravens",
+      "nickname": "Ravens",
+      "conference": "AFC",
+      "division": "AFC North",
+      "color": "#241773",
+      "color2": "#9E7C0C",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/bal.png",
+      "tier": "F",
+      "rating": -5.95,
+      "rating_change": -6.71,
+      "range": [
+        -10.7,
+        -1.2
+      ],
+      "healthy_rating": -3.69,
+      "starter": "Joe Fagnano",
+      "breakdown": {
+        "offense": 0.84,
+        "defense": -0.43,
+        "special_teams": -0.15,
+        "scoring": -0.69,
+        "quarterback": -5.52,
+        "injuries": -0.0
+      },
+      "preseason_rating": 1.12,
+      "offseason": {
+        "qb_changed": false,
+        "veteran_qb": false,
+        "coach_changed": true
+      },
+      "wins": 4,
+      "losses": 4,
+      "ties": 0,
+      "point_diff": -24,
+      "strength_of_record": 0.893,
+      "strength_of_record_rank": 17,
+      "best_win": {
+        "opponent": "DAL",
+        "opponent_abbr": "DAL",
+        "opponent_name": "Cowboys",
+        "opponent_starter": "Dak Prescott",
+        "score": "34-31",
+        "week": 3,
+        "opponent_rating": -1.1
+      },
+      "worst_loss": {
+        "opponent": "CLE",
+        "opponent_abbr": "CLE",
+        "opponent_name": "Browns",
+        "opponent_starter": "Deshaun Watson",
+        "score": "13-10",
+        "week": 6,
+        "opponent_rating": -5.3
+      },
+      "remaining_schedule": -0.21,
+      "remaining_schedule_rank": 20,
+      "chance_best": 0.0,
+      "chance_top5": 0.001,
+      "odds": {
+        "projected_wins": 7.6,
+        "make_playoffs": 0.165,
+        "win_division": 0.025,
+        "top_seed": 0.0,
+        "win_conference": 0.005,
+        "win_super_bowl": 0.002
+      },
+      "vegas_rating": -0.72,
+      "vegas_difference": -5.23,
+      "note_hash": "b0263f1f5c161f05",
+      "note": "Baltimore fell 15 spots to No. 29 after a 36-10 loss to Buffalo. The quarterback situation cost -6.5 points, and the rating dropped -6.7.",
+      "note_source": "ai"
+    },
+    {
+      "rank": 30,
       "previous_rank": 31,
-      "rank_change": 0,
+      "rank_change": 1,
       "team": "PHI",
       "abbr": "PHI",
       "name": "Philadelphia Eagles",
@@ -2356,20 +2278,20 @@
       "color2": "#A5ACAF",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/phi.png",
       "tier": "F",
-      "rating": -7.05,
-      "rating_change": 0.79,
+      "rating": -6.72,
+      "rating_change": 1.11,
       "range": [
-        -11.8,
-        -2.3
+        -11.5,
+        -2.0
       ],
       "healthy_rating": -7.05,
-      "starter": "Tanner McKee",
+      "starter": "Joe Milton III",
       "breakdown": {
         "offense": -1.81,
         "defense": 0.07,
         "special_teams": 0.06,
         "scoring": -1.58,
-        "quarterback": -3.78,
+        "quarterback": -3.46,
         "injuries": -0.0
       },
       "preseason_rating": 2.54,
@@ -2407,23 +2329,23 @@
       "chance_best": 0.0,
       "chance_top5": 0.001,
       "odds": {
-        "projected_wins": 4.9,
+        "projected_wins": 5.0,
         "make_playoffs": 0.022,
-        "win_division": 0.021,
+        "win_division": 0.022,
         "top_seed": 0.0,
         "win_conference": 0.001,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -4.54,
-      "vegas_difference": -2.51,
-      "note_hash": "4a5da41c328fab14",
-      "note": "Philadelphia has lost six straight, the latest 27-10 at Washington, and holds at No. 31. This week's quarterback puts the Eagles 3.8 points below their usual situation.",
+      "vegas_rating": -4.47,
+      "vegas_difference": -2.25,
+      "note_hash": "02ce15f869dd8ecd",
+      "note": "Philadelphia lost 27-10 at Washington, its 6th straight loss, but still gained a spot to No. 30. Injuries added +1.4 points.",
       "note_source": "ai"
     },
     {
-      "rank": 32,
+      "rank": 31,
       "previous_rank": 32,
-      "rank_change": 0,
+      "rank_change": 1,
       "team": "TEN",
       "abbr": "TEN",
       "name": "Tennessee Titans",
@@ -2492,10 +2414,88 @@
         "win_conference": 0.0,
         "win_super_bowl": 0.0
       },
-      "vegas_rating": -7.35,
-      "vegas_difference": 0.04,
-      "note_hash": "baa455807de1bd00",
-      "note": "Tennessee is last again at 1-7 after a 43-36 loss to Cincinnati. Injuries added 0.9 points, but the offense is -2.7, and Jacksonville comes to town in week 10.",
+      "vegas_rating": -7.37,
+      "vegas_difference": 0.07,
+      "note_hash": "210915a3dafe58a9",
+      "note": "Tennessee lost 43-36 at Cincinnati but moved up to No. 31 at 1-7. Injuries added +0.9 points, and the offense is at -2.7.",
+      "note_source": "ai"
+    },
+    {
+      "rank": 32,
+      "previous_rank": 25,
+      "rank_change": -7,
+      "team": "CLE",
+      "abbr": "CLE",
+      "name": "Cleveland Browns",
+      "nickname": "Browns",
+      "conference": "AFC",
+      "division": "AFC North",
+      "color": "#FF3C00",
+      "color2": "#311D00",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+      "tier": "F",
+      "rating": -7.62,
+      "rating_change": -3.31,
+      "range": [
+        -12.4,
+        -2.9
+      ],
+      "healthy_rating": -4.99,
+      "starter": "Shedeur Sanders",
+      "breakdown": {
+        "offense": -2.87,
+        "defense": 0.24,
+        "special_teams": -0.34,
+        "scoring": -2.04,
+        "quarterback": -2.62,
+        "injuries": -0.0
+      },
+      "preseason_rating": -5.31,
+      "offseason": {
+        "qb_changed": true,
+        "veteran_qb": true,
+        "coach_changed": true
+      },
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "point_diff": -34,
+      "strength_of_record": 0.662,
+      "strength_of_record_rank": 14,
+      "best_win": {
+        "opponent": "TB",
+        "opponent_abbr": "TB",
+        "opponent_name": "Buccaneers",
+        "opponent_starter": "Baker Mayfield",
+        "score": "23-19",
+        "week": 2,
+        "opponent_rating": 2.2
+      },
+      "worst_loss": {
+        "opponent": "NYJ",
+        "opponent_abbr": "NYJ",
+        "opponent_name": "Jets",
+        "opponent_starter": "Geno Smith",
+        "score": "17-12",
+        "week": 5,
+        "opponent_rating": -4.8
+      },
+      "remaining_schedule": -1.63,
+      "remaining_schedule_rank": 29,
+      "chance_best": 0.0,
+      "chance_top5": 0.0,
+      "odds": {
+        "projected_wins": 8.7,
+        "make_playoffs": 0.342,
+        "win_division": 0.075,
+        "top_seed": 0.002,
+        "win_conference": 0.008,
+        "win_super_bowl": 0.003
+      },
+      "vegas_rating": -3.93,
+      "vegas_difference": -3.68,
+      "note_hash": "440e1b9a1ba66d80",
+      "note": "Cleveland drops seven spots to No. 32 after a 27-6 loss to Pittsburgh. The quarterback situation cost -2.6 points, even though the Browns are 5-3.",
       "note_source": "ai"
     }
   ],
@@ -2505,10 +2505,10 @@
       "away": "JAX",
       "neutral": false,
       "gameday": "2026-11-05",
-      "home_starter": "Tyler Huntley",
+      "home_starter": "Joe Fagnano",
       "away_starter": "Trevor Lawrence",
-      "model_line": -8.0,
-      "home_win_probability": 0.275,
+      "model_line": -10.3,
+      "home_win_probability": 0.222,
       "market_line": -10.0
     },
     {
@@ -2528,10 +2528,10 @@
       "neutral": false,
       "gameday": "2026-11-08",
       "home_starter": "Tyler Shough",
-      "away_starter": "Deshaun Watson",
-      "model_line": 3.0,
-      "home_win_probability": 0.587,
-      "market_line": 1.5
+      "away_starter": "Shedeur Sanders",
+      "model_line": 5.6,
+      "home_win_probability": 0.661,
+      "market_line": 3.0
     },
     {
       "home": "IND",
@@ -2542,7 +2542,7 @@
       "away_starter": "Dak Prescott",
       "model_line": 0.4,
       "home_win_probability": 0.51,
-      "market_line": -6.0
+      "market_line": -5.5
     },
     {
       "home": "CAR",
@@ -2582,10 +2582,10 @@
       "away": "NYG",
       "neutral": false,
       "gameday": "2026-11-08",
-      "home_starter": "Tanner McKee",
+      "home_starter": "Joe Milton III",
       "away_starter": "J.J. McCarthy",
-      "model_line": -0.7,
-      "home_win_probability": 0.479,
+      "model_line": -0.4,
+      "home_win_probability": 0.489,
       "market_line": -3.5
     },
     {
@@ -2597,7 +2597,7 @@
       "away_starter": "Geno Smith",
       "model_line": 8.7,
       "home_win_probability": 0.742,
-      "market_line": 9.5
+      "market_line": 10.0
     },
     {
       "home": "LAC",
@@ -2630,7 +2630,7 @@
       "away_starter": "Gardner Minshew",
       "model_line": 11.8,
       "home_win_probability": 0.809,
-      "market_line": 12.5
+      "market_line": 8.5
     },
     {
       "home": "NE",
@@ -2667,8 +2667,8 @@
     }
   ],
   "note_counts": {
-    "reused": 29,
-    "ai": 3,
+    "reused": 6,
+    "ai": 26,
     "template": 0
   }
 }
