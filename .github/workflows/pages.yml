@@ -53,5 +53,15 @@ jobs:
         with:
           path: site
 
+      # GitHub's artifact service occasionally can't see a just-uploaded
+      # bundle ("No artifacts named github-pages"); wait and try again.
       - id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - if: steps.deployment.outcome == 'failure'
+        run: sleep 90
+
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
